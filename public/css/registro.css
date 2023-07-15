@@ -18,116 +18,117 @@ body {
 
 main {
     background-color: #ffffff;
-    width: 29%;
-    margin: 67px;
+    width: 323px;
+    margin: 14px;
     display: flex;
     flex-direction: column;
-    border-radius: 25px;
-    height: 531px;
+    border-radius: 9px;
+    height: 594px;
 }
 
 p {
-    font-size: 18px;
+    font-size: 22px;
     color: #1E1E1E;
-    margin: 0px 6px 8px 20px;
+    margin: 0px 6px 14px 11px;
     display: inline;
 }
 
 h2 {
-    margin: 30px 0px 5px 20px;
+    margin: 22px 0px 3px 11px;
+    font-size: 31px;
 }
 
 .nombre {
-    margin-top: 10px;
+    margin-top: -7px;
     margin-bottom: -4px;
-    border-radius: 4px;
-    height: 24px;
-    width: 206px;
-    font-size: 11px;
+    border-radius: 6px;
+    height: 27px;
+    width: 270px;
+    font-size: 12px;
     border-width: 1px;
-    border-color: #58585859;
+    border-color: #58585870;
     padding: 2px 12px;
 }
 
 .apellido {
     margin-top: 10px;
     margin-bottom: -4px;
-    border-radius: 4px;
-    height: 24px;
-    width: 206px;
-    font-size: 11px;
+    border-radius: 6px;
+    height: 27px;
+    width: 270px;
+    font-size: 12px;
     border-width: 1px;
-    border-color: #58585859;
+    border-color: #58585870;
     padding: 2px 12px;
 }
 
 .email {
     margin-top: 10px;
     margin-bottom: -4px;
-    border-radius: 4px;
-    height: 24px;
-    width: 206px;
-    font-size: 11px;
+    border-radius: 6px;
+    height: 27px;
+    width: 270px;
+    font-size: 12px;
     border-width: 1px;
-    border-color: #58585859;
+    border-color: #58585870;
     padding: 2px 12px;
 }
 
 .tel {
    margin-top: 10px;
     margin-bottom: -4px;
-    border-radius: 4px;
-    height: 24px;
-    width: 206px;
-    font-size: 11px;
+    border-radius: 6px;
+    height: 27px;
+    width: 270px;
+    font-size: 12px;
     border-width: 1px;
-    border-color: #58585859;
+    border-color: #58585870;
     padding: 2px 12px;
 }
 
 .fecha {
    margin-top: 10px;
     margin-bottom: -4px;
-    border-radius: 4px;
-    height: 24px;
-    width: 206px;
-    font-size: 11px;
+    border-radius: 6px;
+    height: 27px;
+    width: 270px;
+    font-size: 12px;
     border-width: 1px;
-    border-color: #58585859;
+    border-color: #58585870;
     padding: 2px 12px;
 }
 
 .pais {
   margin-top: 10px;
-    margin-bottom: -4px;
-    border-radius: 4px;
-    height: 24px;
-    width: 206px;
-    font-size: 11px;
+     margin-bottom: -4px;
+    border-radius: 6px;
+    height: 27px;
+    width: 270px;
+    font-size: 12px;
     border-width: 1px;
-    border-color: #58585859;
+    border-color: #58585870;
     padding: 2px 12px;
 }
 
 .contraseña {
     margin-top: 10px;
-    margin-bottom:8px;
-     border-radius: 4px;
-    height: 24px;
-    width: 206px;
-    font-size: 11px;
+   margin-bottom: -4px;
+    border-radius: 6px;
+    height: 27px;
+    width: 270px;
+    font-size: 12px;
     border-width: 1px;
-    border-color: #58585859;
+    border-color: #58585870;
     padding: 2px 12px;
 }
 
 .registrarme {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 18px;
+    margin-bottom: 20px;
     border-radius: 17px;
-    height: 29px;
-    width: 230px;
-    font-size: 12px;
+    height: 38px;
+    width: 292px;
+    font-size: 14px;
     border-width: 0px;
     color: #ffffff;
     background-color: #C83838;
@@ -137,14 +138,13 @@ h2 {
 .line1 {
     background-color: #58585859;
     height: 1px;
-    width: 40vw;
-    width: 11vw;
+    width: 120px;
 }
 
 .linea2 {
     background-color: #58585859;
     height: 1px;
-    width: 11vw;
+    width: 120px;
 }
 
 form {
@@ -171,17 +171,20 @@ form {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 17px;
-    margin-right: 70px;
-    margin-left: 70px;
+    margin-top: 20px;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 5px;
 }
 
-.facebook {
-font-size:17px;
+
+.google {
+    font-size: 21px;
 }
+.facebook {font-size: 21px;}
 
 .apple {
-    font-size:20px;
+    font-size: 26px;
 }
 
 .texto-ultimo {
@@ -193,13 +196,7 @@ font-size:17px;
     justify-content: center;
 }
 
-.cuenta {font-size: 11px;margin: 0;margin-right: 4px;}
+.cuenta {font-size: 12px;margin: 0;margin-right: 4px;}
 
-.inicia {font-size: 11px;display: inline;}
+.inicia {font-size: 12px;display: inline;}
 
-
-@media (min-width:361px) {}
-
-@media (min-width: 769px) {
-    
-}
