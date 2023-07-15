@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrate</title>
+    <script src="../app.js"></script>
+    <link rel="stylesheet" href="/css/registro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <main>
+    <h2> Bienvenido a Pintur</h2>
+    <p>¡Vamos a registrarte!<p>
+    <div class="formularios">
+    <form action="/registro" method="POST">
+    <input class="nombre" type="text" name="nombre" id="nombre" placeholder="Nombre*">
+    <input class="apellido" type="text" name="apellido" id="apellido" placeholder="Apellido*">
+    <input class="email" type="email" name="email" id="email" placeholder="Email*">
+    <input class="tel" type="tel" name="tel" id="tel" placeholder="Teléfono*">
+    <input class="fecha" type="date" name="fecha" id="fecha" placeholder="Fecha de nacimiento">
+    <input class="pais" type="text" name="pais" id="pais" placeholder="País">
+    <input class="contraseña" type="password" name="contraseña" id="contraseña" placeholder="Contraseña*">
+    <button class="registrarme" type="submit"> Registrarme</button>
+</div>
+<section class="lineas">
+<div class="line1"></div> 
+<h3 class="o">o</h3> 
+<div class="linea2"></div>
+</section>
+<section class="botones">
+    <i class="fa-brands fa-google google"></i>
+    <i class="fa-brands fa-facebook-f facebook"></i>
+    <i class="fa-brands fa-apple apple"></i>
+</section>
+<section class="texto-ultimo">
+<p class="cuenta">Ya tenes una cuenta?</p>
+<h3 class="inicia">Inicia sesión</h3>
+</section>
+</main>
+</form>
+</body>
+
+</html>
