@@ -1,0 +1,137 @@
+body, button {
+    font-family: 'Outfit', sans-serif;
+    color: #1E1E1E; 
+    font-size: 10px;
+    margin-top: 100px;
+  }
+
+
+h2 {
+    font-weight: bold;}
+
+.container {
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2.5fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    margin: 20px;
+
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+  }
+
+divs {
+    border: 1px solid black;
+    box-sizing: border-box;
+
+}
+
+.img-producto {
+    grid-area: 1 / 1 / 3 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.img-producto p {
+    padding-inline: 5px;
+    width: auto;
+}
+
+.opciones-producto {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+
+.opciones-compra {
+    grid-area: 1 / 3 / 3 / 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.opciones-compra select, input, button {
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+    border-color:#1E1E1E;
+
+}
+
+button {
+    border: none;
+    background-color: #1E1E1E;
+    color: white;
+    border-radius: 15px;
+}
+
+.cantidad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cantidad input {
+    align-items: center;
+    width: 15vw;
+}
+
+.info-principal {
+    grid-area: 3 / 1 / 6 / 3;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+
+.info-principal p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    width: 220px;
+    height: 30px;
+}
+
+
+.info-principal h3 {
+    margin-left: -15px;
+}
+
+
+.info-general {
+    grid-area: 3 / 3 / 6 / 5;
+}
+
+.linea {
+    grid-area: 3 / 3 / 4 / 5;
+    width: 90%;
+
+}
+
+.aplicacion {
+    grid-area: 4 / 3 / 5 / 5;
+    width: 90%;
+
+}
+
+.extra {
+    grid-area: 5 / 3 / 6 / 5;
+    width: 90%;
+}
+

@@ -1,41 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="..//public/css/producto.css">
-    <title>Detalle de producto</title>
+    <script src="/app.js"></script>
+    <link rel="stylesheet" type="text/css" href="/public/css/producto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+
+    <title>Pintur - Detalle de producto</title>
 </head>
+
 <body>
-    <nav class="nav">
-        <div>Colores</div>
-        <div>Accesorios</div>
-        <div>Catalogo</div>
-        <div>Asesoramiento</div>
-    </nav>
-
-    <h1 class="titulo">Cielos Rasos</h1>
-<br>
-
-<div class="divBoton">
-    <button  class="botonVolver"> ←-----  Seguir comprando</button>
-</div> 
 
 
-<section class="detalleProducto">
-    <div><img src="..\\public\images\productoimagen.png"></div>
-    <div class="contenido">
-        <p>Descripción</p>
-        <p>Detalles</p>
-        <p>Reseñas</p>
+    <div class="container">
+        <div class="img-producto">
+            
+            <img
+                src="/images/productoimagen.png"
+                alt="">
+
+            <div class="opciones-producto" style="display: flex;">
+                <p>Descripción</p>
+                <p>Detalles</p>
+                <p>Reseñas</p>
+            </div>
+        </div>
+
+        <div class="opciones-compra">
+
+            <h2>Nombre de producto</h2>
+
+            <select name="color" id="color">
+                <option>Blanco</option>
+                <option>Negro</option>
+            </select>
+
+            <select name="litros" id="litros">
+                <option>1L</option>
+                <option>5L</option>
+                <option>10L</option>
+                <option>20L</option>
+            </select>
+
+            <div class="cantidad">
+                <label for="cantidad">Cantidad</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" max="10">
+            </div>
+
+            <button>Agregar al carrito</button>
+        </div>
+
+        <div class="info-principal">
+            <p>Información principal</p>
+
+            <div>
+                <ul>
+                    <li>Acabado:
+                        <ul>
+                            <li>Mate</li>
+                        </ul>
+                    </li>
+                    <li>Cobertura:
+                        <ul>
+                            <li>10 a 12 m2 por litro de pintura</li>
+                        </ul>
+                    </li>
+                    <li>Tiempo de secado:
+                        <ul>
+                            <li>2 horas</li>
+                        </ul>
+                    </li>
+                    <li>Capas:
+                        <ul>
+                            <li>2</li>
+                        </ul>
+                    </li>
+                    <h3>Características del producto</h3>
+                    <li>Fácil aplicación</li>
+                    <li>Antihongos</li>
+                    <li>Rápido secado</li>
+                </ul>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info-general"></div>
+        <div class="linea"> 
+            <h2>Línea interior</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid suscipit laudantium quos sit accusamus minus vero consectetur temporibus culpa magni ea quaerat praesentium, obcaecati, hic illum veritatis. Quos, fuga optio!</p>
+        </div>
+        <div class="aplicacion">
+            <h2>Cómo aplicar</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid suscipit laudantium quos sit accusamus minus vero consectetur temporibus</p>
+        </div>
+        <div class="extra">
+            <h2>Salud y seguridad</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque debitis maxime, quasi eius ea ipsum cum dignissimos, aperiam aut eveniet iusto itaque! Voluptates, dolorem perspiciatis. Aperiam reprehenderit consequuntur perferendis assumenda.</p>
+        </div>
     </div>
-</section>
-
-
-
-
 
 
 </body>
+
 </html>
