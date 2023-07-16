@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de producto</title>
+    <script src="../app.js"></script>
+    <link rel="stylesheet" href="/css/detalleproducto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <i class="fa-solid fa-bars burger"></i>
+            <img class="logo" src="/images/LOGO PINTUR.png" width="100px">
+            <ul class="links nav-textos">
+                <li class="uno"><a href="#">Colores</a></li>
+                <li class="dos"><a href="#">Accesorios</a></li>
+                <li class="tres"><a href="#">Catálogo</a></li>
+                <li class="cuatro"><a href="#">Asesoramiento</a></li>
+            </ul>
+            <ul class="links iconos-der">
+                <li><a href="#"> <i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="#"><i class="fa-regular fa-user"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="linea"></div>
+
+    <div class="ovalo">
+    </div>
+    <div class="bienvenido">
+        <h2 class="texto-ovalo">Cielos Rasos</h2>
+    </div>
+    <div class="botones-ovalo">
+        <div class="absolute-boton">
+            <form action="/carritocompras" method="POST">
+                <input class="seguir-comprando" type="text" name="se" id="se" placeholder="Seguir comprando">
+                <i class="fa-solid fa-arrow-left flecha"></i>
+        </div>
+    </div>
+    <article class="foto-nombreproducto">
+        <img class="producto" src="/images/productoimagen.png" width="100px">
+        <div class="datos-nombreproducto">
+        <h3 class="nombre-producto">Nombre Producto</h3>
+        <form action="/detalleproducto" method="POST">
+            <input class="color" type="text" name="color" id="color" placeholder="Blanco">
+            <br>
+            <input class="litros" type="number" name="litros" id="litros" placeholder="20L">
+            <br>
+            <p class="cantidad-p">Cantidad</p> <p class="calcular-p">Calculadora de pintura </p>
+            <br>
+            <input class="cantidad" type="text" name="cantidad" id="cantidad" placeholder="- 1 +">
+            <input class="calcular" type="text" name="calcular" id="calcular" placeholder="Calcular">
+            <br>
+            <button class="agregar-a-lista" type="submit"> Agregar a la lista de deseos</button>
+            <br>
+            <i class="fa-regular fa-heart heart"></i> <h3 class="favoritos-h3"> Favoritos</h3> 
+            <i class="fa-solid fa-location-dot"></i><h3 class="sucursal-h3"> Encontrar una sucursal</h3> 
+    </div>
+
+
+    </article>
+    <section class="body-ustedes">
+        <div class="boletin">
+            <p class="h3-boletin">Subscribite a nuestro boletín</p>
+            <p class="p-boletin">Descubrí ideas y tendencias de decoración</p>
+            <p class="p-boletin">en nuestro nuevo boletín mensual</p>
+            <input class="email" type="email" name="email" id="email" placeholder="Dirección de correo electrónico">
+            <p class="contactanos-boletin">Contactános</p>
+            <ul class="iconos-contacto">
+                <li class="facebook"><a href="#"> <i class="fa-brands fa-facebook-f"></i></i></a></li>
+                <li class="twitter"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li class="instagram"><a href="#"><i class="fa-brands fa-instagram"></i></i></a></li>
+            </ul>
+        </div>
+    </section>
+</body>
+<footer>
+    <div class="footer-bar">
+        <img class="logo-footer" src="/images/LOGO PINTUR.png" width="100px">
+        <ul class="text-ayuda">
+            <li class="titulo">Ayuda</li>
+            <li>Acerca de nosotros</li>
+            <li>Contactános</li>
+            <li>Whatsapp +5491134567</li>
+        </ul>
+        <ul class="compra-segura">
+            <li class="titulo">Compra 100% segura</li>
+            <li>Nuestro sitio tiene toda </li>
+            <li>la seguridad para tu compra.</li>
+        </ul>
+        <ul class="encuentra-sucursal">
+            <li class="titulo">Encuentra una sucursal</li>
+            <li>Dirección</li>
+            <li>ewwt 3456, Abosdjis</li>
+        </ul>
+
+    </div>
+    <div class="ovalo-footer">
+    </div>
+</footer>
+
+</html>

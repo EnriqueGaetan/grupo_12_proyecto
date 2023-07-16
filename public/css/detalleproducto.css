@@ -1,0 +1,940 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+* {
+    font-family: 'Outfit', sans-serif;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #ebebeb;
+    ;
+}
+
+header {
+    background-color: #d3d9dd;
+    width: 100vw;
+    position: relative;
+}
+
+.navbar {
+    display: inline-flex;
+    align-items: center;
+    height: 76px;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: space-around;
+    background-color: #d3d9dd;
+    align-content: center;
+}
+
+
+.logo {
+    margin-left: 25px;
+}
+
+.burguer {
+    font-size: 14px;
+}
+
+.links {
+    display: inline-flex;
+    flex-direction: row;
+    font-size: 12px;
+    list-style: none;
+}
+
+.links li {
+    width: 35vw;
+
+}
+
+.nav-textos {
+    width: 36vw;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    display: none;
+}
+
+
+.iconos-der {
+    width: 21vw;
+    /* display: inline-flex; */
+    padding: 0;
+    font-size: 14px;
+    /* flex-direction: row; */
+}
+
+.linea {
+    background-color: #fff;
+    height: 1px;
+    position: relative;
+    z-index: 10;
+    top: -6px;
+    width: 100vw;
+
+}
+
+.ovalo {
+    background-color: #d3d9dd;
+    height: 36vh;
+    border-radius: 50%;
+    position: relative;
+    z-index: -10;
+    bottom: 130px;
+    width: 100vw;
+}
+
+.bienvenido {
+    display: flex;
+    justify-content: center;
+    color: #1E1E1E;
+}
+
+.texto-ovalo {
+    z-index: 10;
+    position: absolute;
+    top: 76px;
+    /* margin-left: 43px; */
+    font-size: 26px;
+}
+
+.botones-ovalo {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+}
+
+.absolute-boton {
+    z-index: 10;
+    position: absolute;
+    top: 152px;
+    flex-direction: column;
+}
+
+.boton-uno {
+    background-color: #FFFDFD;
+    padding: 2px 12px;
+    border-width: 0px;
+    border-radius: 35px;
+    height: 20px;
+    margin-left: 114px;
+    margin-bottom: 7px;
+    text-align: center;
+    width: 115px;
+    font-size: 13px;
+}
+
+.boton-dos {
+    background-color: #FFFDFD;
+    padding: 2px 12px;
+    border-width: 0px;
+    border-radius: 35px;
+    height: 20px;
+    margin-left: 114px;
+    text-align: center;
+    width: 115px;
+    font-size: 13px;
+    /* top: 51px; */
+}
+
+
+section {
+    height: 50vh;
+}
+
+footer {
+    background-color: #D3D9DD;
+    width: 100vw;
+    height: 40vh;
+    /* margin: 0; */
+}
+
+
+.ovalo-footer {
+    background-color: #d3d9dd;
+    height: 26vh;
+    border-radius: 50%;
+    position: relative;
+    z-index: -10;
+    bottom: 303px;
+    width: 100vw;
+}
+
+.footer-bar {
+    display: inline-flex;
+    align-items: flex-start;
+    height: 200px;
+    flex-direction: column;
+    width: 100vw;
+    align-content: center;
+    margin-bottom: 19px;
+}
+
+.logo-footer {
+    margin-left: 114px;
+    margin-bottom: 12px;
+    width: 130px;
+}
+
+.text-ayuda {
+    font-size: 12px;
+    list-style: none;
+}
+
+.titulo {
+    color: white;
+    font-size: 13px;
+}
+
+.compra-segura {
+    font-size: 12px;
+    list-style: none;
+    align-items: center;
+}
+
+.encuentra-sucursal {
+    font-size: 12px;
+    list-style: none;
+}
+
+.boletin {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-bottom: 103px;
+}
+
+.body-ustedes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.h3-boletin {
+    margin: 10px;
+    font-size: 22px;
+    color: #1E1E1E;
+}
+
+.p-boletin {
+    margin: 1px;
+    font-size: 12px;
+    color: #545151;
+}
+
+.email {
+    margin-top: 10px;
+    margin-bottom: 8px;
+    border-radius: 35px;
+    height: 20px;
+    width: 200px;
+    font-size: 12px;
+    border-width: 1px;
+    padding: 2px 12px;
+}
+
+.contactanos-boletin {
+    font-size: 10px;
+    color: #545151;
+
+}
+
+.iconos-contacto {
+    width: 27vw;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 14px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.seguir-comprando {
+    background-color: #FFFDFD;
+    padding: 2px 15px;
+    border-width: 0px;
+    border-radius: 35px;
+    height: 20px;
+    margin: 5px;
+    text-align: end;
+    width: 127px;
+    font-size: 13px;
+}
+
+.botones-ovalo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.flecha {
+    position: absolute;
+    color: #191919;
+    width: 20px;
+    height: 12px;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+}
+
+.absolute-boton {
+    z-index: 10;
+    position: absolute;
+    top: -212px;
+    /* flex-wrap: wrap; */
+}
+
+
+
+@media (min-width:361px) {
+    header {
+        background-color: #D3D9DD;
+        width: 100vw;
+        position: relative;
+    }
+
+    .burger {
+        display: none;
+        color: #d3d9dd;
+    }
+
+    .navbar {
+        display: inline-flex;
+        align-items: center;
+        height: 76px;
+        flex-direction: row;
+        width: 100vw;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    .logo {
+        margin: -111px;
+    }
+
+    .links {
+        display: inline-flex;
+        flex-direction: row;
+        font-size: 12px;
+        list-style: none;
+    }
+
+    .links li {
+        width: 35vw;
+
+    }
+
+    .nav-textos {
+        width: 36vw;
+        display: inline-flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+
+    .iconos-der {
+        width: 11vw;
+        display: inline-flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-right: 12px;
+    }
+
+    .linea {
+        background-color: #fff;
+        height: 1px;
+        position: relative;
+        z-index: 10;
+        top: -6px;
+        width: 100vw;
+
+    }
+
+    .ovalo {
+        background-color: #d3d9dd;
+        height: 36vh;
+        border-radius: 50%;
+        position: relative;
+        z-index: -10;
+        bottom: 130px;
+        width: 100vw;
+
+    }
+
+    .bienvenido {
+        display: flex;
+        justify-content: center;
+        color: #1E1E1E;
+    }
+
+    .texto-ovalo {
+        z-index: 10;
+        position: absolute;
+        top: 73px;
+        font-size: 29px;
+    }
+
+    .botones-ovalo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .absolute-boton {
+        z-index: 10;
+        position: absolute;
+        top: 143px;
+        /* flex-wrap: wrap; */
+    }
+
+    .boton-uno {
+        background-color: #FFFDFD;
+        padding: 2px 12px;
+        border-width: 0px;
+        border-radius: 35px;
+        height: 20px;
+        margin: 10px;
+        text-align: center;
+        width: 115px;
+        font-size: 13px;
+    }
+
+    .boton-dos {
+        background-color: #FFFDFD;
+        padding: 2px 12px;
+        border-width: 0px;
+        border-radius: 35px;
+        height: 20px;
+        margin: 10px;
+        text-align: center;
+        width: 115px;
+        font-size: 13px;
+    }
+
+    section {
+        height: 50vh;
+    }
+
+    footer {
+        background-color: #D3D9DD;
+        width: 100vw;
+        height: 17vh;
+    }
+
+
+    .ovalo-footer {
+        background-color: #d3d9dd;
+        height: 20vh;
+        border-radius: 75%;
+        position: relative;
+        z-index: -10;
+        bottom: 159px;
+        width: 100vw;
+    }
+
+    .footer-bar {
+        display: inline-flex;
+        align-items: center;
+        height: 76px;
+        flex-direction: row;
+        width: 100vw;
+        justify-content: space-evenly;
+        align-content: center;
+    }
+
+    .logo-footer {
+        margin: 25px;
+        width: 13%;
+    }
+
+    .text-ayuda {
+        font-size: 12px;
+        list-style: none;
+    }
+
+    .titulo {
+        color: white;
+        font-size: 13px;
+    }
+
+    .compra-segura {
+        font-size: 12px;
+        list-style: none;
+        align-items: center;
+    }
+
+    .encuentra-sucursal {
+        font-size: 12px;
+        list-style: none;
+    }
+
+    .boletin {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        margin-bottom: 92px;
+    }
+
+    .body-ustedes {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .h3-boletin {
+        margin: 10px;
+        font-size: 22px;
+        color: #1E1E1E;
+    }
+
+    .p-boletin {
+        margin: 1px;
+        font-size: 12px;
+        color: #545151;
+    }
+
+    .email {
+        margin-top: 10px;
+        margin-bottom: 8px;
+        border-radius: 35px;
+        height: 20px;
+        width: 200px;
+        font-size: 12px;
+        border-width: 1px;
+        padding: 2px 12px;
+    }
+
+    .contactanos-boletin {
+        font-size: 10px;
+        color: #545151;
+
+    }
+
+    .iconos-contacto {
+        width: 23vw;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 14px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .seguir-comprando {
+        background-color: #FFFDFD;
+        padding: 2px 15px;
+        border-width: 0px;
+        border-radius: 35px;
+        height: 20px;
+        margin: 5px;
+        text-align: end;
+        width: 127px;
+        font-size: 13px;
+    }
+
+    .botones-ovalo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .flecha {
+        position: absolute;
+        color: #191919;
+        width: 20px;
+        height: 12px;
+        left: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 14px;
+    }
+
+    .absolute-boton {
+        z-index: 10;
+        position: absolute;
+        top: -195px;
+        /* flex-wrap: wrap; */
+    }
+}
+
+@media (min-width: 769px) {
+    header {
+        background-color: #D3D9DD;
+        width: 100vw;
+        position: relative;
+    }
+
+    .burger {
+        display: none;
+        color: #d3d9dd;
+    }
+
+    .navbar {
+        display: inline-flex;
+        align-items: center;
+        height: 76px;
+        flex-direction: row;
+        width: 100vw;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    .logo {
+        margin: -111px;
+    }
+
+    .links {
+        display: inline-flex;
+        flex-direction: row;
+        font-size: 12px;
+        list-style: none;
+    }
+
+    .links li {
+        width: 35vw;
+
+    }
+
+    .nav-textos {
+        width: 36vw;
+        display: inline-flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+
+    .iconos-der {
+        width: 11vw;
+        display: inline-flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-right: 12px;
+    }
+
+    .linea {
+        background-color: #fff;
+        height: 1px;
+        position: relative;
+        z-index: 10;
+        top: -6px;
+        width: 100vw;
+
+    }
+
+    .ovalo {
+        background-color: #d3d9dd;
+        height: 36vh;
+        border-radius: 50%;
+        position: relative;
+        z-index: -10;
+        bottom: 130px;
+        width: 100vw;
+
+    }
+
+    .bienvenido {
+        display: flex;
+        justify-content: center;
+        color: #1E1E1E;
+    }
+
+    .texto-ovalo {
+        z-index: 10;
+        position: absolute;
+        top: 63px;
+        font-size: 29px;
+    }
+
+    .botones-ovalo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .flecha {
+        position: absolute;
+        color: #191919;
+        width: 20px;
+        height: 12px;
+        left: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 14px;
+    }
+
+    .absolute-boton {
+        z-index: 10;
+        position: absolute;
+        display: flex;
+        /* top: 1px; */
+        /* flex-wrap: wrap; */
+        flex-direction: row;
+        justify-content: center;
+    }
+
+
+
+    .seguir-comprando {
+        background-color: #FFFDFD;
+        padding: 2px 15px;
+        border-width: 0px;
+        border-radius: 35px;
+        height: 20px;
+        margin: 5px;
+        text-align: end;
+        width: 127px;
+        font-size: 13px;
+    }
+
+
+
+    section {
+        height: 50vh;
+    }
+
+    footer {
+        background-color: #D3D9DD;
+        width: 100vw;
+        height: 17vh;
+    }
+
+
+    .ovalo-footer {
+        background-color: #d3d9dd;
+        height: 20vh;
+        border-radius: 75%;
+        position: relative;
+        z-index: -10;
+        bottom: 159px;
+        width: 100vw;
+    }
+
+    .footer-bar {
+        display: inline-flex;
+        align-items: center;
+        height: 76px;
+        flex-direction: row;
+        width: 100vw;
+        justify-content: space-evenly;
+        align-content: center;
+    }
+
+    .logo-footer {
+        margin: 25px;
+        width: 13%;
+    }
+
+    .text-ayuda {
+        font-size: 12px;
+        list-style: none;
+    }
+
+    .titulo {
+        color: white;
+        font-size: 13px;
+    }
+
+    .compra-segura {
+        font-size: 12px;
+        list-style: none;
+        align-items: center;
+    }
+
+    .encuentra-sucursal {
+        font-size: 12px;
+        list-style: none;
+    }
+
+    .boletin {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        margin-bottom: 92px;
+    }
+
+    .body-ustedes {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .h3-boletin {
+        margin: 10px;
+        font-size: 22px;
+        color: #1E1E1E;
+    }
+
+    .p-boletin {
+        margin: 1px;
+        font-size: 12px;
+        color: #545151;
+    }
+
+    .email {
+        margin-top: 10px;
+        margin-bottom: 8px;
+        border-radius: 35px;
+        height: 20px;
+        width: 200px;
+        font-size: 12px;
+        border-width: 1px;
+        padding: 2px 12px;
+    }
+
+    .contactanos-boletin {
+        font-size: 10px;
+        color: #545151;
+
+    }
+
+    .iconos-contacto {
+        width: 23vw;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 14px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    form {
+        position: absolute;
+        /* display:inline-flex; */
+        top: 13px;
+    }
+
+    /* detalle producto */
+
+
+   .foto-nombreproducto {
+        display: flex;
+    }
+
+    .producto {
+        width: 36vw;
+        margin-left: 84px;
+    }
+
+
+
+
+    .color {
+        margin-top: -7px;
+        margin-bottom: -4px;
+        border-radius: 6px;
+        height: 27px;
+        width: 353px;
+        font-size: 12px;
+        border-width: 1px;
+        border-color: #58585870;
+        padding: 2px 12px;
+    }
+
+    .litros {
+        margin-top: 10px;
+        margin-bottom: 3px;
+        border-radius: 6px;
+        height: 27px;
+        width: 353px;
+        font-size: 12px;
+        border-width: 1px;
+        border-color: #58585870;
+        padding: 2px 12px;
+    }
+
+    .datos-nombreproducto {
+        margin-left: 18px;
+    }
+
+    .cantidad {
+        margin-top: 5px;
+        width: 162px;
+        border-radius: 6px;
+        height: 27px;
+        font-size: 12px;
+        border-width: 1px;
+        border-color: #58585870;
+        padding: 2px 12px;
+    }
+
+    .calcular {
+        margin-top: 5px;
+        width: 162px;
+        border-radius: 6px;
+        height: 27px;
+        font-size: 12px;
+        border-width: 1px;
+        border-color: #58585870;
+        padding: 2px 12px;
+    }
+
+    .cantidad-p {
+        font-size: 12px;
+        display: inline;
+        margin-right: 140px;
+    }
+
+    .calcular-p {
+        display: inline;
+        font-size: 12px;
+    }
+
+    .agregar-a-lista {
+        margin-top: 12px;
+        margin-bottom: 10px;
+        border-radius: 17px;
+        height: 39px;
+        width: 379px;
+        font-size: 14px;
+        border-width: 0px;
+        color: #ffffff;
+        background-color: #C83838;
+        padding: 2px 12px;
+    }
+
+    .favoritos-h3 {
+        font-size: 12px;
+        display: inline;
+        margin-right: 35px;
+    }
+
+    .sucursal-h3 {
+        display: inline;
+        font-size: 12px;
+    }
+
+    .heart {
+        margin-left: 73px;
+    }
+
+    
+}
