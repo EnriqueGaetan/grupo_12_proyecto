@@ -12,12 +12,12 @@ body {
 body {
     margin: 0px;
     padding: 0px;
-    background-color: #ebebeb;
+    background-color: #FFFFFF;
     ;
 }
 
 header {
-    background-color: #d3d9dd;
+    background-color: #EBF0F5;
     width: 100vw;
     position: relative;
 }
@@ -29,7 +29,7 @@ header {
     flex-direction: row;
     width: 100vw;
     justify-content: space-around;
-    background-color: #d3d9dd;
+    background-color: #EBF0F5;
     align-content: center;
 }
 
@@ -81,7 +81,7 @@ header {
 }
 
 .ovalo {
-    background-color: #d3d9dd;
+    background-color: #EBF0F5;
     height: 36vh;
     border-radius: 50%;
     position: relative;
@@ -150,7 +150,7 @@ section {
 }
 
 footer {
-    background-color: #D3D9DD;
+    background-color: #EBF0F5;
     width: 100vw;
     height: 40vh;
     /* margin: 0; */
@@ -158,7 +158,7 @@ footer {
 
 
 .ovalo-footer {
-    background-color: #d3d9dd;
+    background-color: #EBF0F5;
     height: 26vh;
     border-radius: 50%;
     position: relative;
@@ -300,14 +300,14 @@ footer {
 
 @media (min-width:361px) {
     header {
-    background-color: #D3D9DD;
+    background-color: #EBF0F5;
     width: 100vw;
     position: relative;
 }
 
 .burger {
     display: none;
-    color:#d3d9dd;
+    color:#EBF0F5;
 }
 
 .navbar {
@@ -365,7 +365,7 @@ footer {
 }
 
 .ovalo {
-    background-color: #d3d9dd;
+    background-color: #EBF0F5;
     height: 36vh;
     border-radius: 50%;
     position: relative;
@@ -431,14 +431,14 @@ section {
 }
 
 footer {
-    background-color: #D3D9DD;
+    background-color: #EBF0F5;
     width: 100vw;
     height: 17vh;
 }
 
 
 .ovalo-footer {
-    background-color: #d3d9dd;
+    background-color: #EBF0F5;
     height: 20vh;
     border-radius: 75%;
     position: relative;
@@ -578,14 +578,14 @@ footer {
 
 @media (min-width: 769px) {
     header {
-    background-color: #D3D9DD;
+    background-color: #EBF0F5;
     width: 100vw;
     position: relative;
 }
 
 .burger {
     display: none;
-    color:#d3d9dd;
+    color:#EBF0F5;
 }
 
 .navbar {
@@ -643,7 +643,7 @@ footer {
 }
 
 .ovalo {
-    background-color: #d3d9dd;
+    background-color: #EBF0F5;
     height: 36vh;
     border-radius: 50%;
     position: relative;
@@ -714,14 +714,14 @@ section {
 }
 
 footer {
-    background-color: #D3D9DD;
+    background-color: #EBF0F5;
     width: 100vw;
     height: 17vh;
 }
 
 
 .ovalo-footer {
-    background-color: #d3d9dd;
+    background-color: #EBF0F5;
     height: 20vh;
     border-radius: 75%;
     position: relative;
