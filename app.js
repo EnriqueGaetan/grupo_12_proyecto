@@ -20,10 +20,14 @@ app.get('/login', (req, res) => {
 });
 
 app.get('/carritodecompras', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/carritocomprasnav.html'));
+    res.sendFile(path.join(__dirname, './views/carritocompras.html'));
 });
 
 app.get('/detalleproducto', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/detalleproducto.html'));
+    res.sendFile(path.join(__dirname, './views/productdetail.html'));
 });
 
+
+app.get('/detalleproducto', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/productdetail.html'));
+});
