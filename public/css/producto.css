@@ -1,0 +1,45 @@
+body{
+    background-color: rgb(249, 249, 249);
+}
+
+
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    height: 50px;
+    background-color:rgb(204, 204, 204);
+}
+
+
+.titulo {
+    text-align: center;
+}
+
+
+.divBoton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    margin-bottom: 100px;
+}
+
+.divBoton .botonVolver {
+    border: none;
+    border-radius: 14px;
+    padding: 8px;
+}
+
+.detalleProducto {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 200px;
+}
+
+.detalleProducto .contenido {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between  ;
+}
