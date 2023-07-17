@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.cont {
+    background-color: #EBF0F5;
+    padding: 30px;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    text-align: center;
+    margin-top: 2px;
+}
+
+.cont button {
+    border-radius: 20px;
+    padding: 7px 18px;
+    margin-top: 15px;
+}
+
+.cont button:hover {
+    background-color:black;
+    font-size: 15px;
+    color: white;
+}
+
+.cont h1 {
+    font-size: 35px;
+    color: black;
+}
+
+.cont-producto-indiv {
+    display: flex;
+    justify-content: center;
+    border-top: solid 1px black;
+    padding: 25px;  
+    align-items: center;
+}
+
+.primera-fila {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+    width: 250px;
+}
+
+.segunda-tercera-fila{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px 15px 25px;
+    align-items: center;
+    width: 350px;
+}
+
+.cont-producto{
+    background-color: #EBF0F5;
+    margin: 10%;
+}
+
+.titulo-producto {
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.img-producto {
+    height: 5px;
+    width: 5px;
+}
+
+@media (max-width: 600px) {
+
+    .cont-producto-indiv {
+        display: block;
+        justify-content: space-around;
+        padding: 25px;
+        align-items: center;
+    }
+
+    .primera-fila {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .segunda-tercera-fila {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .imagen2 {
+        width: 500px;
+        height: 350px;
+    }
+
+
+
+}
+
+.imagen2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuadrado-sucursales {
+    background-color: #EBF0F5;
+    width: 500px;
+    height: 350px;
+    position: relative;
+    left: 12%;
+    bottom: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    border-radius: 2px;
+    padding-left: 25px;
+}
+
+.cuadrado-sucursales button {
+    padding: 7px 18px;
+    border-radius: 20px;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+}
+
+.cuadrado-sucursales button:hover {
+    font-size: 15px;
+}
+
