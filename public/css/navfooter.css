@@ -16,9 +16,11 @@ body {
 }
 
 header {
-    background-color: #EBF0F5;
+    background-color: #ffffff;
     width: 100vw;
     position: relative;
+    height: 100vh;
+    z-index: 1;
 }
 
 .navbar {
@@ -192,7 +194,7 @@ footer {
 }
 
 .titulo {
-    color: white;
+    color: #2390cf;
     font-size: 13px;
 }
 
@@ -264,9 +266,11 @@ footer {
 
 @media (min-width:361px) {
     header {
-    background-color: #D3D9DD;
+    background-color: #ffffff;
     width: 100vw;
+    height: 100vh;
     position: relative;
+    z-index: 1;
 }
 
 .burger {
@@ -347,7 +351,7 @@ footer {
 .texto-ovalo {
     z-index: 10;
     position: absolute;
-    top: 73px;
+    top: 67px;
     font-size: 29px;
 }
 
@@ -431,7 +435,7 @@ footer {
 }
 
 .titulo {
-    color: white;
+    color: #2390cf;
     font-size: 13px;
 }
 
@@ -504,9 +508,10 @@ footer {
 
 @media (min-width: 769px) {
     header {
-    background-color: #D3D9DD;
+    background-color: #ffffff;
     width: 100vw;
     position: relative;
+    height: 100vh;
 }
 
 .burger {
@@ -515,12 +520,14 @@ footer {
 }
 
 .navbar {
+    position: relative;
     display: inline-flex;
     align-items: center;
     height: 76px;
     flex-direction: row;
     width: 100vw;
     justify-content: space-between;
+    z-index: 10;
     align-content: center;
 }
 
@@ -573,7 +580,7 @@ footer {
     height: 36vh;
     border-radius: 50%;
     position: relative;
-    z-index: -10;
+    z-index: 1;
     bottom: 130px;
     width: 100vw;
 }
@@ -582,27 +589,29 @@ footer {
     display: flex;
     justify-content: center;
     color: #1E1E1E;
+    align-items: center;
+    height: -41px;
 }
 
 .texto-ovalo {
     z-index: 10;
     position: absolute;
-    top: 63px;
+    top: 66px;
     font-size: 29px;
 }
 
 .botones-ovalo {
     display: flex;
-    flex-direction:column;
-    justify-content: center;
+    flex-direction: column;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .absolute-boton {
     z-index: 10;
     position: absolute;
     top: 134px;
-    /* flex-wrap: wrap; */
+  
 }
 
 .boton-uno {
@@ -671,7 +680,7 @@ footer {
 }
 
 .titulo {
-    color: white;
+    color: #2390cf;
     font-size: 13px;
 }
 
@@ -740,5 +749,7 @@ footer {
     margin: 0;
     padding: 0;
 }
+
+   
 }
 

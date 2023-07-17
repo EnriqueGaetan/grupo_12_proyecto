@@ -17,9 +17,11 @@ body {
 }
 
 header {
-    background-color: #EBF0F5;
+    background-color: #FFFFFF;
     width: 100vw;
     position: relative;
+    height: 100vh;
+    z-index: 1;
 }
 
 .navbar {
@@ -86,22 +88,24 @@ header {
     border-radius: 50%;
     position: relative;
     z-index: -10;
-    bottom: 130px;
+    bottom: 121px;
     width: 100vw;
 }
 
 .bienvenido {
     display: flex;
-    justify-content: center;
     color: #1E1E1E;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
 }
 
 .texto-ovalo {
     z-index: 10;
     position: absolute;
-    top: 76px;
+    top: 62px;
     /* margin-left: 43px; */
-    font-size: 26px;
+    font-size: 25px;
 }
 
 .botones-ovalo {
@@ -189,7 +193,7 @@ footer {
 }
 
 .titulo {
-    color: white;
+    color: #2390cf;
     font-size: 13px;
 }
 
@@ -300,9 +304,11 @@ footer {
 
 @media (min-width:361px) {
     header {
-    background-color: #EBF0F5;
-    width: 100vw;
-    position: relative;
+        background-color: #ffffff;
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        z-index: 1;
 }
 
 .burger {
@@ -384,7 +390,7 @@ footer {
 .texto-ovalo {
     z-index: 10;
     position: absolute;
-    top: 73px;
+    top: 67px;
     font-size: 29px;
 }
 
@@ -468,7 +474,7 @@ footer {
 }
 
 .titulo {
-    color: white;
+    color: #2390cf;
     font-size: 13px;
 }
 
@@ -578,9 +584,10 @@ footer {
 
 @media (min-width: 769px) {
     header {
-    background-color: #EBF0F5;
-    width: 100vw;
-    position: relative;
+        background-color: #ffffff;
+        width: 100vw;
+        position: relative;
+        height: 100vh;
 }
 
 .burger {
@@ -589,12 +596,14 @@ footer {
 }
 
 .navbar {
+    position: relative;
     display: inline-flex;
     align-items: center;
     height: 76px;
     flex-direction: row;
     width: 100vw;
     justify-content: space-between;
+    z-index: 10;
     align-content: center;
 }
 
@@ -647,6 +656,7 @@ footer {
     height: 36vh;
     border-radius: 50%;
     position: relative;
+    z-index: 1;
     z-index: -10;
     bottom: 130px;
     width: 100vw;
@@ -657,12 +667,14 @@ footer {
     display: flex;
     justify-content: center;
     color: #1E1E1E;
+    align-items: center;
+    height: -41px;
 }
 
 .texto-ovalo {
     z-index: 10;
     position: absolute;
-    top: 63px;
+    top: 66px;
     font-size: 29px;
 }
 
@@ -687,8 +699,6 @@ footer {
     z-index: 10;
     position: absolute;
     display: flex;
-    /* top: 1px; */
-    /* flex-wrap: wrap; */
     flex-direction: row;
     justify-content: center;
 }
@@ -751,7 +761,7 @@ footer {
 }
 
 .titulo {
-    color: white;
+    color: #2390cf;
     font-size: 13px;
 }
 
@@ -825,6 +835,18 @@ footer {
         position:absolute;
         /* display:inline-flex; */
         top: 13px;
+    }
+
+    .seguir-comprando {
+        background-color: #FFFDFD;
+        padding: 2px 15px;
+        border-width: 0px;
+        border-radius: 35px;
+        height: 20px;
+        margin: 5px;
+        text-align: end;
+        width: 127px;
+        font-size: 13px;
     }
 }
 
