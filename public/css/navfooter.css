@@ -158,7 +158,6 @@ footer {
     background-color: #EBF0F5;
     width: 100vw;
     height: 40vh;
-    /* margin: 0; */
 }
 
 
@@ -247,6 +246,9 @@ footer {
     padding: 2px 12px;
 }
 
+.email:hover {
+    box-shadow: 3px 3px 4px rgb(147 144 144 / 50%); }
+
 .contactanos-boletin {
     font-size: 10px;
     color: #545151;
@@ -264,6 +266,10 @@ footer {
     padding: 0;
 }
 
+.boton-uno:hover, .boton-dos:hover {
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5); }
+      
+    
 @media (min-width:361px) {
     header {
     background-color: #ffffff;
@@ -393,6 +399,10 @@ footer {
     font-size: 13px;
 }
 
+.boton-uno:hover, .boton-dos:hover {
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5); }
+      
+    
 section {
     height: 50vh;
 }
@@ -487,6 +497,9 @@ footer {
     border-width: 1px;
     padding: 2px 12px;
 }
+
+.email:hover {
+    box-shadow: 3px 3px 4px rgb(147 144 144 / 50%); }
 
 .contactanos-boletin {
     font-size: 10px;
@@ -638,6 +651,10 @@ footer {
     font-size: 13px;
 }
 
+.boton-uno:hover, .boton-dos:hover {
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5); }
+      
+    
 section {
     height: 50vh;
 }
@@ -732,6 +749,9 @@ footer {
     border-width: 1px;
     padding: 2px 12px;
 }
+
+.email:hover {
+    box-shadow: 3px 3px 4px rgb(147 144 144 / 50%); }
 
 .contactanos-boletin {
     font-size: 10px;

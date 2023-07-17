@@ -104,8 +104,7 @@ header {
     z-index: 10;
     position: absolute;
     top: 62px;
-    /* margin-left: 43px; */
-    font-size: 25px;
+      font-size: 25px;
 }
 
 .botones-ovalo {
@@ -246,6 +245,8 @@ footer {
     padding: 2px 12px;
 }
 
+.email:hover {
+    box-shadow: 3px 3px 4px rgb(147 144 144 / 50%); }
 .contactanos-boletin {
     font-size: 10px;
     color: #545151;
@@ -274,6 +275,11 @@ footer {
     width: 127px;
     font-size: 13px;
 }
+
+.seguir-comprando:hover {
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5); }
+      
+    
 
 .botones-ovalo {
     display: flex;
@@ -405,7 +411,7 @@ footer {
     z-index: 10;
     position: absolute;
     top: 143px;
-    /* flex-wrap: wrap; */
+    
 }
 
 .boton-uno {
@@ -527,6 +533,9 @@ footer {
     padding: 2px 12px;
 }
 
+.email:hover {
+    box-shadow: 3px 3px 4px rgb(147 144 144 / 50%); }
+
 .contactanos-boletin {
     font-size: 10px;
     color: #545151;
@@ -555,6 +564,9 @@ footer {
     width: 127px;
     font-size: 13px;
 }
+
+.seguir-comprando:hover {
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5); }
 
 .botones-ovalo {
     display: flex;
@@ -717,6 +729,9 @@ footer {
     font-size: 13px;
 }
 
+.seguir-comprando:hover {
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5); }
+
 
 
 section {
@@ -814,6 +829,9 @@ footer {
     padding: 2px 12px;
 }
 
+.email:hover {
+    box-shadow: 3px 3px 4px rgb(147 144 144 / 50%); }
+
 .contactanos-boletin {
     font-size: 10px;
     color: #545151;
@@ -833,21 +851,10 @@ footer {
 
     form {
         position:absolute;
-        /* display:inline-flex; */
-        top: 13px;
+               top: 13px;
     }
 
-    .seguir-comprando {
-        background-color: #FFFDFD;
-        padding: 2px 15px;
-        border-width: 0px;
-        border-radius: 35px;
-        height: 20px;
-        margin: 5px;
-        text-align: end;
-        width: 127px;
-        font-size: 13px;
-    }
+    
 }
 
 
