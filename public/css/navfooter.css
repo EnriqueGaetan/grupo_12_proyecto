@@ -15,6 +15,14 @@ body {
     background-color: #FFFFFF;
 }
 
+main  {
+    height:70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 header {
     background-color: #ffffff;
     width: 100vw;
@@ -26,7 +34,7 @@ header {
 .navbar {
     display: inline-flex;
     align-items: center;
-    height: 76px;
+    height: 56px;
     flex-direction: row;
     width: 100vw;
     justify-content: space-around;
@@ -76,18 +84,17 @@ header {
     height: 1px;
     position: relative;
     z-index: 10;
-    top: -6px;
+    top: -4px;
     width: 100vw;
-
 }
 
 .ovalo {
     background-color: #EBF0F5;
-    height: 36vh;
+    height: 37vh;
     border-radius: 50%;
     position: relative;
     z-index: -10;
-    bottom: 121px;
+    bottom: 133px;
     width: 100vw;
 }
 
@@ -102,24 +109,26 @@ header {
 .texto-ovalo {
     z-index: 10;
     position: absolute;
-    top: 62px;
+    top: 49px;
     /* margin-left: 43px; */
-    font-size: 25px;
+    font-size: 21px;
+    width: 88vw;
 }
 
 
 
 .botones-ovalo {
     display: flex;
-    flex-direction: column;
     width: 100vw;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
 .absolute-boton {
     z-index: 10;
     position: absolute;
-    top: 152px;
+    top: 102px;
     flex-direction: column;
 }
 
@@ -128,12 +137,12 @@ header {
     padding: 2px 12px;
     border-width: 0px;
     border-radius: 35px;
-    height: 20px;
-    margin-left: 114px;
-    margin-bottom: 7px;
+    height: 15px;
+    /* margin-left: 110px; */
+    margin-bottom: 0px;
     text-align: center;
-    width: 115px;
-    font-size: 13px;
+    width: 83px;
+    font-size: 10px;
 }
 
 .boton-dos {
@@ -141,11 +150,11 @@ header {
     padding: 2px 12px;
     border-width: 0px;
     border-radius: 35px;
-    height: 20px;
-    margin-left: 114px;
+    height: 15px;
+    /* margin-left: 110px; */
     text-align: center;
-    width: 115px;
-    font-size: 13px;
+    width: 83px;
+    font-size: 10px;
     /* top: 51px; */
 }
 
@@ -157,54 +166,54 @@ section {
 footer {
     background-color: #EBF0F5;
     width: 100vw;
-    height: 40vh;
+    height: 57vh;
 }
 
 
 .ovalo-footer {
     background-color: #EBF0F5;
-    height: 26vh;
+    height: 23vh;
     border-radius: 50%;
     position: relative;
     z-index: -10;
-    bottom: 303px;
+    bottom: 321px;
     width: 100vw;
 }
 
 .footer-bar {
     display: inline-flex;
     align-items: flex-start;
-    height: 200px;
+    height: 257px;
     flex-direction: column;
     width: 100vw;
+    margin-bottom: 20px;
     align-content: center;
-    margin-bottom: 19px;
 }
 
 .logo-footer {
-    margin-left: 114px;
-    margin-bottom: 12px;
-    width: 130px;
+    margin-left: 97px;
+    margin-bottom: 11px;
+    width: 121px;
 }
 
 .text-ayuda {
-    font-size: 12px;
+    font-size: 10px;
     list-style: none;
 }
 
 .titulo {
     color: #2390cf;
-    font-size: 13px;
+    font-size: 11px;
 }
 
 .compra-segura {
-    font-size: 12px;
+    font-size: 10px;
     list-style: none;
     align-items: center;
 }
 
 .encuentra-sucursal {
-    font-size: 12px;
+    font-size: 10px;
     list-style: none;
 }
 
@@ -214,7 +223,7 @@ footer {
     align-items: center;
     flex-wrap: wrap;
     justify-content: flex-end;
-    margin-bottom: 103px;
+    margin-bottom: 66px;
 }
 
 .body-ustedes {
@@ -224,24 +233,24 @@ footer {
 }
 
 .h3-boletin {
-    margin: 10px;
-    font-size: 22px;
+    margin: 8px;
+    font-size: 18px;
     color: #1E1E1E;
 }
 
 .p-boletin {
     margin: 1px;
-    font-size: 12px;
+    font-size: 10px;
     color: #545151;
 }
 
 .email {
-    margin-top: 10px;
-    margin-bottom:8px;
+    margin-top: 7px;
+    margin-bottom: 3px;
     border-radius: 35px;
-    height: 20px;
-    width: 200px;
-    font-size: 12px;
+    height: 16px;
+    width: 126px;
+    font-size: 9px;
     border-width: 1px;
     padding: 2px 12px;
 }
@@ -260,7 +269,7 @@ footer {
     display: inline-flex;
     flex-direction: row;
     justify-content: space-around;
-    font-size: 14px;
+    font-size: 13px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -270,7 +279,7 @@ footer {
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5); }
       
     
-@media (min-width:361px) {
+@media (min-width:480px) {
     header {
     background-color: #ffffff;
     width: 100vw;
@@ -290,12 +299,12 @@ footer {
     height: 76px;
     flex-direction: row;
     width: 100vw;
-    justify-content: space-between;
     align-content: center;
+    justify-content: space-between;
 }
 
 .logo {
-    margin: -111px;
+    margin: -22px;
 }
 
 .links {
@@ -311,11 +320,12 @@ footer {
 }
 
 .nav-textos {
-    width: 36vw;
+    width: 53vw;
     display: inline-flex;
-    align-items: center;
-    flex-direction: row;
+    font-size: 11px;
     justify-content: space-evenly;
+    flex-direction: row;
+    margin-left: 0;
 }
 
 
@@ -333,9 +343,8 @@ footer {
     height: 1px;
     position: relative;
     z-index: 10;
-    top: -6px;
+    top: -13px;
     width: 100vw;
-
 }
 
 .ovalo {
@@ -344,7 +353,7 @@ footer {
     border-radius: 50%;
     position: relative;
     z-index: -10;
-    bottom: 130px;
+    bottom: 119px;
     width: 100vw;
 }
 
@@ -357,8 +366,9 @@ footer {
 .texto-ovalo {
     z-index: 10;
     position: absolute;
-    top: 67px;
-    font-size: 29px;
+    top: 60px;
+    font-size: 27px;
+    width: 93vw;
 }
 
 .botones-ovalo {
@@ -371,7 +381,7 @@ footer {
 .absolute-boton {
     z-index: 10;
     position: absolute;
-    top: 143px;
+    top: 125px;
     /* flex-wrap: wrap; */
 }
 
@@ -381,10 +391,10 @@ footer {
     border-width: 0px;
     border-radius: 35px;
     height: 20px;
-    margin: 10px;
+    margin: 5px;
     text-align: center;
-    width: 115px;
-    font-size: 13px;
+    width: 118px;
+    font-size: 12px;
 }
 
 .boton-dos {
@@ -393,10 +403,10 @@ footer {
     border-width: 0px;
     border-radius: 35px;
     height: 20px;
-    margin: 10px;
+    margin: 5px;
     text-align: center;
-    width: 115px;
-    font-size: 13px;
+    width: 118px;
+    font-size: 12px;
 }
 
 .boton-uno:hover, .boton-dos:hover {
@@ -426,37 +436,37 @@ footer {
 
 .footer-bar {
     display: inline-flex;
-    align-items: center;
+    align-items: flex-start;
     height: 76px;
     flex-direction: row;
     width: 100vw;
-    justify-content: space-evenly;
     align-content: center;
+    justify-content: space-evenly;
 }
 
 .logo-footer {
-    margin: 25px;
-    width: 13%;
+    margin: 16px;
+    width: 12%;
 }
 
 .text-ayuda {
-    font-size: 12px;
+    font-size: 11px;
     list-style: none;
 }
 
 .titulo {
     color: #2390cf;
-    font-size: 13px;
+    font-size: 11px;
 }
 
 .compra-segura {
-    font-size: 12px;
+    font-size: 11px;
     list-style: none;
     align-items: center;
 }
 
 .encuentra-sucursal {
-    font-size: 12px;
+    font-size: 11px;
     list-style: none;
 }
 
@@ -594,7 +604,7 @@ footer {
     border-radius: 50%;
     position: relative;
     z-index: 1;
-    bottom: 130px;
+    bottom: 109px;
     width: 100vw;
 }
 
@@ -609,8 +619,8 @@ footer {
 .texto-ovalo {
     z-index: 10;
     position: absolute;
-    top: 66px;
-    font-size: 29px;
+    top: 63px;
+    font-size: 28px;
 }
 
 .botones-ovalo {
@@ -623,8 +633,7 @@ footer {
 .absolute-boton {
     z-index: 10;
     position: absolute;
-    top: 134px;
-  
+    top: 132px;
 }
 
 .boton-uno {
@@ -688,7 +697,7 @@ footer {
 
 .logo-footer {
     margin: 25px;
-    width: 13%;
+    width: 10%;
 }
 
 .text-ayuda {
@@ -769,7 +778,12 @@ footer {
     margin: 0;
     padding: 0;
 }
+  
+}
 
-   
+@media (min-width: 1024px) {
+    main {
+      height: 159vh;
+    }
 }
 
