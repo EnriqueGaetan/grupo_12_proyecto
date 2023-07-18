@@ -150,7 +150,7 @@ header {
 }
 
 
-section {
+.body-ustedes {
     height: 50vh;
 }
 
@@ -403,7 +403,7 @@ footer {
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5); }
       
     
-section {
+.body-ustedes {
     height: 50vh;
 }
 
@@ -655,7 +655,7 @@ footer {
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5); }
       
     
-section {
+.body-ustedes {
     height: 50vh;
 }
 
@@ -756,9 +756,7 @@ footer {
 .contactanos-boletin {
     font-size: 10px;
     color: #545151;
- 
 }
-
 .iconos-contacto  {
     width: 23vw;
     display: inline-flex;
@@ -769,7 +767,5 @@ footer {
     margin: 0;
     padding: 0;
 }
-
-   
 }
 

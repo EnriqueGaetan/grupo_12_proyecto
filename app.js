@@ -31,3 +31,7 @@ app.get('/productcart', (req, res) => {
     res.sendFile(path.join(__dirname, './views/productcart.html'));
 });
 
+app.get('/home', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/home.html'));
+});
+
