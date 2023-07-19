@@ -19,3 +19,5 @@ https://www.tersuave.com.ar
 https://www.casablanca.com.ar/ (Estilo)
 
 Elegimos estas web’s por que comparten el rubro que elegimos y nuestro público objetivo. Además, encontramos funcionalidades que son amigables para el usuario final. 
+
+Link tablero de trabajo: https://trello.com/b/arMqM8Z7/pintur-dh
