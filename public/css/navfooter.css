@@ -16,7 +16,7 @@ body {
 }
 
 main  {
-    height:70vh;
+    height:118vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
