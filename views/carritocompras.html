@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de compras</title>
+    <title>PRUEBA carrito de comras</title>
     <script src="../app.js"></script>
+    <link rel="stylesheet" href="/css/navfooter.css">
     <link rel="stylesheet" href="/css/carritocompras.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -29,13 +30,11 @@
                 <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
             </ul>
         </div>
-
         <div class="linea"></div>
-
         <div class="ovalo">
         </div>
         <div class="bienvenido">
-            <h2 class="texto-ovalo">Carrito de compras</h2>
+            <h2 class="texto-ovalo"> Carrito de compras</h2>
         </div>
         <div class="botones-ovalo">
             <div class="absolute-boton">
@@ -45,7 +44,120 @@
             </div>
         </div>
     </header>
+
     <main>
+        <article class="ventana-compra">
+            <h3 class="titulo-h3"> Productos (3)</h3>
+            <div class="producto-1">
+                <img class="producto" src="/images/carrito 1.png" width="100px">
+                <div class="textos">
+
+                    <b></b>
+                    <p class="nombre-producto"> ANTIHONGO</p></b>
+                    <em>
+                        <p class="texto-producto"> Anticondensante. Fácil aplicación.</p>
+                    </em>
+                </div>
+                <div class="boxes">
+                    <select class="color" name="color" id="color">
+                        <option>Blanco</option>
+                        <option>Rojo</option>
+                        <option>Gris</option>
+                    </select>
+                    <div class="cantidad">
+                        <button class="button-masymenos" type="submit">-</button>
+                        <label for="cantidad">1</label>
+                        <button class="button-masymenos" type="submit">+</button>
+                    </div>
+                    <select class="litros" name="litros" id="litros">
+                        <option>20L</option>
+                        <option>5L</option>
+                        <option>10L</option>
+                        <option>1L</option>
+                    </select>
+                    <div>
+                        <button class="basura" type="reset"><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="producto-2">
+                <img class="producto" src="/images/carrito 2.png" width="120px">
+                <div class="textos">
+
+                    <p class="nombre-producto"> CASADECO ROMÁNICO</p>
+                    <em>
+                        <p class="texto-producto"> Interior-Exterior. Textura media.</p>
+                    </em>
+                </div>
+                <div class="boxes">
+                    <select class="color" name="color" id="color">
+                        <option>Gris</option>
+                        <option>Blanco</option>
+                        <option>Rojo</option>
+                    </select>
+                    <div class="cantidad">
+                        <button class="button-masymenos" type="submit">-</button>
+                        <label for="cantidad">2</label>
+                        <button class="button-masymenos" type="submit">+</button>
+                    </div>
+                    <select class="litros" name="litros" id="litros">
+                        <option>4L</option>
+                        <option>5L</option>
+                        <option>10L</option>
+                        <option>20L</option>
+                    </select>
+                    <div>
+                        <button class="basura" type="reset"><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="producto-3">
+                <img class="producto" src="/images/carrito 3.png" width="100px">
+                <div class="textos">
+
+                    <p class="nombre-producto"> PISOS</p>
+                    <em>
+                        <p class="texto-producto"> Antideslizante. Facil aplicación.</p>
+                    </em>
+                </div>
+                <div class="boxes">
+                    <select class="color" name="color" id="color">
+                        <option>Blanco</option>
+                        <option>Rojo</option>
+                        <option>Gris</option>
+                    </select>
+                    <div class="cantidad">
+                        <button class="button-masymenos" type="submit">-</button>
+                        <label for="cantidad">4</label>
+                        <button class="button-masymenos" type="submit">+</button>
+                    </div>
+                    <select class="litros" name="litros" id="litros">
+                        <option>10L</option>
+                        <option>5L</option>
+                        <option>20L</option>
+                        <option>30L</option>
+                    </select>
+                    <div>
+                        <button class="basura" type="reset"><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+
+       
+
+        <article class="box-exterior">
+            <img class="img-sucursal" src="/images/encontrar-sucursal.png" width="100px">
+            <div class="caja-blanca2">
+            <div class="textos-cb">
+                <p class="p-titulo-linea"> Encontrar sucursal </p>
+                <button class="continuar" type="submit"> VER MÁS TIENDAS</button>
+            </div></div>
+        </article>
+
+
         <section class="body-ustedes">
             <div class="boletin">
                 <p class="h3-boletin">Subscribite a nuestro boletín</p>
@@ -62,6 +174,7 @@
         </section>
     </main>
 </body>
+
 <footer>
     <div class="footer-bar">
         <img class="logo-footer" src="/images/LOGO PINTUR.png" width="100px">
