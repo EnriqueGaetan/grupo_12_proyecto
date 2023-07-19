@@ -16,7 +16,6 @@ body {
 }
 
 main  {
-    height:118vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
