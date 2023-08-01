@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/navfooter.css">
+
+        <link rel="stylesheet" href="/css/formulario.css">    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Pintur - Home</title>
+    </head>
+<body>
+
+    <header>
+        <%- include('header') %>
+    </header>    
+    
+
+    <h1>Modificar producto</h1>
+
+
+    <article>
+
+
+    <form action="/modificarProducto" method="post">
+    
+      <label for="producto">Seleccionar producto existente:</label>
+      <select name="producto" required>
+        <option value=""> * Seleccionar producto</option>
+        <option value="producto1">Producto 1</option>
+        <option value="producto2">Producto 2</option>
+        <option value="producto3">Producto 3</option>
+        <option value="producto4">Producto 4</option>
+        <option value="producto5">Producto 5</option>
+      </select>
+      <br>
+
+      <label for="description" class="descripcionProducto">Descripción:</label>
+      <textarea id="description" name="description" required></textarea>
+      <br>
+  
+      <label for="image" class="input-file">Selecionar imagen del producto:</label>
+      <input type="file" id="image" name="image" required>
+      <br>
+  
+      <label for="categoria">Categoría:</label>
+      <select name="categoria" required>
+        <option value=""> * Seleccionar</option>
+        <option value="pinturas">Pinturas</option>
+        <option value="accesorios">Accesorios</option>
+        <option value="otros">Otros</option>
+
+      </select>
+      
+      <br>
+  
+      <label for="color">Colores:</label>
+      <select name="color" required>
+        <option value=""> * Seleccionar</option>
+        <option value="blanco">Blanco</option>
+        <option value="azul">Azul</option>
+        <option value="rojo">Rojo</option>
+        <option value="amarillo">Amarillo</option>
+      </select>
+
+      <br>
+  
+      <label for="price">Precio:</label>
+      <input type="number" id="price" name="price" step="0.01" required>
+      <br>
+  
+      <input class="enviar" type="submit" value="Guardar cambios" >
+    </form>
+
+    </article>
+    
+    <footer>
+        <%- include('footer') %>
+    </footer>
+
+    
+</body>
+</html>

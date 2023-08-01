@@ -2,6 +2,7 @@ const controllers = {
     home: (req, res) => {
         return res.render('home');
     },
+
     registro: (req, res) => {
         return res.render('register');
     },
@@ -16,6 +17,14 @@ const controllers = {
 
     productDetail: (req, res)=>{
         return res.render('productDetail');
+    },
+
+    productAdd: (req, res)=>{
+        return res.render('productAdd');
+    },
+
+    productEdit: (req, res)=>{
+        return res.render('productEdit');
     }
     
 }
