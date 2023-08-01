@@ -12,14 +12,14 @@ body {
 body {
     margin: 0px;
     padding: 0px;
-    background-color: #1E1E1E;
-    ;
+    background-color: #ffffff;
+    
 }
 
 main {
     background-color: #ffffff;
     width: 323px;
-    margin: 14px;
+    margin: 14px auto;
     display: flex;
     flex-direction: column;
     border-radius: 9px;

@@ -238,6 +238,10 @@ header {
     position: relative;
 }
 
+main {
+    height: 164vh;
+    
+}
 .navbar {
     display: inline-flex;
     align-items: center;
@@ -250,7 +254,7 @@ header {
 }
 
 
-.logo {margin-left: 25px;}
+
 
 .burguer {
     font-size:14px;
@@ -317,12 +321,9 @@ header {
 .texto-ovalo {
     z-index: 10;
     position: absolute;
-    top: 62px;
-    /* margin-left: 43px; */
+    top: 75px;   
     font-size: 25px;
 }
-
-
 
 .botones-ovalo {
     display: flex;

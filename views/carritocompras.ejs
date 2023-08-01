@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<%- include('partials/head') %>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRUEBA carrito de comras</title>
+    <title>Pintur - Carrito de compras</title>
     <script src="../app.js"></script>
     <link rel="stylesheet" href="/css/navfooter.css">
     <link rel="stylesheet" href="/css/carritocompras.css">
@@ -14,26 +15,8 @@
 </head>
 
 <body>
-    <header>
-        <div class="navbar">
-            <i class="fa-solid fa-bars burger"></i>
-            <img class="logo" src="/images/LOGO PINTUR.png" width="100px">
-            <ul class="links nav-textos">
-                <li class="uno"><a href="#">Colores</a></li>
-                <li class="dos"><a href="#">Accesorios</a></li>
-                <li class="tres"><a href="#">Catálogo</a></li>
-                <li class="cuatro"><a href="#">Asesoramiento</a></li>
-            </ul>
-            <ul class="links iconos-der">
-                <li><a href="#"> <i class="fa-solid fa-magnifying-glass"></i></a></li>
-                <li><a href="#"><i class="fa-regular fa-user"></i></a></li>
-                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            </ul>
-        </div>
-        <div class="linea"></div>
-        <div class="ovalo">
-        </div>
-        <div class="bienvenido">
+    <%- include('partials/header') %>   
+ <div class="bienvenido">
             <h2 class="texto-ovalo"> Carrito de compras</h2>
         </div>
         <div class="botones-ovalo">
@@ -43,8 +26,6 @@
                     <i class="fa-solid fa-arrow-left flecha"></i>
             </div>
         </div>
-    </header>
-
     <main>
         <article class="ventana-compra">
             <h3 class="titulo-h3"> Productos (3)</h3>
@@ -53,7 +34,7 @@
                 <div class="textos">
 
                     <b></b>
-                    <p class="nombre-producto"> ANTIHONGO</p></b>
+                   <a href="productDetail"> <p class="nombre-producto"> ANTIHONGO</p></b></a>
                     <em>
                         <p class="texto-producto"> Anticondensante. Fácil aplicación.</p>
                     </em>
@@ -176,28 +157,7 @@
 </body>
 
 <footer>
-    <div class="footer-bar">
-        <img class="logo-footer" src="/images/LOGO PINTUR.png" width="100px">
-        <ul class="text-ayuda">
-            <li class="titulo">Ayuda</li>
-            <li>Acerca de nosotros</li>
-            <li>Contactános</li>
-            <li>Whatsapp +5491134567</li>
-        </ul>
-        <ul class="compra-segura">
-            <li class="titulo">Compra 100% segura</li>
-            <li>Nuestro sitio tiene toda </li>
-            <li>la seguridad para tu compra.</li>
-        </ul>
-        <ul class="encuentra-sucursal">
-            <li class="titulo">Encuentra una sucursal</li>
-            <li>Dirección</li>
-            <li>ewwt 3456, Abosdjis</li>
-        </ul>
-
-    </div>
-    <div class="ovalo-footer">
-    </div>
+    <%- include('partials/footer') %>
 </footer>
 
 </html>
