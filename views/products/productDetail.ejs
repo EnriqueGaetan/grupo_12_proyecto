@@ -49,14 +49,14 @@
 
             <div class="opciones-compra">
 
-                <h1>ANTIHONGO</h1>
-                <h2>Anticondensante, Fácil aplicación</h2>
+                <h1> <%=selectedProduct.name %> </h1>
+                <h2> <%=selectedProduct.description %> </h2>
 
                 <div class="opciones-compra-items">
 
                     <select name="color" id="color">
-                        <option>Blanco</option>
-                        <option>Negro</option>
+                        <option><%=selectedProduct.color1 %></option>
+                        <option><%=selectedProduct.color2 %></option>
                     </select>
 
                     <select name="litros" id="litros">

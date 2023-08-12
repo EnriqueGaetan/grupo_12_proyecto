@@ -1,0 +1,55 @@
+[ { "id": 1,
+    "name": "Latex",
+    "description": "Para cielos rasos",
+    "color1": "Blanco",
+    "color2": "Negro",
+    "image":  "productoimagen.png",
+    "category": "Interior", 
+    "price": 2000
+    },
+
+    { "id": 2,
+    "name": "Latex",
+    "description": "Frente - Mate",
+    "color": "Blanco",
+    "image": "productoimagen.png",
+    "category": "Exterior" , 
+    "price": 2000
+    },
+
+    { "id": 3,
+    "name": "Esmalte",
+    "description": "Secado rápido",
+    "color": "gris",
+    "image": "productoimagen.png",
+    "category": "Esmalte", 
+    "price": 2000
+    },
+
+    { "id": 4,
+    "name": "Antioxido",
+    "description": "Preparación de metales, previene y detiene la oxidación.",
+    "color": "-",
+    "image": "productoimagen.png",
+    "category": "Complementos", 
+    "price": 2000
+    },
+
+    { "id": 5,
+    "name": "Lija",
+    "description": "",
+    "color": "-",
+    "image": "productoimagen.png",
+    "category": "Accesorios", 
+    "price": 2000
+    },
+
+    { "id": 6,
+    "name": "Cinta de enmascarar",
+    "description": "",
+    "color": "-",
+    "image": "productoimagen.png",
+    "category": "Accesorios", 
+    "price": 2000
+    }
+]

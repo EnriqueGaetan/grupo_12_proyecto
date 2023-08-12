@@ -1,0 +1,62 @@
+[ {
+    "id": 1,
+    "firstName": "Lucas",
+    "lastName": "Banegas",
+    "email": "lbanegas@dh.com",
+    "password": "123456",
+    "category": "admin",
+    "image": "userimage"
+},
+
+{
+    "id": 2,
+    "firstName": "Rocio",
+    "lastName": "Barrios",
+    "email": "rbarrios@dh.com",
+    "password": "123456",
+    "category": "admin",
+    "image": "userimage"
+},
+
+{
+    "id": 3,
+    "firstName": "Serrana",
+    "lastName": "Soler",
+    "email": "ssoler@dh.com",
+    "password": "123456",
+    "category": "admin",
+    "image": "userimage"
+},
+
+{
+    "id": 4,
+    "firstName": "Enrique",
+    "lastName": "Gaetán",
+    "email": "egaetan@dh.com",
+    "password": "123456",
+    "category": "admin",
+    "image": "userimage"
+},
+
+{
+    "id": 5,
+    "firstName": "Ezequiel",
+    "lastName": "Bonet",
+    "email": "ebonet@dh.com",
+    "password": "123456",
+    "category": "admin",
+    "image": "userimage"
+},
+
+{
+    "id": 6,
+    "firstName": "Ignacio",
+    "lastName": "García",
+    "email": "igarcia@gmail.com",
+    "password": "123456",
+    "category": "client",
+    "image": "userimage"
+}
+
+
+]
