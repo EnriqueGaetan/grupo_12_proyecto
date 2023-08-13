@@ -2,14 +2,19 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-const mainRoutes = require('./routes/mainRoutes');
+const mainRouter = require('./routes/mainRouter');
+const productsRouter = require('./routes/productsRouter');
+const usersRouter = require('./routes/usersRouter');
+
 
 app.set('view engine', 'ejs');
 
 app.use(express.static('./public'));
 
-app.use('/', mainRoutes);
-app.set('view engine','ejs');
+app.use('/', mainRouter);
+app.use('/products', productsRouter);
+app.use('/users', usersRouter);
+
 
 app.set('views', [
     path.join(__dirname, './views/main'),
