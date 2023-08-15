@@ -89,11 +89,11 @@ header {
 
 .ovalo {
     background-color: #EBF0F5;
-    height: 37vh;
+    height: 36vh;
     border-radius: 50%;
     position: relative;
     z-index: -10;
-    bottom: 133px;
+    bottom: 1px;
     width: 100vw;
 }
 
@@ -531,7 +531,7 @@ footer {
 @media (min-width: 769px) {
     header {
     background-color: #ffffff;
-    width: 100vw;
+    /* width: 100vw; */
     position: relative;
     height: 30vh;
 }
@@ -599,7 +599,7 @@ footer {
 
 .ovalo {
     background-color: #EBF0F5;
-    height: 36vh;
+    height: 54vh;
     border-radius: 50%;
     position: relative;
     z-index: 1;
@@ -664,7 +664,7 @@ footer {
       
     
 .body-ustedes {
-    height: 50vh;
+    height: 59vh;
 }
 
 footer {
@@ -676,11 +676,11 @@ footer {
 
 .ovalo-footer {
     background-color: #EBF0F5;
-    height: 20vh;
+    height: 21vh;
     border-radius: 75%;
     position: relative;
     z-index: -10;
-    bottom: 159px;
+    bottom: 139px;
     width: 100vw;
 }
 

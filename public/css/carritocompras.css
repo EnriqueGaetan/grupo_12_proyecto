@@ -1208,7 +1208,7 @@ margin-top: 0px;
     }
 
     .img-sucursal {
-        width: 69vw;
+        width: 119vw;
         height: 35vh;
         margin-left: 135px;
         /* margin-bottom: 25px; */
@@ -1257,6 +1257,7 @@ main {
     margin-bottom: 28px;
     /* margin-left: 42px; */
     margin-top: 37px;
+    justify-content: center;
 }
 
 .img-exterior{
@@ -1291,7 +1292,7 @@ margin-bottom: 14px;
     height: 26vh;
     width: 30vw;
     position: absolute;
-    left: 80px;
+    left: 339px;
     display: inline-flex;
     align-items: center;
  }

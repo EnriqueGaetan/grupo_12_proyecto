@@ -18,6 +18,10 @@ const controllers = {
 
     productEdit: (req, res)=>{
         return res.render('productEdit');
+    },
+
+    products: (req, res)=>{
+        return res.render('products');
     }
     
 }
