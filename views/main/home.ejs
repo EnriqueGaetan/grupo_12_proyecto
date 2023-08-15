@@ -4,78 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRUEBA Home</title>
+    <script src="../app.js"></script>
     <link rel="stylesheet" href="/css/navfooter.css">
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Pintur - Home</title>
 </head>
 
 <body>
     <header>
         <%- include('header') %>
-    </header>
-    <div class="bienvenido">
-        <h2 class="texto-ovalo">¡Bienvenido a tu mundo de colores!</h2>
-    </div>
-    <div class="botones-ovalo">
-        <div class="absolute-boton">
-            <form action="/index" method="POST">
-                <input class="boton-uno" type="text" name="se" id="se" placeholder="Se lo que quiero">
-                <input class="boton-dos" type="text" name="nose" id="nose" placeholder="No estoy seguro">
+        <div class="bienvenido">
+            <h2 class="texto-ovalo">¡Bienvenido a tu mundo de colores!</h2>
         </div>
-    </div>
+        <div class="botones-ovalo">
+            <div class="absolute-boton">
+                <form action="/index" method="POST">
+                    <input class="boton-uno" type="text" name="se" id="se" placeholder="Se lo que quiero">
+                    <input class="boton-dos" type="text" name="nose" id="nose" placeholder="No estoy seguro">
+            </div>
+        </div>
+    </header>
     <main>
-        <section class="contenedor-top-cards">
-            <div class="top-cards">
-                <div class="texto-top-cards1">
-                    <h2>Inspiración</h2>
-                    <button>Ver más ></button>
+        <article class="imagenes-linea">
+            <div class="box-1">
+                <img class="imagen-1" src="/images/Inspiracion.png" width="100px">
+                <div class="texto-1">
+                    <p class="titulos-arriba"> Inspiración </p>
+                    <p class="ver-mas"> Ver más</p>
                 </div>
-                <img src="/images/Inspiracion.png" alt="inspiracion">
-                <div class="texto-top-cards2">
-                    <h2>Consejos</h2>
-                    <button>Ver más ></button>
+                <div class="box-2">
+                    <img class="imagen-2" src="/images/consejos.png" width="100px">
+                    <div class="texto-2">
+                        <p class="titulos-arriba"> Consejos </p>
+                        <p class="ver-mas"> Ver más</p>
+                    </div>
                 </div>
-                <img src="/images/consejos.png" alt="consejos">
-                <div class="texto-top-cards3">
-                    <h2>Productos</h2>
-                    <button>Ver más ></button>
+                <div class="box-3">
+                    <a href="/products/products"> <img class="imagen-3" src="/images/productos.png" width="100px"></a>
+                    <div class="texto-3">
+                        <p class="titulos-arriba"> Productos </p>
+                        <p class="ver-mas"> Ver más</p>
+                    </div>
                 </div>
-                <img src="/images/productos.png" alt="productos">
+        </article>
+
+        <article class="forma">
+            <img class="forma-centro" src="/images/forma1.png" width="100px">
+            <div class="texto-centro">
+                <p class="p1">QUIERO <b>PINTAR</b></p>
+                <p class="p2">QUIERO <b>REPARAR</b></p>
+                <p class="p3">QUIERO <b>IMPERMEABILIZAR</b></p>
+                <p class="p4">QUIERO <b>REVESTIR</b></p>
             </div>
-        </section>
-        <section class="contenedor-middle-bar">
-            <div class="middle-bar">
-                <ul>
-                    <li>Quiero Pintar</li>
-                    <li>Quiero Reparar</li>
-                    <li>Quiero Impermeabilizar</li>
-                    <li>Quiero Revestir</li>
-                </ul>
-            </div>
-        </section>
-        <section class="contenedor-big-card">
-            <div class="big-card1">
-                <img src="/images/linea-interior.png" alt="img-linea-interior">
-                <div class="big-card1-texto">
-                    <h2>Linea Interior</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis cumque, libero at excepturi optio
-                        voluptatibus reiciendis, doloremque consequatur praesentium quos facere eos.</p>
-                    <button class="big-card-button">VER MAS</button>
-                </div>
-            </div>
-            <div class="big-card2">
-                <img src="/images/linea-exterior.png" alt="img-linea-exterior">
-                <div class="big-card2-texto">
-                    <h2>Linea Exterior</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis cumque, libero at excepturi optio
-                        voluptatibus reiciendis, doloremque consequatur praesentium quos facere eos.</p>
-                    <button class="big-card-button">VER MAS</button>
-                </div>
-            </div>
-        </section>
+        </article>
+
+        <article class="box-interior">
+            <img class="img-interior" src="/images/linea-interior.png" width="100px">
+            <div class="caja-blanca1">
+            <div class="textos-cb">
+                <p class="p-titulo-linea"> Línea Interior </p>
+                <p class="p-lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dignissimos itaque esse nostrum molestias aliquid fugit modi earum aspernatur,
+                    doloribus harum culpa eos commodi vel nam repudiandae beatae nisi labore dolorem?</p>
+                <p class="ver-mas2"> Ver más</p>
+            </div></div>
+        </article>
+
+        <article class="box-exterior">
+            <img class="img-exterior" src="/images/linea-exterior.png" width="100px">
+            <div class="caja-blanca2">
+            <div class="textos-cb">
+                <p class="p-titulo-linea"> Línea Exterior </p>
+                <p class="p-lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dignissimos itaque esse nostrum molestias aliquid fugit modi earum aspernatur,
+                    doloribus harum culpa eos commodi vel nam repudiandae beatae nisi labore dolorem?</p>
+                <p class="ver-mas2"> Ver más</p>
+            </div></div>
+        </article>
+
         <section class="body-ustedes">
             <div class="boletin">
                 <p class="h3-boletin">Subscribite a nuestro boletín</p>
@@ -90,6 +99,7 @@
                 </ul>
             </div>
         </section>
+
     </main>
 </body>
 

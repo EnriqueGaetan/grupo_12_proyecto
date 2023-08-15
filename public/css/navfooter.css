@@ -599,7 +599,7 @@ footer {
 
 .ovalo {
     background-color: #EBF0F5;
-    height: 54vh;
+    height: 36vh;
     border-radius: 50%;
     position: relative;
     z-index: 1;
@@ -670,17 +670,17 @@ footer {
 footer {
     background-color: #EBF0F5;
     width: 100vw;
-    height: 22vh;
+    height: 17vh;
 }
 
 
 .ovalo-footer {
     background-color: #EBF0F5;
-    height: 21vh;
+    height: 20vh;
     border-radius: 75%;
     position: relative;
     z-index: -10;
-    bottom: 139px;
+    bottom: 165px;
     width: 100vw;
 }
 
