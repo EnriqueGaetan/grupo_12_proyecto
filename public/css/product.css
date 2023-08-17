@@ -30,6 +30,9 @@
         display: grid;
     }
 
+
+
+
     .info-principal-titulo {
         display: flex;
         justify-content: center;
@@ -108,12 +111,11 @@ img {
 .opciones-producto a {
     margin-top: 11px;
     display: flex;
-    gap: 10px
+    color: red;
 }
 
 
 .img-producto p {
-    padding-inline: 5px;
     width: auto;
     font-size: 14px;
 }
@@ -169,7 +171,6 @@ button {
 
 .fav-sucursal {
     display: flex;
-    display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -186,6 +187,22 @@ button {
 
 }
 
+.editar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C83838;
+    color: white;
+    border-radius: 15px;
+    width: 160px;
+    height: 25px;
+    text-decoration: none;
+    
+}
+.editar:hover {
+    background-color: #b23535;
+
+}
 
 
 

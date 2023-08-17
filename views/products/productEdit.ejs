@@ -1,86 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/navfooter.css">
 
-        <link rel="stylesheet" href="/css/formulario.css">    
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <title>Pintur - Home</title>
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/navfooter.css">
+
+  <link rel="stylesheet" href="/css/formulario.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Pintur - Home</title>
+</head>
+
 <body>
 
-    <header>
-        <%- include('header') %>
+  <header>
+    <%- include('header') %>
 
-            </header>    
-    
-
-    <h1>Modificar producto</h1>
+  </header>
 
 
-    <article>
+  <h1>Modificar producto</h1>
+  <br>
+  <h2>Nombre actual: <%= product.name %></h2>
+  <h2>N° de producto: <%= product.id %> </h2>
 
 
-    <form action="/modificarProducto" method="post">
-    
-      <label for="producto">Seleccionar producto existente:</label>
-      <select name="producto" required>
-        <option value=""> * Seleccionar producto</option>
-        <option value="producto1">Producto 1</option>
-        <option value="producto2">Producto 2</option>
-        <option value="producto3">Producto 3</option>
-        <option value="producto4">Producto 4</option>
-        <option value="producto5">Producto 5</option>
-      </select>
+  <article>
+
+
+    <form action="/products/<%= product.id %>/edit?_method=PUT" method="post" enctype="multipart/form-data">
+  
+
+
+      <label for="name">Nombre del producto:</label>
+      <input type="text" id="name" name="name" required>
       <br>
-
+  
       <label for="description" class="descripcionProducto">Descripción:</label>
       <textarea id="description" name="description" required></textarea>
       <br>
   
       <label for="image" class="input-file">Selecionar imagen del producto:</label>
-      <input type="file" id="image" name="image" required>
+      <input type="file" id="image" name="img" multiple>
+
       <br>
   
       <label for="categoria">Categoría:</label>
-      <select name="categoria" required>
+      <select name="category" required>
         <option value=""> * Seleccionar</option>
-        <option value="pinturas">Pinturas</option>
-        <option value="accesorios">Accesorios</option>
-        <option value="otros">Otros</option>
+        <option value="interior">Interior</option>
+        <option value="exterior">Exterior</option>
+        <option value="complementos">Complementos</option>
 
       </select>
       
       <br>
   
-      <label for="color">Colores:</label>
-      <select name="color" required>
-        <option value=""> * Seleccionar</option>
-        <option value="blanco">Blanco</option>
-        <option value="azul">Azul</option>
-        <option value="rojo">Rojo</option>
-        <option value="amarillo">Amarillo</option>
-      </select>
+      <label for="color">Color:</label>
+      <input type="text" id="color" name="color" required>
+
 
       <br>
   
+      <label for="price">Opciones - Litros/Tamaño/Etc</label>
+      <input type="text" id="options" name="options" required>
+      <br>
+
       <label for="price">Precio:</label>
       <input type="number" id="price" name="price" step="0.01" required>
       <br>
   
-      <input class="enviar" type="submit" value="Guardar cambios" >
+
+      <input class="enviar" type="submit" value="Guardar cambios">
+   
     </form>
 
-    </article>
-    
-    <footer>
-        <%- include('footer') %>
-    </footer>
+    <form action="/products/<%= product.id%>/delete?_method=DELETE" method="POST">
+      <button class="borrar" type="submit">Borrar</button>
+    </form>
 
-    
+    <br>
+
+
+
+  </article>
+
+  <footer>
+    <%- include('footer') %>
+  </footer>
+
+
 </body>
+
 </html>

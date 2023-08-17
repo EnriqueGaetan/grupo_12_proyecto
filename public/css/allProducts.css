@@ -24,6 +24,14 @@ body {
 
 }
 
+.foreachproducts {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+
 .caja-articulos {
     /* border: 1px solid #ebebeb; */
     padding: 15px;
@@ -209,7 +217,7 @@ body {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-
+        margin: 15px;
     }
 
     .products2 {
@@ -893,7 +901,9 @@ body {
     }
 
     main {
-        height: 189vh;
+       /* height: 189vh;  EDITADO LUCAS*/
+
+        height: 100%;
     }
 
     .block {

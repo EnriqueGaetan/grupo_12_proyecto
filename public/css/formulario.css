@@ -9,12 +9,18 @@ h1 {
 
 }
 
+h2 {
+    text-align: center;
+    font-size: 15px;
+}
+
 article {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 60px;
     padding-bottom: 100px;
+    flex-direction: column
   }
 
 
@@ -69,9 +75,27 @@ input[type="file"] {
     border-width: 0px;
     color: #ffffff;
     background-color: #C83838;
+    padding: 10px;
+
 }
 
+.borrar {
+    margin-top: 15px;
+    border-radius: 17px;
+    font-size: 14px;
+    border-width: 0px;
+    color: #ffffff;
+    background-color: #C83838;
+    padding: 10px;
+}
+
+
+
 .enviar:hover {
+    background-color: #b23535;
+}
+
+.borrar:hover {
     background-color: #b23535;
 }
 

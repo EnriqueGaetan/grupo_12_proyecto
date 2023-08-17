@@ -29,41 +29,42 @@
             </div>
         </div>
     </div>
-    <main>
+
+
+        
     <section>
+
+        
         <div class="container">
             <div class="img-producto">
-
-                <img src="/images/carrito 1.png" alt="">
-
-                <div class="opciones-producto">
-                    <a href="">Descripción</a>
-                    <br>
-                    <a href="">Detalles</a>
-                    <br>
-                    <a href="">Reseñas</a>
-
+                <div >
+                    <a class="editar" href="/products/<%=selectedProduct.id %>/edit">Editar producto</a>
                 </div>
+
+
+                <img src="/images/<%=selectedProduct.img%>" width="500px">
+                
+
+
+
+                
             </div>
 
 
             <div class="opciones-compra">
 
                 <h1> <%=selectedProduct.name %> </h1>
-                <h2> <%=selectedProduct.description %> </h2>
+                <h1> $ <%=selectedProduct.price %> </h1>
+                <br>
 
                 <div class="opciones-compra-items">
 
                     <select name="color" id="color">
-                        <option><%=selectedProduct.color1 %></option>
-                        <option><%=selectedProduct.color2 %></option>
+                        <option><%=selectedProduct.color%></option>
                     </select>
 
                     <select name="litros" id="litros">
-                        <option>1L</option>
-                        <option>5L</option>
-                        <option>10L</option>
-                        <option>20L</option>
+                        <option><%=selectedProduct.options%></option>
                     </select>
 
                     <div class="cantidad">
@@ -134,27 +135,11 @@
 
             <div class="info-general"></div>
             <div class="linea-int-ext">
-                <h2>Línea interior</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid suscipit laudantium quos sit
-                    accusamus
-                    minus vero consectetur temporibus culpa magni ea quaerat praesentium, obcaecati, hic illum
-                    veritatis.
-                    Quos, fuga optio!</p>
+                <h2>Descripción del producto</h2>
+                <p> <%=selectedProduct.description %></p>
             </div>
-            <div class="aplicacion">
-                <h2>Cómo aplicar</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid suscipit laudantium quos sit
-                    accusamus
-                    minus vero consectetur temporibus</p>
-            </div>
-            <div class="extra">
-                <h2>Salud y seguridad</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque debitis maxime, quasi eius ea ipsum
-                    cum
-                    dignissimos, aperiam aut eveniet iusto itaque! Voluptates, dolorem perspiciatis. Aperiam
-                    reprehenderit
-                    consequuntur perferendis assumenda.</p>
-            </div>
+
+
         </div>
 
 

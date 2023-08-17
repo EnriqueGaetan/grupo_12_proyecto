@@ -1,17 +1,45 @@
-const express = require('express');
-const router = express.Router();
+    const express = require('express');
+    const productsController = require('../controllers/productsController');
+    const multer = require('multer');
 
-const productsController= require ( '../controllers/productsController')
+    const router = express.Router();
 
 
-router.get('/carritocompras', productsController.carritocompras);
+    const storage = multer.diskStorage({
+        destination: (req, file, cb) => {
+            cb(null, './public/images/');
+        },
+        filename: (req, file, cb) => {
+            cb(null, Date.now() + '-' + file.originalname);
+        }
+    });
 
-router.get('/:id/productDetail', productsController.productDetail);
+    const upload = multer({ storage: storage });
 
-router.get('/create', productsController.productCreate);
+    // Todos los productos /products
+    router.get('/', productsController.products);
 
-router.get('/productEdit', productsController.productEdit);
+    // Carrito de compras /products/carritocompras
+    router.get('/productCart', productsController.productCart);
 
-router.get('/products', productsController.products);
+    // Detalle de producto products/2/productDetail
+    router.get('/:id/productDetail', productsController.productDetail);
 
-module.exports = router;
+    // Crear producto - GET / POST
+    router.get('/create', productsController.create);
+    router.post('/',  upload.any('img'), productsController.createProduct);
+
+    // Borrar producto - DELETE
+    router.delete('/:id/delete', productsController.deleteProduct);
+    
+    
+    // Editar producto - GET / PUT
+    router.get('/:id/edit', productsController.editProduct);
+    router.put('/:id/edit',upload.any('img'), productsController.updateProduct);
+
+
+
+
+
+
+    module.exports = router;

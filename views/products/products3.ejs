@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <script src="../app.js"></script>
+    <link rel="stylesheet" href="/css/navfooter.css">
+    <link rel="stylesheet" href="/css/allProducts.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <%- include('header') %>   
+        <div class="bienvenido">
+            <h2 class="texto-ovalo"> Nuestros productos</h2>
+        </div>
+        <div class="botones-ovalo">
+            <div class="absolute-boton">
+                <form action="/carritocompras" method="POST">
+                    <a href="/"> <input class="seguir-comprando" type="text" name="se" id="se" placeholder="Volver"> </a>
+                    <i class="fa-solid fa-arrow-left flecha"></i>
+            </div>
+        </div>
+    </header>
+    <main>
+<br>
+
+<div class="foreachproducts">
+        <% products.forEach(products => { %>
+
+        <section class="products">
+
+            <article class="product-wrapper">
+                <div class="producto">
+                        <a href="/products/<%= products.id%>/productDetail"><img src="/images/<%=products.img%>" class="imagen-productos"></a>
+                    <div class="caja-articulos">
+
+                        <div class="descripciones">
+                            <p> <%=products.name %></p>
+                        </div>
+
+                        <i class="fa-solid fa-check check"></i>
+                        <div class="datos">
+                            <p>Fácil aplicación</p>
+                        </div>
+                        <br>
+
+                        
+                        <i class="fa-solid fa-check check"></i>
+                        <div class="datos">
+                            <p>Rápido secado</p>
+                        </div>
+                        <br>
+                        <i class="fa-solid fa-location-dot location"></i>
+                        <div class="datoTienda">
+                            <p>Sólo disponible en tienda</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </article>
+
+        </section>
+        <% }) %>
+
+    </div>
+
+
+
+<section>
+        <section class="body-ustedes">
+            <div class="boletin">
+                <p class="h3-boletin">Subscribite a nuestro boletín</p>
+                <p class="p-boletin">Descubrí ideas y tendencias de decoración</p>
+                <p class="p-boletin">en nuestro nuevo boletín mensual</p>
+                <input class="email" type="email" name="email" id="email" placeholder="Dirección de correo electrónico">
+                <p class="contactanos-boletin">Contactános</p>
+                <ul class="iconos-contacto">
+                    <li class="facebook"><a href="#"> <i class="fa-brands fa-facebook-f"></i></i></a></li>
+                    <li class="twitter"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li class="instagram"><a href="#"><i class="fa-brands fa-instagram"></i></i></a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+
+<footer>
+    <%- include('footer') %>
+</footer>
+
+</html>
