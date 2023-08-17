@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
+    <title>Pintur - Productos</title>
     <script src="../app.js"></script>
     <link rel="stylesheet" href="/css/navfooter.css">
     <link rel="stylesheet" href="/css/allProducts.css">
@@ -29,15 +29,19 @@
         </div>
     </header>
     <main>
-        <p class="titulo-h3">Productos línea interior</p>
+<br>
+
+<div class="foreachproducts">
+        <% products.forEach(products => { %>
+
         <section class="products">
             <article class="product-wrapper">
                 <div class="producto">
-                    <a href="/products/productDetail"><img src="/images/cielosrasos.png" class="imagen-productos"></a>
+                        <a href="/products/<%= products.id%>/productDetail"><img src="/images/<%=products.img%>" class="imagen-productos"></a>
                     <div class="caja-articulos">
 
                         <div class="descripciones">
-                            <p>Cielos Rasos</p>
+                            <p> <%=products.name %></p>
                         </div>
 
                         <i class="fa-solid fa-check check"></i>
@@ -59,209 +63,17 @@
 
                     </div>
                 </div>
+
             </article>
 
-            <article class="product-wrapper">
-                <div class="producto">
-                    <img src="/images/enduidoInterior.png" class="imagen-productos">
-                    <div class="caja-articulos">
-
-                        <div class="descripciones">
-                            <p>Enduido Interior</p>
-                        </div>
-
-                        <i class="fa-solid fa-check check"></i>
-                        <div class="datos">
-                            <p>Fácil aplicación</p>
-                        </div>
-                        <br>
-                        <i class="fa-solid fa-check check"></i>
-                        <div class="datos">
-                            <p>Cubre imperfecciones</p>
-                        </div>
-                        <br>
-                        <i class="fa-solid fa-location-dot location"></i>
-                        <div class="datoTienda">
-                            <p>Sólo disponible en tienda</p>
-                        </div>
-
-                    </div>
-                </div>
-            </article>
-
-            <article class="product-wrapper">
-                <div class="producto">
-                    <img src="/images/bañosycocinas.png" class="imagen-productos">
-                    <div class="caja-articulos">
-
-                        <div class="descripciones">
-                            <p>Baños & Cocinas</p>
-                        </div>
-
-                        <i class="fa-solid fa-check check"></i>
-                        <div class="datos">
-                            <p>Fácil aplicación</p>
-                        </div>
-                        <br>
-                        <i class="fa-solid fa-check check"></i>
-                        <div class="datos">
-                            <p>Cubre imperfecciones</p>
-                        </div>
-                        <br>
-                        <i class="fa-solid fa-location-dot location"></i>
-                        <div class="datoTienda">
-                            <p>Sólo disponible en tienda</p>
-                        </div>
-
-                    </div>
-                </div>
-            </article>
-
-            <article class="product-wrapper">
-                <div class="producto">
-                    <img src="/images/pizarrones.png" class="imagen-productos">
-                    <div class="caja-articulos">
-                        <div class="descripciones">
-                            <p>Pizarrones</p>
-                        </div>
-
-                        <i class="fa-solid fa-check check"></i>
-                        <div class="datos">
-                            <p>Fácil aplicación</p>
-                        </div>
-                        <br>
-                        <i class="fa-solid fa-check check"></i>
-                        <div class="datos">
-                            <p>Cubre imperfecciones</p>
-                        </div>
-                        <br>
-                        <i class="fa-solid fa-location-dot location"></i>
-                        <div class="datoTienda">
-                            <p>Sólo disponible en tienda</p>
-                        </div>
-
-                    </div>
-                </div>
-            </article>
         </section>
-        
-        <p class="titulo-h3">Productos línea exterior</p>
-    
-        <section class="products2">
-            <article class="product-wrapper">
-                <div class="producto">
-                    <img src="/images/piletas.png" class="imagen-productos">
-                    <div class="caja-articulos">
-                        <div class="descripciones">
-                            <p>Piletas Caucho Clorado</p>
-                        </div>
+        <% }) %>
 
-                        <i class="fa-solid fa-check check"></i>
-                        <div class="datos">
-                            <p>Fácil aplicación</p>
-                        </div>
-                        <br>
-                        <i class="fa-solid fa-check check"></i>
-                        <div class="datos">
-                            <p>Cubre imperfecciones</p>
-                        </div>
-                        <br>
-                        <i class="fa-solid fa-location-dot location"></i>
-                        <div class="datoTienda">
-                            <p>Sólo disponible en tienda</p>
-                        </div>
-
-                    </div>
-                </div>
-            </article>
-
-            <article class="product-wrapper">
-                <div class="producto">
-                    <img src="/images/enduidoExterior.png" class="imagen-productos">
-                    <div class="caja-articulos">
-
-                        <div class="descripciones">
-                            <p>Enduido Exterior</p>
-                        </div>
-
-                        <i class="fa-solid fa-check check"></i>
-                        <div class="datos">
-                            <p>Fácil aplicación</p>
-                        </div>
-                        <br>
-                        <i class="fa-solid fa-check check"></i>
-                        <div class="datos">
-                            <p>Cubre imperfecciones</p>
-                        </div>
-                        <br>
-                        <i class="fa-solid fa-location-dot location"></i>
-                        <div class="datoTienda">
-                            <p>Sólo disponible en tienda</p>
-                        </div>
-
-                    </div>
-                </div>
-            </article>
-
-            <article class="product-wrapper">
-                <div class="producto">
-                    <img src="/images/proteccionextrema.png" class="imagen-productos">
-                    <div class="caja-articulos">
-
-                        <div class="descripciones">
-                            <p>Protección Extrema</p>
-                        </div>
-
-                        <i class="fa-solid fa-check check"></i>
-                        <div class="datos">
-                            <p>Fácil aplicación</p>
-                        </div>
-                        <br>
-                        <i class="fa-solid fa-check check"></i>
-                        <div class="datos">
-                            <p>Cubre imperfecciones</p>
-                        </div>
-                        <br>
-                        <i class="fa-solid fa-location-dot location"></i>
-                        <div class="datoTienda">
-                            <p>Sólo disponible en tienda</p>
-                        </div>
-
-                    </div>
-                </div>
-            </article>
-
-            <article class="product-wrapper">
-                <div class="producto">
-                    <img src="/images/techos.png" class="imagen-productos">
-                    <div class="caja-articulos">
-                        <div class="descripciones">
-                            <p>Techos</p>
-                        </div>
-
-                        <i class="fa-solid fa-check check"></i>
-                        <div class="datos">
-                            <p>Fácil aplicación</p>
-                        </div>
-                        <br>
-                        <i class="fa-solid fa-check check"></i>
-                        <div class="datos">
-                            <p>Cubre imperfecciones</p>
-                        </div>
-                        <br>
-                        <i class="fa-solid fa-location-dot location"></i>
-                        <div class="datoTienda">
-                            <p>Sólo disponible en tienda</p>
-                        </div>
-
-                    </div>
-                </div>
-            </article>
-        </section>
+    </div>
 
 
 
-
+<section>
         <section class="body-ustedes">
             <div class="boletin">
                 <p class="h3-boletin">Subscribite a nuestro boletín</p>
