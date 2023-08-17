@@ -3,7 +3,7 @@
 
 * {
     font-family: 'Outfit', sans-serif;
-    color: #1E1E1E; 
+    /* color: #1E1E1E; */
     font-size: 12px;
 }
 
@@ -88,10 +88,9 @@
 .container {
     /* border: 1px solid black; */
     display: grid;
-
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    margin-top: -80px;
+    gap: 0px 60px;
+    /* grid-auto-flow: row; */
+    margin-top: 41px;
 }
 
 img {
@@ -123,8 +122,7 @@ img {
 
 .opciones-compra {
     grid-area: 1 / 3 / 3 / 5;
-
-
+    /* height: 114vh; */
 }
 
 
@@ -132,8 +130,7 @@ img {
 .opciones-compra-items {
     display: flex;
     flex-direction: column;
-    max-width: 90%;
-
+    max-width: 70%;
 }
 
 .opciones-compra select, input, button {
@@ -220,9 +217,8 @@ button {
 
 .linea-int-ext {
     grid-area: 3 / 3 / 4 / 5;
-    width: 90%;
+    width: 70%;
     margin-top: 10px;
-
 }
 
 .aplicacion {
@@ -257,7 +253,6 @@ header {
 
 main {
     height: 164vh;
-    
 }
 .navbar {
     display: inline-flex;
@@ -383,9 +378,7 @@ main {
 }
 
 
-section {
-    height: 50vh;
-}
+
 
 footer {
     background-color: #EBF0F5;
@@ -759,10 +752,36 @@ footer {
         background-color: #ffffff;
         width: 100vw;
         position: relative;
-        height: 10vh;
-        z-index: 2;
+        height: 30vh;
 }
 
+      .seguir-comprando {
+        background-color: #FFFDFD;
+        padding: 2px 15px;
+        border-width: 0px;
+        border-radius: 35px;
+        height: 20px;
+        margin: 5px;
+        text-align: end;
+        width: 58px;
+        font-size: 13px;
+    }
+
+    .seguir-comprando:hover {
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .flecha {
+        position: absolute;
+        color: #191919;
+        width: 20px;
+        height: 12px;
+        left: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 14px;
+    }
+    
 .burger {
     display: none;
     color: #EBF0F5;
@@ -826,11 +845,11 @@ footer {
 
 .ovalo {
     background-color: #EBF0F5;
-    height: 35vh;
-    border-radius: 75%;
+    height: 36vh;
+    border-radius: 50%;
     position: relative;
     z-index: 1;
-    bottom: 130px;
+    bottom: 109px;
     width: 100vw;
 }
 
@@ -845,8 +864,8 @@ footer {
 .texto-ovalo {
     z-index: 10;
     position: absolute;
-    top: 114px;
-    font-size: 28px;
+    top: 66px;
+    font-size: 29px;
 }
 
 .botones-ovalo {
@@ -859,7 +878,7 @@ footer {
 .absolute-boton {
     z-index: 10;
     position: absolute;
-    top: 175px;
+    top: 134px;
 }
 
 .boton-uno {
@@ -891,13 +910,13 @@ footer {
       
     
 .body-ustedes {
-    height: 50vh;
+    height: 46vh;
 }
 
 footer {
     background-color: #EBF0F5;
     width: 100vw;
-    height: 22vh;
+    height: 17vh;
 }
 
 
@@ -907,7 +926,7 @@ footer {
     border-radius: 75%;
     position: relative;
     z-index: -10;
-    bottom: 159px;
+    bottom: 165px;
     width: 100vw;
 }
 
@@ -952,14 +971,14 @@ footer {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    margin-bottom: 92px;
+    margin-bottom: 99px;
 }
 
 .body-ustedes {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    align-content: flex-start;
 }
 
 .h3-boletin {
@@ -1018,7 +1037,34 @@ footer {
 
 @media (min-width: 1024px) {
     main {
-      height: 159vh;
+      height: 100%;
+    }
+
+      .seguir-comprando {
+        background-color: #FFFDFD;
+        padding: 2px 15px;
+        border-width: 0px;
+        border-radius: 35px;
+        height: 20px;
+        margin: 5px;
+        text-align: end;
+        width: 58px;
+        font-size: 13px;
+    }
+
+    .seguir-comprando:hover {
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .flecha {
+        position: absolute;
+        color: #191919;
+        width: 20px;
+        height: 12px;
+        left: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 14px;
     }
 }
 

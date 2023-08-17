@@ -5,163 +5,172 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pintur - Detalle de producto</title>
     <script src="../app.js"></script>
+    <link rel="stylesheet" href="/css/navfooter.css">
     <link rel="stylesheet" href="/css/product.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
-
-    <title>Pintur - Detalle de producto</title>
 </head>
 
 <body>
- 
+    <header>
         <%- include('header') %>
-  
-    <div class="ovalo">
-        <div class="bienvenido">
-            <h2 class="texto-ovalo"> Cielos Rasos</h2>
-        </div>
-        <div class="botones-ovalo">
-            <div class="absolute-boton">
-                <form action="/productDetail" method="POST">
-                    <input class="seguir-comprando" type="text" name="se" id="se" placeholder="Seguir comprando">
-                    <i class="fa-solid fa-arrow-left flecha"></i>
+            <div class="bienvenido">
+                <h2 class="texto-ovalo"> Cielos Rasos</h2>
             </div>
-        </div>
-    </div>
-
-
-        
-    <section>
-
-        
-        <div class="container">
-            <div class="img-producto">
-                <div >
-                    <a class="editar" href="/products/<%=selectedProduct.id %>/edit">Editar producto</a>
-                </div>
-
-
-                <img src="/images/<%=selectedProduct.img%>" width="500px">
-                
-
-
-
+            <div class="botones-ovalo">
+                <div class="absolute-boton">
+                    <form action="/productDetail" method="POST">
+                        <a href="/"> <input class="seguir-comprando" type="text" name="se" id="se" placeholder="Volver"> </a>
+                        <i class="fa-solid fa-arrow-left flecha"></i>
+                </div>               
                 
             </div>
+        </header>
+        <main>
+            <section>
 
 
-            <div class="opciones-compra">
-
-                <h1> <%=selectedProduct.name %> </h1>
-                <h1> $ <%=selectedProduct.price %> </h1>
-                <br>
-
-                <div class="opciones-compra-items">
-
-                    <select name="color" id="color">
-                        <option><%=selectedProduct.color%></option>
-                    </select>
-
-                    <select name="litros" id="litros">
-                        <option><%=selectedProduct.options%></option>
-                    </select>
-
-                    <div class="cantidad">
-
+                <div class="container">
+                    <div class="img-producto">
                         <div>
-                            <label for="cantidad">Cantidad</label>
-                            <input type="number" id="cantidad" name="cantidad" min="1" max="10" placeholder="- 1 +">
+                            <a class="editar" href="/products/<%=selectedProduct.id %>/edit">Editar producto</a>
                         </div>
 
-                        <div>
 
-                            <label for="cantidad">Calculadora de pintura</label>
-                            <input type="number" id="cantidad" name="cantidad" min="1" max="10" placeholder="Calcular">
+                        <img src="/images/<%=selectedProduct.img%>" width="500px">
+
+
+
+
+
+                    </div>
+
+
+                    <div class="opciones-compra">
+
+                        <h1>
+                            <%=selectedProduct.name %>
+                        </h1>
+                        <h1> $ <%=selectedProduct.price %>
+                        </h1>
+                        <br>
+
+                        <div class="opciones-compra-items">
+
+                            <select name="color" id="color">
+                                <option>
+                                    <%=selectedProduct.color%>
+                                </option>
+                            </select>
+
+                            <select name="litros" id="litros">
+                                <option>
+                                    <%=selectedProduct.options%>
+                                </option>
+                            </select>
+
+                            <div class="cantidad">
+
+                                <div>
+                                    <label for="cantidad">Cantidad</label>
+                                    <input type="number" id="cantidad" name="cantidad" min="1" max="10"
+                                        placeholder="- 1 +">
+                                </div>
+
+                                <div>
+
+                                    <label for="cantidad">Calculadora de pintura</label>
+                                    <input type="number" id="cantidad" name="cantidad" min="1" max="10"
+                                        placeholder="Calcular">
+                                </div>
+                            </div>
+
+                            <button>Agregar al carrito</button>
+
+                            <div class="fav-sucursal">
+                                <i class="fa-regular fa-heart"></i>
+                                <p>Favoritos</p>
+                                <i class="fa-solid fa-location-dot"> </i>
+                                <p>Encontrar una sucursal</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="info-principal">
+                        <p class="info-principal-titulo">Información principal</p>
+
+                        <div>
+                            <ul>
+                                <li>Acabado:
+                                    <ul>
+                                        <li>Mate</li>
+                                    </ul>
+                                </li>
+                                <li>Cobertura:
+                                    <ul>
+                                        <li>10 a 12 m2 por litro</li>
+                                    </ul>
+                                </li>
+                                <li>Tiempo de secado:
+                                    <ul>
+                                        <li>2 horas</li>
+                                    </ul>
+                                </li>
+                                <li>Capas:
+                                    <ul>
+                                        <li>2</li>
+                                    </ul>
+                                </li>
+                                <h3>Características del producto</h3>
+                                <li>Fácil aplicación</li>
+                                <li>Antihongos</li>
+                                <li>Rápido secado</li>
+                            </ul>
+                            </ul>
                         </div>
                     </div>
 
-                    <button>Agregar al carrito</button>
 
-                    <div class="fav-sucursal">
-                        <i class="fa-regular fa-heart"></i>
-                        <p>Favoritos</p>
-                        <i class="fa-solid fa-location-dot"> </i>
-                        <p>Encontrar una sucursal</p>
+
+                    <div class="info-general"></div>
+                    <div class="linea-int-ext">
+                        <h2>Descripción del producto</h2>
+                        <p>
+                            <%=selectedProduct.description %>
+                        </p>
                     </div>
 
+
                 </div>
 
-            </div>
 
+                <section class="body-ustedes">
+                    <div class="boletin">
+                        <p class="h3-boletin">Subscribite a nuestro boletín</p>
+                        <p class="p-boletin">Descubrí ideas y tendencias de decoración</p>
+                        <p class="p-boletin">en nuestro nuevo boletín mensual</p>
+                        <input class="email" type="email" name="email" id="email"
+                            placeholder="Dirección de correo electrónico">
+                        <p class="contactanos-boletin">Contactános</p>
+                        <ul class="iconos-contacto">
+                            <li class="facebook"><a href="#"> <i class="fa-brands fa-facebook-f"></i></i></a></li>
+                            <li class="twitter"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li class="instagram"><a href="#"><i class="fa-brands fa-instagram"></i></i></a></li>
+                        </ul>
+                    </div>
+                </section>
+                </main>
 
-
-
-            <div class="info-principal">
-                <p class="info-principal-titulo">Información principal</p>
-
-                <div>
-                    <ul>
-                        <li>Acabado:
-                            <ul>
-                                <li>Mate</li>
-                            </ul>
-                        </li>
-                        <li>Cobertura:
-                            <ul>
-                                <li>10 a 12 m2 por litro</li>
-                            </ul>
-                        </li>
-                        <li>Tiempo de secado:
-                            <ul>
-                                <li>2 horas</li>
-                            </ul>
-                        </li>
-                        <li>Capas:
-                            <ul>
-                                <li>2</li>
-                            </ul>
-                        </li>
-                        <h3>Características del producto</h3>
-                        <li>Fácil aplicación</li>
-                        <li>Antihongos</li>
-                        <li>Rápido secado</li>
-                    </ul>
-                    </ul>
-                </div>
-            </div>
-
-
-
-            <div class="info-general"></div>
-            <div class="linea-int-ext">
-                <h2>Descripción del producto</h2>
-                <p> <%=selectedProduct.description %></p>
-            </div>
-
-
-        </div>
-
-
-        <section class="body-ustedes">
-            <div class="boletin">
-                <p class="h3-boletin">Subscribite a nuestro boletín</p>
-                <p class="p-boletin">Descubrí ideas y tendencias de decoración</p>
-                <p class="p-boletin">en nuestro nuevo boletín mensual</p>
-                <input class="email" type="email" name="email" id="email" placeholder="Dirección de correo electrónico">
-                <p class="contactanos-boletin">Contactános</p>
-                <ul class="iconos-contacto">
-                    <li class="facebook"><a href="#"> <i class="fa-brands fa-facebook-f"></i></i></a></li>
-                    <li class="twitter"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li class="instagram"><a href="#"><i class="fa-brands fa-instagram"></i></i></a></li>
-                </ul>
-            </div>
-        </section>
-    </main>
-
-        <footer>
-            <%- include('footer') %>
-        </footer>
+                <footer>
+                    <%- include('footer') %>
+                </footer>
 
 </body>
 

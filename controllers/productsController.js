@@ -71,7 +71,7 @@ const controllers = {
     products: (req, res)=>{
         const products = productModel.findAll();
 
-        res.render('products3', {products});
+        res.render('products', {products});
     },
 
     deleteProduct: (req,res)=> {

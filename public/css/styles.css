@@ -166,7 +166,7 @@ width: 13vw;
 
     .products .product-wrapper {
         display: inline-block;
-        width: 23%;
+        width: 100%;
         margin-bottom: 20px;
         border: 1px solid #ebebeb;
     }
@@ -187,8 +187,8 @@ width: 13vw;
     .products {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        align-content: flex-start;
+        justify-content: flex-start;
+        align-content: center;
         flex-wrap: wrap;
         height: 60vh;
     }
