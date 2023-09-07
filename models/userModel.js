@@ -24,7 +24,7 @@ const model = {
             ...userData
         };
 
-        newUser.password = bcrypt.hashSync(newUser.password, 12);
+        newUser.password = bcrypt.hashSync(newUser.password, 10);
 
         users.push(newUser);
 
