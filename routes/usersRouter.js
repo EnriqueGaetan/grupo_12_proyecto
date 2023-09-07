@@ -3,8 +3,15 @@ const router = express.Router();
 
 const usersController= require ( '../controllers/usersController')
 
+
+// Formulario de login
 router.get('/login', usersController.login);
-router.get('/register', usersController.registro);
+
+
+// Formulario de registro
+router.get('/register', usersController.register);
+router.post('/register', usersController.registerPost);
+
 
 
 

@@ -196,6 +196,37 @@ form {
     justify-content: center;
 }
 
+
+/* input[type="file"] {
+    display: none;
+  } */
+
+  input::file-selector-button {
+    display: none;
+}
+
+
+#image {
+    margin-left: 50%;
+  }
+
+
+.input-file {
+    margin: 15px;
+    padding: 6px 22px;
+    background-color: #e8e8e8;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 78%;
+    font-size: 13px;
+    text-align: center;
+}
+
+.input-file:hover {
+    background-color: #c5c4c4;
+  }
+
+
 .cuenta {font-size: 12px;margin: 0;margin-right: 4px;}
 
 .inicia {font-size: 12px;display: inline;}

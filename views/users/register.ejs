@@ -17,15 +17,15 @@
     <h2> Bienvenido a <a href="/"><img class="logo" src="/images/LOGO PINTUR.png" width="100px"></a></h2>
     <p>¡Vamos a registrarte!<p>
     <div class="formularios">
-    <form action="/registro" method="POST">
+    <form action="/users/register" method="POST">
     <input class="nombre" type="text" name="nombre" id="nombre" placeholder="Nombre*">
     <input class="apellido" type="text" name="apellido" id="apellido" placeholder="Apellido*">
     <input class="email" type="email" name="email" id="email" placeholder="Email*">
     <input class="tel" type="tel" name="tel" id="tel" placeholder="Teléfono*">
-    <input class="fecha" type="date" name="fecha" id="fecha" placeholder="Fecha de nacimiento">
-    <input class="pais" type="text" name="pais" id="pais" placeholder="País">
-    <input class="contraseña" type="password" name="contraseña" id="contraseña" placeholder="Contraseña*">
+    <label for="image" class="input-file">Selecionar foto de perfil*</label>
+    <input type="file" id="image" name="image" multiple>    
     <button class="registrarme" type="submit"> Registrarme</button>
+
 </div>
 <section class="lineas">
 <div class="line1"></div> 
