@@ -23,3 +23,15 @@ Retrospectiva del Sprint 2:
 4 - **Hacer menos**: Acumular tareas pendientes al final del sprint. Avanzar en el proyecto con tiempo. 
 
 5 - **Dejar de hacer**: Dejar de postergar las retrospectivas al final del Sprint. Deberíamos programarlas con antelación para asegurar que se lleven a cabo y podamos mejorar continuamente nuestro proceso de trabajo.
+
+______________________________-
+
+Retrospectiva del Sprint 5:
+
+1 - **Comenzar a hacer**: Se deben pactar nuevamente las reuniones de equipo.
+
+2 - **Hacer más:** Comunicación entre compañeros la cual al día de la fecha es nula. Repartir tareas.
+
+3  **Continuar haciendo:** Sin comentarios 
+4 - **Hacer menos**: Sin comentarios
+5 - **Dejar de hacer**: Sin comentarios
