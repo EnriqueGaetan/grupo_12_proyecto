@@ -22,6 +22,11 @@ const controllers = {
             image: filenames,
         }
 
+
+        if (req.file) {
+			profilePicture = req.file.filename;
+		}
+        
         const user = userModel.create(newUser);
         if (user.error) {
             res.redirect('/users/register?error=' + user.error);

@@ -26,7 +26,7 @@ app.use(session({ secret: 'Pintur!!', resave: false, saveUninitialized: true}));
 
 app.use(userLog);
 
-app.use(express.static('./src/public'));
+app.use(express.static('./public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(bodyParser.json());
