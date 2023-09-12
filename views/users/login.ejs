@@ -17,15 +17,25 @@
 <body>
     <main>
 
-         
         <h2> Bienvenido a <a href="/"><img class="logo" src="/images/LOGO PINTUR.png" width="100px"></a> </h2>
-        <p>¡Vamos a iniciar sesión!<p>
+        <p>¡Vamos a iniciar sesión!
+        <p>
         <div class="formularios">
-            <form action="/login" method="POST">
+            <form action="/users/login" method="POST">
                 <input class="email" type="email" name="email" id="email" placeholder="Email*">
-                <input class="contraseña" type="password" name="contraseña" id="contraseña" placeholder="Contraseña*">
+                <input class="contraseña" type="password" name="password" id="password" placeholder="Contraseña*">
+                <div class="sesion">
+                <label for="" >Mantener sesión iniciada</label><input type="checkbox" name="remember">
+                </div>
                 <button class="continuar" type="submit"> Continuar</button>
+
         </div>
+
+        <div>
+            <p class="error"> <%=error%></p>
+        </div>
+
+
         <section class="lineas">
             <div class="line1"></div>
             <h3 class="o">o</h3>
@@ -38,11 +48,14 @@
         </section>
         <section class="texto-ultimo">
             <p class="cuenta">¿No tienes una cuenta?</p>
-           <a href="/users/register"> <h3 class="inicia">Regístrate</h3></a>
-            
+            <a href="/users/register">
+                <h3 class="inicia">Regístrate</h3>
+            </a>
+
         </section>
     </main>
     </form>
+
 
 </body>
 

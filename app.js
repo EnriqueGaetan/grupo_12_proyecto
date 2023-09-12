@@ -1,27 +1,19 @@
 const express = require('express');
-const app = express();
-const path = require('path');
 const methodOverride = require('method-override');
-const bodyParser = require('body-parser');
-app.use(methodOverride('_method'));
-
-
-
 const mainRouter = require('./routes/mainRouter');
 const productsRouter = require('./routes/productsRouter');
 const usersRouter = require('./routes/usersRouter');
+const path = require('path');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const {userLog} =  require('./middlewares/userLog');
 
+
+
+const app = express();
 
 app.set('view engine', 'ejs');
-
-app.use(express.static('./public'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-
-app.use('/', mainRouter);
-app.use('/products', productsRouter);
-app.use('/users', usersRouter);
-
 
 app.set('views', [
     path.join(__dirname, './views/main'),
@@ -29,6 +21,46 @@ app.set('views', [
     path.join(__dirname, './views/products'),
     path.join(__dirname, './views/users'),
 ]);
+
+app.use(session({ secret: 'Pintur!!', resave: false, saveUninitialized: true}));
+
+app.use(userLog);
+
+app.use(express.static('./public'));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(bodyParser.json());
+app.use(cookieParser());
+
+
+app.use(methodOverride('_method'));
+
+
+
+
+
+app.use((req, res, next) => {
+    // Si hay una cookie guardada con el email de un usuario
+    if(req.cookies.email){
+        const userModel = require('./models/userModel');
+
+        // Mediante el modelo vamos a buscar los datos del usuario
+        const user = userModel.findByEmail(req.cookies.email);
+
+        // Guardamos en session los datos del mismo
+        req.session.user = user;
+    }
+    // Si no hay cookie de email, no hacemos nada
+    next();
+});
+
+
+
+
+app.use('/', mainRouter);
+app.use('/products', productsRouter);
+app.use('/users', usersRouter);
+
 
 
 app.listen(3000, () =>

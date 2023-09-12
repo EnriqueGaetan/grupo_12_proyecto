@@ -72,7 +72,7 @@
 
 .imagen-productos {
 
-width: 13vw;
+    width: 13vw;
 }
 
 
@@ -263,4 +263,13 @@ width: 13vw;
     .location {
         color: rgb(124, 123, 123);
     }
+}
+
+.enviar {
+    border-radius: 17px;
+    font-size: 14px;
+    border-width: 0px;
+    color: #ffffff;
+    background-color: #C83838;
+    padding: 10px;
 }

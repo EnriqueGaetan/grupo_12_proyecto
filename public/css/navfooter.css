@@ -2,6 +2,8 @@
 
 * {
     font-family: 'Outfit', sans-serif;
+    text-decoration: none;
+    color: black;
 }
 
 html,
@@ -58,6 +60,10 @@ header {
 .links li {
     width: 35vw;
 
+}
+
+.user {
+    color: red;
 }
 
 .nav-textos {
@@ -558,7 +564,7 @@ footer {
 }
 
 .links {
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
     font-size: 12px;
     list-style: none;

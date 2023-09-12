@@ -7,7 +7,7 @@ const bcrypt = require('bcrypt');
 const model = {
     fileRoute: path.join(__dirname, '../data/users.json'),
 
-    create: (userData) => {
+    create: (userData) => { 
         // ejecutamos el método findByEmail para que busque un usuario en el JSON que tenga el mail que nos llega desde userData
         const emailInUse = model.findByEmail(userData.email);
 

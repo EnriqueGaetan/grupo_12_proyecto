@@ -15,6 +15,7 @@
 
     <header>
         <%- include('header') %>
+
     </header>    
 
     <h1>Añadir producto</h1>
@@ -46,9 +47,21 @@
       </select>
       
       <br>
-  
       <label for="color">Color:</label>
-      <input type="text" id="color" name="color" required>
+      <select name="color" required>
+        <option value=""> * Seleccionar</option>
+        <option value="blanco">Blanco</option>
+        <option value="negro">Negro</option>
+        <option value="gris">Gris</option>
+        <option value="rojo">Rojo</option>
+        <option value="azul">Azul</option>
+        <option value="amarillo">Amarillo</option>
+        <option value="marron">Marrón</option>
+    </select>
+
+
+
+
 
 
       <br>

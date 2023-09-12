@@ -5,6 +5,7 @@
     font-family: 'Outfit', sans-serif;
     /* color: #1E1E1E; */
     font-size: 12px;
+    text-decoration: none;
 }
 
 @media (max-width: 479px) {

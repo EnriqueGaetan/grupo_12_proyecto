@@ -1,8 +1,8 @@
 const controllers = {
     home: (req, res) => {
-        return res.render('home');
-    },
-    
+        res.render('home', { user: req.session.user });
+    }
 }
+    
 
 module.exports = controllers;

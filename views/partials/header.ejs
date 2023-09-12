@@ -1,23 +1,46 @@
 <!-- partials/header.ejs -->
 <header>
-<div class="navbar">
-    <i class="fa-solid fa-bars burger"></i>
-    <img class="logo" src="/images/LOGO PINTUR.png" width="100px">
-    <ul class="links nav-textos">
-        <li class="uno"><a href="#">Colores</a></li>
-        <li class="dos"><a href="#">Accesorios</a></li>
-        <li class="tres"><a href="/products">Productos</a></li>
-        <li class="cuatro"><a href="#">Asesoramiento</a></li>
-    </ul>
-    <ul class="links iconos-der">
-        <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-        <li><a href="/users/login"><i class="fa-regular fa-user"></i></a></li>
-        <li><a href="/products/productCart"><i class="fa-solid fa-cart-shopping"></i></a></li>
-    </ul>
-</div>
-<div class="linea"></div>
+    <div class="navbar">
+        <i class="fa-solid fa-bars burger"></i>
+        <a href="/" class="logo">
+            <img src="/images/LOGO PINTUR.png" width="100px" alt="Descripción de la imagen">
+          </a>
+          
+        <ul class="links nav-textos">
+            <li class="uno"><a href="#">Colores</a></li>
+            <li class="dos"><a href="#">Accesorios</a></li>
+            <li class="tres"><a href="/products">Productos</a></li>
+            <li class="cuatro"><a href="#">Asesoramiento</a></li>
+        </ul>
 
-<div class="ovalo">
-</div>
+        <ul class="links iconos-der">
+            <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+            
+            <li><a href="/users/login">
+                <% if (locals.userLog) { %>
+                    <p><%= locals.userLog.firstName %>
+                    </p>
+                    <p> 
+                        <a href="/users/logout" style="color:rgb(224, 0, 52);">   Salir</a>
+                    </p>
+                            <% } else { %>
+                                <p >Iniciar sesión</p>
+
+                                <% } %>
+                </a>
+            </li>
+
+            <li><a href="/products/productCart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+
+    </div>
+
+
+
+
+    <div class="linea"></div>
+
+    <div class="ovalo">
+    </div>
 
 </header>

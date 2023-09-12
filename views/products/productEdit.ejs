@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/navfooter.css">
-
   <link rel="stylesheet" href="/css/formulario.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -17,6 +16,7 @@
 
   <header>
     <%- include('header') %>
+
 
   </header>
 
@@ -35,11 +35,11 @@
 
 
       <label for="name">Nombre del producto:</label>
-      <input type="text" id="name" name="name" required>
+      <input type="text" id="name" name="name" required value="<%= product.name %>" >
       <br>
   
       <label for="description" class="descripcionProducto">Descripción:</label>
-      <textarea id="description" name="description" required></textarea>
+      <input type="text"  textarea id="description" name="description" required value="<%=product.description %>" ></textarea>
       <br>
   
       <label for="image" class="input-file">Seleccionar imagen del producto:</label>
@@ -48,8 +48,8 @@
       <br>
   
       <label for="categoria">Categoría:</label>
-      <select name="category" required>
-        <option value=""> * Seleccionar</option>
+      <select name="category" required value="" >
+        <option value="<%= product.category %>" > <%= product.category %> </option>
         <option value="interior">Interior</option>
         <option value="exterior">Exterior</option>
         <option value="complementos">Complementos</option>
@@ -59,17 +59,26 @@
       <br>
   
       <label for="color">Color:</label>
-      <input type="text" id="color" name="color" required>
+      <select name="color" required>
+        <option value="<%= product.color%>"> <%= product.color %></option>
+        <option value="blanco">Blanco</option>
+        <option value="negro">Negro</option>
+        <option value="gris">Gris</option>
+        <option value="rojo">Rojo</option>
+        <option value="azul">Azul</option>
+        <option value="amarillo">Amarillo</option>
+        <option value="marron">Marrón</option>
+    </select>
 
 
       <br>
   
       <label for="price">Opciones - Litros/Tamaño/Etc</label>
-      <input type="text" id="options" name="options" required>
+      <input type="text" id="options" name="options" required value="<%= product.options %>">
       <br>
 
       <label for="price">Precio:</label>
-      <input type="number" id="price" name="price" step="0.01" required>
+      <input type="number" id="price" name="price" step="0.01" required value="<%= product.price %>">
       <br>
   
 
