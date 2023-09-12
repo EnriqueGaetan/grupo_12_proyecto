@@ -1,13 +1,13 @@
 const express = require('express');
 const methodOverride = require('method-override');
-const mainRouter = require('./routes/mainRouter');
-const productsRouter = require('./routes/productsRouter');
-const usersRouter = require('./routes/usersRouter');
+const mainRouter = require('./src/routes/mainRouter');
+const productsRouter = require('./src/routes/productsRouter');
+const usersRouter = require('./src/routes/usersRouter');
 const path = require('path');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
-const {userLog} =  require('./middlewares/userLog');
+const {userLog} =  require('./src/middlewares/userLog');
 
 
 
@@ -16,17 +16,17 @@ const app = express();
 app.set('view engine', 'ejs');
 
 app.set('views', [
-    path.join(__dirname, './views/main'),
-    path.join(__dirname, './views/partials'),
-    path.join(__dirname, './views/products'),
-    path.join(__dirname, './views/users'),
+    path.join(__dirname, './src/views/main'),
+    path.join(__dirname, './src/views/partials'),
+    path.join(__dirname, './src/views/products'),
+    path.join(__dirname, './src/views/users'),
 ]);
 
 app.use(session({ secret: 'Pintur!!', resave: false, saveUninitialized: true}));
 
 app.use(userLog);
 
-app.use(express.static('./public'));
+app.use(express.static('./src/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(bodyParser.json());
@@ -42,7 +42,7 @@ app.use(methodOverride('_method'));
 app.use((req, res, next) => {
     // Si hay una cookie guardada con el email de un usuario
     if(req.cookies.email){
-        const userModel = require('./models/userModel');
+        const userModel = require('./src/models/userModel');
 
         // Mediante el modelo vamos a buscar los datos del usuario
         const user = userModel.findByEmail(req.cookies.email);

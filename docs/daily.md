@@ -1,0 +1,3 @@
+Todos los integrantes del grupo conicidimos que las weekly son productivas porque es un espacio donde podemos intercambiar experiencias sobre las tareas que nos llevamos y compartir las dudas. 
+En varias ocasiones existieron situaciones donde entre todos pudimos coordinar un camino alternativo para llegar al mejor resultado.
+Durante el sprint trabajamos mucho de manera online y aparte de las weeklies fue necesario hacer reuniones para ayudar a destrabar alguna tarea. 
