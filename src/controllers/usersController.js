@@ -68,6 +68,7 @@ const controllers = {
                 console.log('No se quiere mantener la sesión iniciada');
             }
             req.session.user = userInJson;
+            console.log(req.session.user);
             res.redirect('/');
 
         } else {

@@ -18,11 +18,11 @@ const controllers = {
     },
 
     createProduct: (req, res)=> {
-        console.log(req.files);
+        // console.log(req.files);
 
         const filenames = req.files.map(file => file.filename);
 
-        console.log(filenames)
+        // console.log(filenames)
 
         const newProduct = {
             name: req.body.name,

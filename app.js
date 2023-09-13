@@ -7,7 +7,8 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
-const {userLog} =  require('./src/middlewares/userLog');
+const userLog =  require('./src/middlewares/userLog');
+const cookiesMiddleware = require('./src/middlewares/cookiesMiddleware');
 
 
 
@@ -23,6 +24,9 @@ app.set('views', [
 ]);
 
 app.use(session({ secret: 'Pintur!!', resave: false, saveUninitialized: true}));
+app.use(cookieParser());
+
+app.use(cookiesMiddleware);
 
 app.use(userLog);
 
@@ -30,7 +34,6 @@ app.use(express.static('./public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(bodyParser.json());
-app.use(cookieParser());
 
 
 app.use(methodOverride('_method'));
@@ -39,20 +42,20 @@ app.use(methodOverride('_method'));
 
 
 
-app.use((req, res, next) => {
-    // Si hay una cookie guardada con el email de un usuario
-    if(req.cookies.email){
-        const userModel = require('./src/models/userModel');
+// app.use((req, res, next) => {
+//     // Si hay una cookie guardada con el email de un usuario
+//     if(req.cookies.email){
+//         const userModel = require('./src/models/userModel');
 
-        // Mediante el modelo vamos a buscar los datos del usuario
-        const user = userModel.findByEmail(req.cookies.email);
+//         // Mediante el modelo vamos a buscar los datos del usuario
+//         const user = userModel.findByEmail(req.cookies.email);
 
-        // Guardamos en session los datos del mismo
-        req.session.user = user;
-    }
-    // Si no hay cookie de email, no hacemos nada
-    next();
-});
+//         // Guardamos en session los datos del mismo
+//         req.session.user = user;
+//     }
+//     // Si no hay cookie de email, no hacemos nada
+//     next();
+// });
 
 
 
@@ -63,7 +66,7 @@ app.use('/users', usersRouter);
 
 
 
-app.listen(3000, () =>
+app.listen(3001, () =>
     console.log("Servidor corriendo en el puerto 3000"));
 
 

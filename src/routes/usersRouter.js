@@ -4,7 +4,6 @@ const multer = require('multer');
 const router = express.Router();
 const userValidation = require('../middlewares/userMiddleware');
 
-
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, './public/images/');
