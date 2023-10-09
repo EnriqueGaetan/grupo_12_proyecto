@@ -3,6 +3,7 @@ const methodOverride = require('method-override');
 const mainRouter = require('./src/routes/mainRouter');
 const productsRouter = require('./src/routes/productsRouter');
 const usersRouter = require('./src/routes/usersRouter');
+const colorRouter = require('./src/routes/colorRouter');
 const path = require('path');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
@@ -63,6 +64,7 @@ app.use(methodOverride('_method'));
 app.use('/', mainRouter);
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
+app.use('/colores', colorRouter);
 
 
 
