@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-10-2023 a las 01:03:44
+-- Tiempo de generación: 09-10-2023 a las 02:48:19
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -80,10 +80,10 @@ CREATE TABLE `products` (
   `name` varchar(100) NOT NULL,
   `img` blob DEFAULT NULL,
   `description` varchar(500) NOT NULL,
-  `price` int(10) UNSIGNED DEFAULT NULL,
-  `color_id` int(11) DEFAULT NULL,
-  `options_id` int(11) DEFAULT NULL,
-  `category_id` int(11) DEFAULT NULL
+  `price` int(10) UNSIGNED NOT NULL,
+  `color_id` int(11) NOT NULL,
+  `options_id` int(11) NOT NULL,
+  `category_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -123,22 +123,22 @@ INSERT INTO `productscategory` (`id`, `category`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `shoppingcart`
+-- Estructura de tabla para la tabla `shoppingcarts`
 --
 
-CREATE TABLE `shoppingcart` (
+CREATE TABLE `shoppingcarts` (
   `cart_id` int(11) NOT NULL,
-  `total_price` int(10) UNSIGNED DEFAULT NULL,
+  `total_price` int(10) UNSIGNED NOT NULL,
   `items` int(11) NOT NULL,
-  `product_id` int(11) DEFAULT NULL,
-  `user_id` int(11) DEFAULT NULL
+  `product_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `shoppingcart`
+-- Volcado de datos para la tabla `shoppingcarts`
 --
 
-INSERT INTO `shoppingcart` (`cart_id`, `total_price`, `items`, `product_id`, `user_id`) VALUES
+INSERT INTO `shoppingcarts` (`cart_id`, `total_price`, `items`, `product_id`, `user_id`) VALUES
 (1, 17700, 2, 1, 1),
 (2, 17700, 2, 4, 1),
 (3, 2000, 1, 3, 2),
@@ -222,9 +222,9 @@ ALTER TABLE `productscategory`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `shoppingcart`
+-- Indices de la tabla `shoppingcarts`
 --
-ALTER TABLE `shoppingcart`
+ALTER TABLE `shoppingcarts`
   ADD PRIMARY KEY (`cart_id`),
   ADD KEY `product_id` (`product_id`),
   ADD KEY `user_id` (`user_id`);
@@ -271,9 +271,9 @@ ALTER TABLE `productscategory`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT de la tabla `shoppingcart`
+-- AUTO_INCREMENT de la tabla `shoppingcarts`
 --
-ALTER TABLE `shoppingcart`
+ALTER TABLE `shoppingcarts`
   MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
@@ -301,11 +301,11 @@ ALTER TABLE `products`
   ADD CONSTRAINT `productsoptions` FOREIGN KEY (`options_id`) REFERENCES `options` (`id`);
 
 --
--- Filtros para la tabla `shoppingcart`
+-- Filtros para la tabla `shoppingcarts`
 --
-ALTER TABLE `shoppingcart`
-  ADD CONSTRAINT `shoppingcart_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
-  ADD CONSTRAINT `shoppingcart_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`);
+ALTER TABLE `shoppingcarts`
+  ADD CONSTRAINT `shoppingcarts_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
+  ADD CONSTRAINT `shoppingcarts_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`);
 
 --
 -- Filtros para la tabla `users`
