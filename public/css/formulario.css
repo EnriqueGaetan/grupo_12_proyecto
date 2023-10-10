@@ -153,11 +153,19 @@ input[type="file"] {
 
 }
 
-.usuarioDatos input, select{
+.usuarioDatos input{
     font-size: 15px;
-
     border: none;
     color: rgb(202, 0, 0);
     padding: 10px;
 
   }
+
+
+ .usuariosDatos select{
+    font-size: 15px;
+    border: none;
+    color: rgb(202, 0, 0);
+    padding: 10px;
+
+  } 
