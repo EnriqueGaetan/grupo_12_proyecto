@@ -100,6 +100,8 @@ input[type="file"] {
 }
 
 
+
+
 /* @media (min-width: 1024px) {
 
 }
@@ -118,3 +120,44 @@ input[type="file"] {
         padding: 10px;
 }
 } */
+
+.editar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C83838;
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    width: 160px;
+    height: 25px;
+    text-decoration: none;
+    padding: 7px;
+    margin-top: 25px;
+    
+}
+.editar:hover {
+    background-color: #b23535;
+
+}
+
+
+.usuarioDatos {
+    color: rgb(202, 0, 0);
+    border: none;
+
+}
+
+.usuarioDatos h1{
+    padding-bottom: 60px;
+
+
+}
+
+.usuarioDatos input, select{
+    font-size: 15px;
+
+    border: none;
+    color: rgb(202, 0, 0);
+    padding: 10px;
+
+  }

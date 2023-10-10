@@ -1,3 +1,6 @@
+const { Sequelize, DataTypes } = require('sequelize');
+
+
 module.exports = (sequelize, DataTypes) => {
     let alias = "Color"; 
 
@@ -8,7 +11,9 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true
         },
         color: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false
+
         }
     }; 
 
@@ -20,10 +25,12 @@ module.exports = (sequelize, DataTypes) => {
     const Color = sequelize.define(alias, cols, config);
 
     Color.associate = function(models) {
-        Color.hasMany (models.Products, { 
-            as: "products", 
-            foreignKey: "color_id"
-        })
+        Color.hasMany(models.Product, { 
+            as: 'colors',
+            timestamps: false,
+            foreignKey: 'color_id'
+        });
     }
+    
     return Color;
 }

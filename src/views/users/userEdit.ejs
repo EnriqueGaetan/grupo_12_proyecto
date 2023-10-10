@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/navfooter.css">
+  <link rel="stylesheet" href="/css/formulario.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Pintur - Modificar usuario</title>
+</head>
+
+<body>
+
+  <header>
+    <%- include('header') %>
+
+
+  </header>
+
+
+  
+
+  <h1>Modificar usuario: <br>
+    <%= user.first_name %> <%= user.last_name %> </h1>
+
+
+    <article>
+
+
+    <form action="/users/<%= user.user_id %>/edit?_method=PUT" method="post" enctype="multipart/form-data">
+
+
+    <label for="first_name">Nombre</label>
+    <input type="text" id="name" name="first_name" required value="<%= user.first_name %>" >
+    <br>
+
+    <label for="last_name">Apellido</label>
+    <input type="text" id="name" name="last_name" required value="<%= user.last_name %>" >
+    <br>
+
+    
+    <label for="last_name">Correo</label>
+    <input type="text" id="name" name="email" required value="<%= user.email%>" >
+    <br>
+
+
+
+
+    <br>
+
+    <label for="categoria">Categoría:</label>
+    <select name="category_id" required>
+      <option value="<%= user.category %>"> * Seleccionar</option>
+      <option value="1">Administrador</option>
+      <option value="2">Invitado</option>
+
+    </select>
+    
+
+    <br>
+
+    <label for="image" class="input-file">Seleccionar imagen de perfil :</label>
+    <input type="file" id="image" name="img" multiple>
+    <br>
+
+    <input class="enviar" type="submit" value="Guardar cambios">
+   
+  </form>
+
+</article>
+
+
+  <footer>
+    <%- include('footer') %>
+  </footer>
+
+
+</body>
+
+</html>

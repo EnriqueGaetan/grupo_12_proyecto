@@ -1,50 +1,38 @@
-const productModel = require('../models/productModels');
+const { Product } = require('../database/models');
 
 
 const controllers = {
-    productCart: (req, res)=>{
-        return res.render('productCart');
+    products: async (req, res) => {
+        const products = await Product.findAll({ raw: true });
+
+        res.render('products', { products });
     },
+    productDetail: async (req, res) => {
+        try {
+            const selectedProduct = await Product.findByPk(req.params.id, {
+                raw: true,
+                nest: true
+            });
 
-    productDetail: (req, res)=>{
-        const productId = req.params.id;
-        const selectedProduct = productModel.findById(productId);
-        res.render('productDetail', {selectedProduct });
-    },
+            res.render('productDetail', { selectedProduct });
 
-
-    create: (req, res)=>{
-        return res.render('productCreate');
-    },
-
-    createProduct: (req, res)=> {
-        // console.log(req.files);
-
-        const filenames = req.files.map(file => file.filename);
-
-        // console.log(filenames)
-
-        const newProduct = {
-            name: req.body.name,
-            description: req.body.description,
-            color: req.body.color,
-            options: req.body.options,
-            category: req.body.category,
-            price: req.body.price,
-            img: filenames
+        } catch (error) {
+            console.log(error);
         }
-
-        const createdProduct = productModel.createProduct(newProduct);
-        res.redirect('products');
     },
+    editProduct: async (req, res) => {
+        const id = req.params.id;
 
+        try {
+            const product = await Product.findByPk(id, { raw: true });
 
-    editProduct: (req, res)=>{
-        const product = productModel.findById(Number(req.params.id));
-        res.render('productEdit', { product });
+            res.render('productEdit', { product });
+        } catch (error) {
+            console.log(error);
+        }
     },
+    updateProduct: async (req, res) => {
 
-    updateProduct: (req, res)=>{
         console.log(req.files);
 
         const filenames = req.files.map(file => file.filename);
@@ -61,24 +49,73 @@ const controllers = {
 
         };
 
-        productModel.updateProduct(updatedProduct);
 
+        try {         
+            await Product.update(updatedProduct, {
+                where: {
+                    id: req.params.id
+                }
+            })
+                
+
+        } catch (error) {
+            console.log(error);
+        }
         res.redirect('/products');
+
+
+    },
+    create: (req, res)=>{
+        return res.render('productCreate');
+    },
+    createProduct: async (req,res) => {
+        const filenames = req.files.map(file => file.filename);
+
+        const newProduct = {
+            name: req.body.name,
+            description: req.body.description,
+            color_id: req.body.color,
+            options_id: req.body.options,
+            category_id: req.body.category,
+            price: req.body.price,
+            img: filenames
+        }
+
+        console.log(newProduct)
+
+
+        try {
+            const createdProduct = await Product.create(newProduct);
+
+            return res.redirect('/products');
+        } catch (error) {
+            console.log(error);
+        }
+
     },
 
-
-
-    products: (req, res)=>{
-        const products = productModel.findAll();
-
-        res.render('products', {products});
+    productCart: (req, res)=>{
+        return res.render('productCart');
     },
 
-    deleteProduct: (req,res)=> {
-        productModel.destroy(Number(req.params.id));
-        res.redirect('/products');
+    deleteProduct: async (req, res) => {
+        const id = req.params.id;
+
+        try {
+            Product.destroy({
+                where: {
+                    id
+                }
+            })
+        } catch (error) {
+            console.log(error);
+        }
+
+        res.redirect('/products')
     }
-    
-}
+
+    }
+
+
 
 module.exports = controllers;

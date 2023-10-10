@@ -27,10 +27,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        image: {
-            type: DataTypes.BLOB,
-            allowNull: false
-        }
+        // image: {
+        //     type: DataTypes.BLOB,
+        //     allowNull: false
+        // }
     }; 
 
     let config = {
@@ -40,27 +40,27 @@ module.exports = (sequelize, DataTypes) => {
 
     const User = sequelize.define(alias, cols, config);
 
-    // User.associate = function(models) {
-    //     User.belongsTo (models.Usercategorys, {
-    //         as: "usercategorys",
-    //         foreignKey: "category_id"
-    //     })
-    // }
-
-    // User.associate = function(models) {
-    //     User.hasMany (models.Shoppingcarts, { 
-    //         as: "shoppingcarts",
-    //         foreignKey: "user_id"
-    //     })
-
-    //     User.belongsToMany(models.Products, {
-    //         as: 'productsuser',
-    //         through: 'users_products',
-    //         foreignKey: 'users_id',
-    //         otherKey: 'products_id',
-    //         timestamps: false,
-    //     })
-    // }
-
-    return User;
-}
+    User.associate = function(models) {
+        User.belongsTo(models.Usercategory, {
+            as: "usercategorys",
+            foreignKey: "category_id"
+        });
+    
+        User.hasMany(models.Shoppingcart, {
+            as: "shoppingcarts",
+            foreignKey: "user_id"
+        });
+    
+        User.belongsToMany(models.Product, {
+            as: 'productsuser',
+            through: 'users_products',
+            foreignKey: 'users_id',
+            otherKey: 'products_id',
+            timestamps: false,
+        });
+    };
+    
+        
+        return User;
+        
+    };

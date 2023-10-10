@@ -1,5 +1,8 @@
+const { Sequelize, DataTypes } = require('sequelize');
+
+
 module.exports = (sequelize, DataTypes) => {
-    const alias = "Productcategory"; 
+    let alias = "Color"; 
 
     let cols = { 
         id: {
@@ -7,26 +10,27 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        category: {
+        color: {
             type: DataTypes.STRING,
             allowNull: false
+
         }
     }; 
 
     let config = {
-        tableName: "productscategory", 
+        tableName: "colors", 
         timestamps: false 
     };
 
-    const Productcategory = sequelize.define(alias, cols, config);
+    const Color = sequelize.define(alias, cols, config);
 
-    Productcategory.associate = (models) => {
-        Productcategory.hasMany(models.Product, { 
-            as: "productcategory",
+    Color.associate = (models)  => {
+        Color.hasMany(models.Product, { 
+            as: 'colors',
             timestamps: false,
-            foreignKey: "category_id"
+            foreignKey: 'color_id'
         });
     }
-
-    return Productcategory;
+    
+    return Color;
 }
