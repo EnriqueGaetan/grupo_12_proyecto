@@ -36,7 +36,10 @@
     <main>
 <br>
 
-<a class="enviar" href="/products/create">Crear producto</a>
+<% if (products.length === 0) { %>
+  <p style="color:red; font-size: 25px;">No se encontraron resultados.</p>
+<% } %>
+
 
 <div class="foreachproducts">
         <% products.forEach(products => { %>

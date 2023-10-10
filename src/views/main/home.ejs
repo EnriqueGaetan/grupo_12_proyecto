@@ -23,22 +23,33 @@
         </div>
         <div class="botones-ovalo">
             <div class="absolute-boton">
-                <form action="/index" method="POST">
-                    <input class="boton-uno" type="text" name="se" id="se" placeholder="Se lo que quiero">
-                    <input class="boton-dos" type="text" name="nose" id="nose" placeholder="No estoy seguro">
+                <form action="/products/search" method="POST">
+                    <input class="boton-uno" type="text" name="productSearch" id="productSearch" placeholder="Que buscás?">
+                    <button type="submit" style="    display: inline-block;
+                    background-color: #6c6c6c;
+                    color: white;
+                    height: 24px;
+                    width: 45px;
+                    padding: 5px 10px;
+                    border: none;
+                    border-radius: 10px;
+                    cursor: pointer;">Ir</button>
+                    <!-- Pendiente!! Configurar en CSS -->
+                </form>
+
             </div>
         </div>
     </header>
     <main>
         <article class="imagenes-linea">
             <div class="box-1">
-                <img class="imagen-1" src="/images/Inspiracion.png" width="100px">
+                <a href="/pendingSite"><img class="imagen-1" src="/images/Inspiracion.png" width="100px"></a>
                 <div class="texto-1">
                     <p class="titulos-arriba"> Inspiración </p>
                     <p class="ver-mas"> Ver más</p>
                 </div>
                 <div class="box-2">
-                    <img class="imagen-2" src="/images/consejos.png" width="100px">
+                    <a href="/pendingSite"><img class="imagen-2" src="/images/consejos.png" width="100px"></a>
                     <div class="texto-2">
                         <p class="titulos-arriba"> Consejos </p>
                         <p class="ver-mas"> Ver más</p>
