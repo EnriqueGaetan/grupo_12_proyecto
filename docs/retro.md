@@ -47,5 +47,7 @@ Retrospectiva del Sprint 6:
 2 - **Hacer más:** Hacer más reuniones diarias, en este sprint las retomamos pero faltarían más.
 
 3  **Continuar haciendo:** Seguir con la comunicación entre los integrantes del equipo la cual retomamos los dos compañeros que quedamos en el sprint. Seguir repartiendo las tareas equitativamente.
-4 - **Hacer menos**: Sin comentarios
+
+4 - **Hacer menos**: ---
+
 5 - **Dejar de hacer**: Llegar al lanzamiento del sprint con los temas claros y la teoría leída.
