@@ -35,3 +35,17 @@ Retrospectiva del Sprint 5:
 3  **Continuar haciendo:** Sin comentarios 
 4 - **Hacer menos**: Sin comentarios
 5 - **Dejar de hacer**: Sin comentarios
+
+
+____________________________________
+______________________________-
+
+Retrospectiva del Sprint 6:
+
+1 - **Comenzar a hacer**: Dividir temas cuando se lanza el Sprint, nos ayuda a acomodar mejor los tiempos.
+
+2 - **Hacer más:** Hacer más reuniones diarias, en este sprint las retomamos pero faltarían más.
+
+3  **Continuar haciendo:** Seguir con la comunicación entre los integrantes del equipo la cual retomamos los dos compañeros que quedamos en el sprint. Seguir repartiendo las tareas equitativamente.
+4 - **Hacer menos**: Sin comentarios
+5 - **Dejar de hacer**: Llegar al lanzamiento del sprint con los temas claros y la teoría leída.
