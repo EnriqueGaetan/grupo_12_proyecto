@@ -17,13 +17,28 @@
         <%- include('header') %>
 
             <div class="bienvenido">
-                <h2 class="texto-ovalo"> Cielos Rasos</h2>
+                <h2 class="texto-ovalo">      
+                    
+                    <% if (selectedProduct.category_id === 1) { %>
+                        <h2 class="texto-ovalo">Interior</h2>
+                         <% } else if (selectedProduct.category_id === 2) { %>
+                            <h2 class="texto-ovalo">Exterior</h2>
+
+                      <% } else if (selectedProduct.category_id === 3) { %>
+                        <h2 class="texto-ovalo">Complementos</h2>
+
+                      <% } %>
+            
+            </h2>
+
+
+
             </div>
             <div class="botones-ovalo">
                 <div class="absolute-boton">
-                    <form action="/productDetail" method="POST">
-                        <a href="/"> <input class="seguir-comprando" type="text" name="se" id="se" placeholder="Volver"> </a>
-                        <i class="fa-solid fa-arrow-left flecha"></i>
+                    <a href="/products">
+                        <button class="seguir-comprando" style="color: black; text-align: center; font-size: 15px ;width: 100px" type="button">Volver</button>
+                      </a>
                 </div>               
                 
             </div>
@@ -38,7 +53,8 @@
                         </div>
 
 
-                        <img src="/images/<%=selectedProduct.img%>" width="500px">
+                        <img src="data:image/png;base64,<%= selectedProduct.img.toString('base64') %>" width="500px">
+                        <img  alt="Imagen del producto">
 
 
 

@@ -1,4 +1,9 @@
+const { log } = require('console');
 const { Product } = require('../database/models');
+const { Op } = require('sequelize');
+
+const fs = require('fs');
+
 
 
 const controllers = {
@@ -32,12 +37,21 @@ const controllers = {
         }
     },
     updateProduct: async (req, res) => {
+        const uploadedFile = req.file;
 
-        console.log(req.files);
+        if (!uploadedFile) {
+            console.error('No se ha subido ningún archivo');
+            res.status(400).send('No se ha subido ningún archivo');
+            return;
+        }
+    
 
-        const filenames = req.files.map(file => file.filename);
+        console.log(uploadedFile.path)
+        const imageBuffer = fs.readFileSync(uploadedFile.path);
+        const imageBlob = Buffer.from(imageBuffer, 'binary');
 
-        console.log(filenames)
+        console.log(imageBlob)
+
         let updatedProduct = {
             id: Number(req.params.id),
         };
@@ -45,7 +59,7 @@ const controllers = {
         updatedProduct = {
             ...updatedProduct,
             ...req.body,
-            img: filenames
+            img: imageBlob,
 
         };
 
@@ -69,7 +83,14 @@ const controllers = {
         return res.render('productCreate');
     },
     createProduct: async (req,res) => {
-        const filenames = req.files.map(file => file.filename);
+        const uploadedFile = req.file;
+
+        console.log(uploadedFile.path)
+        const imageBuffer = fs.readFileSync(uploadedFile.path);
+        const imageBlob = Buffer.from(imageBuffer, 'binary');
+
+        console.log(imageBlob)
+
 
         const newProduct = {
             name: req.body.name,
@@ -78,7 +99,7 @@ const controllers = {
             options_id: req.body.options,
             category_id: req.body.category,
             price: req.body.price,
-            img: filenames
+            img: imageBlob,
         }
 
         console.log(newProduct)
@@ -112,9 +133,29 @@ const controllers = {
         }
 
         res.redirect('/products')
-    }
+    },
+
+    search: async (req, res) => {
+        console.log(req.body.productSearch)
+        
+        try {
+            const products = await Product.findAll({
+                where: {
+                    name: {
+                        [Op.like]: `%${req.body.productSearch}%`
+                    }
+                }
+                })
+             
+
+            res.render('productsSearch', { products });
+
+        } catch (error) {
+            console.log(error);
+        }
 
     }
+}
 
 
 
