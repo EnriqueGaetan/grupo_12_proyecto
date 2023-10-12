@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Panel de control - usuarios</title>
+        <script src="../app.js"></script>
+        <link rel="stylesheet" href="/css/navfooter.css">
+        <link rel="stylesheet" href="/css/home.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <style>
+        main {
+            height: 77vh;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 180vh;
+            width: 150%;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: .5rem;
+        }
+
+        th {
+            background-color: #f9f9f9;
+            font-weight: bold;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        td:nth-child(2) {
+            background-color: #f2f2f2;
+        }
+
+        td:nth-child(3) {
+            color: #000;
+        }
+
+        td:nth-child(5) {
+            text-align: center;
+            width: 10%;
+        }
+
+        td:nth-child(5) a {
+            text-decoration: none;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <%- include('header') %>
+
+            <div class="bienvenido">
+                <h2 class="texto-ovalo"> Panel de control - Usuarios</h2>
+            </div>
+            <div class="botones-ovalo">
+                <div class="absolute-boton">
+                    <a href="/">
+                    </a>
+                </div>
+
+            </div>
+            </div>
+    </header>
+
+    <main>
+
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Categoría</th>
+                        <th>Email</th>
+                        <th>Editar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% allUsers.forEach(user=> { %>
+                        <tr>
+                            <td>
+                                <%= user.user_id %>
+                            </td>
+                            <td>
+                                <%= user.first_name %>
+                            </td>
+                            <td>
+                                <%= user.last_name %>
+                            </td>
+                            <td>
+                                <%= user.category_id %>
+                            </td>
+                            <td>
+                                <%= user.email %>
+                            </td>
+                            <td> <a href="/users/<%=user.user_id%>/edit" style="color: #C83838;"> ► </a> </td>
+                        </tr>
+                        <% }) %>
+                </tbody>
+            </table>
+
+        </div>
+    </main>
+
+    <footer>
+        <%- include('footer') %>
+    </footer>
+
+
+</body>
+
+</html>
