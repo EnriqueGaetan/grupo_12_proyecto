@@ -23,75 +23,97 @@
 
   <h1>Modificar producto</h1>
   <br>
-  <h2>Nombre actual: <%= product.name %></h2>
-  <h2>N° de producto: <%= product.id %> </h2>
+  <h2><%= product.name %>
+  </h2>
+  <br>
+
+  <h2>   <div >
+    <% if (product.img) { %>
+      <img src="data:image/png;base64,<%= product.img.toString('base64') %>" width="100px">
+      <% } %>
+  <br>
+  </h2>
+
 
 
   <article>
 
 
     <form action="/products/<%= product.id %>/edit?_method=PUT" method="post" enctype="multipart/form-data">
-  
-
 
       <label for="name">Nombre del producto:</label>
-      <input type="text" id="name" name="name" required value="<%= product.name %>" >
+      <input type="text" id="name" name="name" required value="<%= product ? product.name : '' %>">
       <br>
-  
-      <label for="description" class="descripcionProducto">Descripción:</label>
-      <input type="text"  textarea id="description" name="description" required value="<%=product.description %>" ></textarea>
-      <br>
-  
-      <label for="img" class="input-file">Seleccionar imagen del producto:</label>
-      <input type="file" id="img" name="img" multiple>
+      <% if (locals.errors && locals.errors.name) { %>
+        <p class="error">
+          <%= locals.errors.name.msg %>
+        </p>
+        <% } %>
 
-      <br>
-  
-      <label for="categoria">Categoría:</label>
-      <select name="category" required>
-        <option value="<%= product.category %>"> * Seleccionar</option>
-        <option value="1">Interior</option>
-        <option value="2">Exterior</option>
-        <option value="3">Complementos</option>
-
-      </select>
-      
-      <br>
-  
-      <label for="color">Color:</label>
-      <select name="color" required>
-        <option value="<%= product.color %>"> * Seleccionar</option>
-        <option value="1">Blanco</option>
-        <option value="2">Negro</option>
-        <option value="3">Gris</option>
-        <option value="4">Marrón</option>
-        <option value="5">Rojo</option>
-        <option value="6">Azul</option>
-        <option value="7">Verde</option>
-    </select>
+          <label for="description" class="descripcionProducto">Descripción:</label>
+          <input type="text" textarea id="description" name="description" required
+            value="<%=product.description %>"></textarea>
+          <br>
+          <% if (locals.errors && locals.errors.description) { %>
+            <p class="error">
+              <%= locals.errors.description.msg %>
+            </p>
+            <% } %>
+              <input type="hidden" name="currentImg" value="<%= product.img %>">
 
 
-      <br>
-  
-      <label for="options">Opciones - Litros/Tamaño/Etc</label>
-      <select name="options" required>
-        <option value="<%= product.options %>"> * Seleccionar</option>
-        <option value="1">1 Litro</option>
-        <option value="2">2 Litros</option>
-        <option value="3">5 Litros</option>
-        <option value="4">10 Litros</option>
-        <option value="5">20 Litros</option>
-        <option value="6">25 Litros</option>
-      </select>
-      <br>
 
-      <label for="price">Precio:</label>
-      <input type="number" id="price" name="price" step="0.01" required value="<%= product.price %>">
-      <br>
-  
+              <label for="img" class="input-file">Actualizar imagen del producto:</label>
+              <input type="file" id="img" name="img" multiple>
+              <% if (locals.errors && locals.errors.img) { %>
+                <p class="error">
+                  <%= locals.errors.img.msg %>
+                </p>
+                <% } %>
 
-      <input class="enviar" type="submit" value="Guardar cambios">
-   
+                  <br>
+
+                  <label for="categoria">Categoría:</label>
+                  <select name="category" required>
+                    <option value="1" <%=product.category_id===1 ? 'selected' : '' %>>Interior</option>
+                    <option value="2" <%=product.category_id===2 ? 'selected' : '' %>>Exterior</option>
+                    <option value="3" <%=product.category_id===3 ? 'selected' : '' %>>Complementos</option>
+                  </select>
+
+                  <br>
+
+                  <label for="color">Color:</label>
+                  <select name="color" required>
+                    <option value="1" <%=product.color===1 ? 'selected' : '' %>>Blanco</option>
+                    <option value="2" <%=product.color===2 ? 'selected' : '' %>>Negro</option>
+                    <option value="3" <%=product.color===3 ? 'selected' : '' %>>Gris</option>
+                    <option value="4" <%=product.color===4 ? 'selected' : '' %>>Marrón</option>
+                    <option value="5" <%=product.color===5 ? 'selected' : '' %>>Rojo</option>
+                    <option value="6" <%=product.color===6 ? 'selected' : '' %>>Azul</option>
+                    <option value="7" <%=product.color===7 ? 'selected' : '' %>>Verde</option>
+                  </select>
+
+
+                  <br>
+
+                  <label for="options">Opciones - Litros/Tamaño/Etc</label>
+                  <select name="options" required>
+                    <option value="1" <%=product.options_id===1 ? 'selected' : '' %>>1 Litro</option>
+                    <option value="2" <%=product.options_id===2 ? 'selected' : '' %>>2 Litros</option>
+                    <option value="3" <%=product.options_id===3 ? 'selected' : '' %>>5 Litros</option>
+                    <option value="4" <%=product.options_id===4 ? 'selected' : '' %>>10 Litros</option>
+                    <option value="5" <%=product.options_id===5 ? 'selected' : '' %>>20 Litros</option>
+                    <option value="6" <%=product.options_id===6 ? 'selected' : '' %>>25 Litros</option>
+                  </select>
+                  <br>
+
+                  <label for="price">Precio:</label>
+                  <input type="number" id="price" name="price" step="0.01" required value="<%= product.price %>">
+                  <br>
+
+
+                  <input class="enviar" type="submit" value="Guardar cambios">
+
     </form>
 
     <form action="/products/<%= product.id%>/delete?_method=DELETE" method="POST">

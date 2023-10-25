@@ -51,10 +51,10 @@
                         <div>
                             <a class="editar" href="/products/<%=selectedProduct.id %>/edit">Editar producto</a>
                         </div>
+                        <br>
 
 
                         <img src="data:image/png;base64,<%= selectedProduct.img.toString('base64') %>" width="500px">
-                        <img  alt="Imagen del producto">
 
 
 
@@ -76,14 +76,12 @@
 
                             <select name="color" id="color">
                                 <option>
-                                    <%=selectedProduct.color%>
+                                    <%=selectedProduct.colors.color%>
                                 </option>
                             </select>
 
                             <select name="litros" id="litros">
-                                <option>
-                                    <%=selectedProduct.options%>
-                                </option>
+                                <option><%= selectedProduct.options.liters %> litros</option>
                             </select>
 
                             <div class="cantidad">

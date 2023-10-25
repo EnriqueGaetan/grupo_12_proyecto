@@ -3,6 +3,9 @@ const { User } = require('../database/models');
 const userModel = require('../models/userModel');
 const bcrypt = require('bcrypt');
 const uuid = require('uuid');
+const fs = require('fs');
+const path = require('path');
+
 
 const controllers = {
     register: (req, res) => {
@@ -12,9 +15,21 @@ const controllers = {
     },
 
     registerPost: async (req, res) => {
-        console.log(req.files);
-        const filenames = req.files.map(file => file.filename);
-        console.log(filenames);
+
+        const uploadedFile = req.file;
+        let imageBlob; 
+
+        if (req.file === undefined) {
+            const imagePath = path.join(__dirname, '../../public/images/userimage.png');
+            imageBlob = Buffer.from(fs.readFileSync(imagePath), 'binary');
+
+        }  else {
+            const imageBuffer = fs.readFileSync(uploadedFile.path);
+            imageBlob = Buffer.from(imageBuffer, 'binary');
+            console.log(imageBlob)
+        }
+        
+        
 
         const newUser = {
             first_name: req.body.firstName,
@@ -22,37 +37,47 @@ const controllers = {
             email: req.body.email,
             category_id: "2", // Por defecto los usuarios son registrados como invitados.
             password: req.body.password,
-            image: filenames,
+            image: imageBlob,
         }
 
         newUser.password = bcrypt.hashSync(newUser.password, 12);
 
 
-        if (req.file) {
-            profilePicture = req.file.filename;
-        }
+
+        const errors = validationResult(req);
+
+        console.log(errors);
+
+        if (errors.isEmpty()) {
+
+            
 
 
-        try {
-            const registerPost = await User.create(newUser);
+            try {
+                const registerUser = await User.create(newUser);
+                return res.redirect('/');
+    
+            } catch (error) {
+                return res.render('register', { errors: errors.mapped(), old: req.body });
 
-            return res.redirect('/')
-        } catch (error) {
-            console.log(error);
-        }
+            }               
+        } else {
+            return res.render('register', { errors: errors.mapped(), old: req.body });
+        };  
 
 
     },
 
 
     login: (req, res) => {
-        const error = req.query.error;
-        res.render('login', { error });
+        const loginErrors = req.query.error;
+
+        res.render('login', { loginErrors });
     },
+
 
     logout: (req, res) => {
         res.clearCookie('email');
-
         req.session.destroy();
         res.redirect('/');
     },
@@ -60,8 +85,16 @@ const controllers = {
     loginPost: (req, res) => {
         const userInJson = userModel.findByEmail(req.body.email);
 
+        const errors = validationResult(req);
+
+        if (!errors.isEmpty()) {
+            req.session.loginErrors = errors.array();
+            return res.render('login', { errors: errors.array() });
+        };
+
+
         if (!userInJson) {
-            return res.redirect('/users/login?error=El mail o la contraseña son incorrectos');
+            return res.render('login', { loginErrors: [{ msg: 'Usuario no encontrado' }] });
         }
 
         const validPw = bcrypt.compareSync(req.body.password, userInJson.password);
@@ -76,12 +109,11 @@ const controllers = {
             req.session.user = userInJson;
             console.log(req.session.user);
             res.redirect('/');
-
         } else {
-            res.redirect('/users/login?error=El mail o la contraseña son incorrectos');
+            return res.render('login', { loginErrors: [{ msg: 'El correo o la contraseña son incorrectos' }] });
         }
-    },
-
+    }
+    ,
     edit: async (req, res) => {
         const id = req.params.id;
 
@@ -116,13 +148,13 @@ const controllers = {
         };
 
 
-        try {         
+        try {
             await User.update(updateUser, {
                 where: {
                     user_id: req.params.id
                 }
             })
-                
+
 
         } catch (error) {
             console.log(error);

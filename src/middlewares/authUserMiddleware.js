@@ -1,10 +1,10 @@
-function productMiddleware (req, res, next) {
+function authUserMiddleware (req, res, next) {
     
     if (res.locals.userLog) {
-        next();     
+        res.redirect('/controlpanel')
     } else {
-     res.redirect('/products')
-}
+        next();     
+    }
 
 }
 
@@ -12,4 +12,4 @@ function productMiddleware (req, res, next) {
 // Ingresa a products/:id/edit si el usuario está logueado
 // Pendiente: Se debe configurar productEdit para que figure/no figure el ícono "Editar producto"  
 
-module.exports = productMiddleware;
+module.exports = authUserMiddleware;

@@ -231,3 +231,8 @@ form {
 
 .inicia {font-size: 12px;display: inline;}
 
+.error {
+    padding-top: 10px;
+    color: red;
+    font-size: 10px;
+}   

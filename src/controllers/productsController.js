@@ -1,7 +1,8 @@
 const { log } = require('console');
 const { Product } = require('../database/models');
+const { Colors } = require('../database/models');
 const { Op } = require('sequelize');
-
+const { validationResult } = require('express-validator');
 const fs = require('fs');
 
 
@@ -15,11 +16,14 @@ const controllers = {
     productDetail: async (req, res) => {
         try {
             const selectedProduct = await Product.findByPk(req.params.id, {
+                include: ['options', 'colors'],
                 raw: true,
                 nest: true
             });
 
             res.render('productDetail', { selectedProduct });
+
+            console.log(selectedProduct);
 
         } catch (error) {
             console.log(error);
@@ -39,57 +43,56 @@ const controllers = {
     updateProduct: async (req, res) => {
         const uploadedFile = req.file;
 
-        if (!uploadedFile) {
-            console.error('No se ha subido ningún archivo');
-            res.status(400).send('No se ha subido ningún archivo');
-            return;
+        const product = await Product.findByPk(req.params.id, { raw: true });
+    
+        let updatedProduct = product;
+    
+        if (uploadedFile) { 
+            console.log(uploadedFile.path);
+            const imageBuffer = fs.readFileSync(uploadedFile.path);
+            const imageBlob = Buffer.from(imageBuffer, 'binary');
+    
+            updatedProduct = {
+                ...updatedProduct,
+                ...req.body,
+                img: imageBlob,
+            };
         }
     
-
-        console.log(uploadedFile.path)
-        const imageBuffer = fs.readFileSync(uploadedFile.path);
-        const imageBlob = Buffer.from(imageBuffer, 'binary');
-
-        console.log(imageBlob)
-
-        let updatedProduct = {
-            id: Number(req.params.id),
-        };
-
-        updatedProduct = {
-            ...updatedProduct,
-            ...req.body,
-            img: imageBlob,
-
-        };
-
-
-        try {         
-            await Product.update(updatedProduct, {
-                where: {
-                    id: req.params.id
-                }
-            })
-                
-
-        } catch (error) {
-            console.log(error);
+        let errors = validationResult(req);
+    
+        if (errors.isEmpty()) {
+            try {
+                await Product.update(updatedProduct, {
+                    where: {
+                        id: req.params.id
+                    }
+                });
+                return res.redirect('/products');
+            } catch (error) {
+                return res.render('productEdit', { errors: errors.mapped(), old: req.body, product: updatedProduct, uploadedFile: uploadedFile });
+            }
+        } else {
+            return res.render('productEdit', { errors: errors.mapped(), old: req.body, product: updatedProduct, uploadedFile: uploadedFile });
         }
-        res.redirect('/products');
-
-
-    },
+    }
+    ,
     create: (req, res)=>{
         return res.render('productCreate');
     },
     createProduct: async (req,res) => {
         const uploadedFile = req.file;
-
-        console.log(uploadedFile.path)
+        
+        if (req.file == undefined ) {
+            res.locals.errors = { img: { msg: 'Debes seleccionar una imagen' } };
+            return res.render('productCreate');
+        } 
+        
         const imageBuffer = fs.readFileSync(uploadedFile.path);
         const imageBlob = Buffer.from(imageBuffer, 'binary');
-
         console.log(imageBlob)
+
+
 
 
         const newProduct = {
@@ -104,14 +107,20 @@ const controllers = {
 
         console.log(newProduct)
 
+            let errors = validationResult(req);
 
-        try {
-            const createdProduct = await Product.create(newProduct);
+            if (errors.isEmpty()) {
+                try {
+                    const createdProduct = await Product.create(newProduct);
+                    return res.redirect('/products');
+        
+                } catch (error) {
+                    return res.render('productCreate', { errors: errors.mapped(), old: req.body });
 
-            return res.redirect('/products');
-        } catch (error) {
-            console.log(error);
-        }
+                }               
+            } else {
+                return res.render('productCreate', { errors: errors.mapped(), old: req.body });
+            };  
 
     },
 

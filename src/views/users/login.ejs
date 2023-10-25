@@ -16,25 +16,35 @@
 
 <body>
     <main>
-
         <h2> Bienvenido a <a href="/"><img class="logo" src="/images/LOGO PINTUR.png" width="100px"></a> </h2>
         <p>¡Vamos a iniciar sesión!
         <p>
         <div class="formularios">
-            <form action="/users/login" method="POST">
-                <input class="email" type="email" name="email" id="email" placeholder="Email*">
-                <input class="contraseña" type="password" name="password" id="password" placeholder="Contraseña*">
+            <form action="/users/login" method="POST" id="loginForm">
+                <input class="email" type="email" name="email" id="inputEmail" placeholder="Email*">
+                <span class="erEmail"></span>
+                <input class="contraseña" type="password" name="password" id="inputPassword" placeholder="Contraseña*">
+                <span class="erPassword"></span>
                 <div class="sesion">
-                <label for="" >Mantener sesión iniciada</label><input type="checkbox" name="remember">
+                    <label for="">Mantener sesión iniciada</label><input type="checkbox" name="remember">
                 </div>
-                <button class="continuar" type="submit"> Continuar</button>
-
+                <button class="continuar" id="button" type="submit">Continuar</button>
+            </form>
         </div>
 
-        <div>
-            <p class="error"> <%=error%></p>
+        <div class="formularios">
+            <% if (loginErrors && loginErrors.length) { %>
+                <div class="error">
+                    <ul>
+                        <% loginErrors.forEach(error=> { %>
+                            <li>
+                                <%= error.msg %>
+                            </li>
+                            <% }); %>
+                    </ul>
+                </div>
+                <% } %>
         </div>
-
 
         <section class="lineas">
             <div class="line1"></div>
@@ -51,10 +61,10 @@
             <a href="/users/register">
                 <h3 class="inicia">Regístrate</h3>
             </a>
-
         </section>
     </main>
-    </form>
+
+    <script src="../js/loginValidation.js"></script>
 
 
 </body>
