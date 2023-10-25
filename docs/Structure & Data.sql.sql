@@ -194,7 +194,7 @@ CREATE TABLE `users` (
   `last_name` varchar(15) NOT NULL,
   `category_id` int(11) NOT NULL,
   `email` varchar(20) NOT NULL,
-  `password` varchar(20) NOT NULL,
+  `password` varchar(120) NOT NULL,
   `image` blob DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
