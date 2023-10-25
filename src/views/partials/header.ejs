@@ -11,6 +11,11 @@
             <li class="dos"><a href="/pendingSite">Accesorios</a></li>
             <li class="tres"><a href="/products">Productos</a></li>
             <li class="cuatro"><a href="/pendingSite">Asesoramiento</a></li>
+            <% if (locals.userLog) { %>
+            <li class="cuatro"><a style="color:rgb(224, 0, 52);" href="/controlpanel">Panel de administrador</a></li>
+            <% } else { %>
+                <% } %>
+
         </ul>
 
         <ul class="links iconos-der">
