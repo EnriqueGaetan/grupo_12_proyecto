@@ -151,13 +151,20 @@ form {
 }
 
 .error {
-    color: rgb(101, 0, 0);
+    color: rgb(193, 0, 0);
     font-size: 13px;
     display: flex;
     justify-content: center;
-
 }
 
+span {
+        color: rgb(193, 0, 0);
+        font-size: 13px;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        
+}
 
 .sesion {
     margin-top: 17px;

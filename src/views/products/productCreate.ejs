@@ -24,21 +24,32 @@
     <article>
     
     <form action="/products" method="post" enctype="multipart/form-data">
-      <label for="name">Nombre del producto:</label>
-      <input type="text" id="name" name="name" required>
-      <br>
-  
-      <label for="description" class="descripcionProducto">Descripción:</label>
-      <textarea id="description" name="description" required></textarea>
-      <br>
+        <label for="name">Nombre del producto:</label>
+        <input type="text" id="name" name="name">
+        <% if (locals.errors && locals.errors.name) { %>
+          <p class="error"><%= locals.errors.name.msg %></p>
+        <% } %>
+        <br>
+    
+        <label for="description" class="descripcionProducto">Descripción:</label>
+        <textarea id="description" name="description"></textarea>
+
+        <% if (locals.errors && locals.errors.description) { %>
+          <p class="error"><%= locals.errors.description.msg %></p>
+        <% } %>
+        <br>
   
       <label for="img" class="input-file">Selecionar imagen del producto:</label>
       <input type="file" id="img" name="img" multiple>
+      <% if (locals.errors && locals.errors.img) { %>
+        <p class="error"><%= locals.errors.img.msg %></p>
+      <% } %>
+      <br>
 
       <br>
   
       <label for="categoria">Categoría:</label>
-      <select name="category" required>
+      <select name="category">
         <option value=""> * Seleccionar</option>
         <option value="1">Interior</option>
         <option value="2">Exterior</option>
@@ -48,7 +59,7 @@
       
       <br>
       <label for="color">Color:</label>
-      <select name="color" required>
+      <select name="color">
         <option value=""> * Seleccionar</option>
         <option value="1">Blanco</option>
         <option value="2">Negro</option>
@@ -67,7 +78,7 @@
       <br>
   
       <label for="options">Opciones - Litros/Tamaño/Etc</label>
-      <select name="options" required>
+      <select name="options">
         <option value=""> * Seleccionar</option>
         <option value="1">1 Litro</option>
         <option value="2">2 Litros</option>
@@ -80,7 +91,7 @@
       <br>
 
       <label for="price">Precio:</label>
-      <input type="number" id="price" name="price" step="0.01" required>
+      <input type="number" id="price" name="price" step="0.01" >
       <br>
   
       <input class="enviar" type="submit" value="Guardar Producto" >

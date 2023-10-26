@@ -3,8 +3,11 @@ const usersController = require('../controllers/usersController')
 const multer = require('multer');
 const router = express.Router();
 const userValidation = require('../middlewares/userMiddleware');
-const userMiddleware = require('../middlewares/userMiddleware');
-const productMiddleware = require('../middlewares/productMiddleware');
+const productMiddleware2 = require('../middlewares/productMiddleware2');
+const loginMiddleware = require('../middlewares/loginMiddleware');
+const authUserMiddleware = require('../middlewares/authUserMiddleware');
+const registerMiddleware = require('../middlewares/registerMiddleware')
+
 
 
 const storage = multer.diskStorage({
@@ -20,9 +23,10 @@ const upload = multer({ storage: storage });
 
 
 
+
 // Formulario de login
-router.get('/login', userValidation,   usersController.login);
-router.post('/login', usersController.loginPost);
+router.get('/login', authUserMiddleware, usersController.login);
+router.post('/login', userValidation, usersController.loginPost);
 
 //logout
 router.get('/logout', usersController.logout);
@@ -31,16 +35,16 @@ router.get('/logout', usersController.logout);
 
 // Formulario de registro
 router.get('/register',userValidation, usersController.register);
-router.post('/register',upload.any('img'), usersController.registerPost);
+router.post('/register',[upload.single('image'), registerMiddleware], usersController.registerPost);
 
 //Detalle de usuario
-router.get('/:id/',productMiddleware, usersController.detail);
+router.get('/:id/', usersController.detail);
 
 
 
 // Formulario de edición 
-router.get('/:id/edit', productMiddleware, usersController.edit);
-router.put('/:id/edit', productMiddleware, upload.any('img'), usersController.updateUser);
+router.get('/:id/edit', usersController.edit);
+router.put('/:id/edit', [upload.single('img'), registerMiddleware], usersController.updateUser);
 
 
 module.exports = router;

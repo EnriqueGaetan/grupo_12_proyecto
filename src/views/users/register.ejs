@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="/js/js-front.js"></script>
 </head>
 
 <body>
@@ -17,13 +18,30 @@
     <h2> Bienvenido a <a href="/"><img class="logo" src="/images/LOGO PINTUR.png" width="100px"></a></h2>
     <p>¡Vamos a registrarte!<p>
     <div class="formularios">
+      <div class="errores">
+        <ul></ul> </div>
     <form action="/users/register" method="POST" enctype="multipart/form-data">
     <input class="nombre" type="text" name="firstName" id="firstName" placeholder="Nombre*">
+    <% if (locals.errors && locals.errors.firstName) { %>
+        <p class="error"><%= locals.errors.firstName.msg %></p>
+      <% } %>
     <input class="apellido" type="text" name="lastName" id="lastName" placeholder="Apellido*">
-    <input class="email" type="email" name="email" id="email" placeholder="Email*">
+    <% if (locals.errors && locals.errors.lastName) { %>
+        <p class="error"><%= locals.errors.lastName.msg %></p>
+      <% } %>
+    <input class="email emailReg" type="text" name="email" id="email" placeholder="Email*">
+    <% if (locals.errors && locals.errors.email) { %>
+        <p class="error"><%= locals.errors.email.msg %></p>
+      <% } %>
     <input class="tel" type="password" name="password" id="password" placeholder="password*">
+    <% if (locals.errors && locals.errors.password) { %>
+        <p class="error"><%= locals.errors.password.msg %></p>
+      <% } %>
     <label for="image" class="input-file">Selecionar foto de perfil*</label>
-    <input type="file" id="image" name="image" multiple>    
+    <input type="file" id="image" name="image" multiple>
+    <% if (locals.errors && locals.errors.image) { %>
+        <p class="error"><%= locals.errors.image.msg %></p>
+      <% } %>
     <button class="registrarme" type="submit"> Registrarme</button>
 
 </div>
