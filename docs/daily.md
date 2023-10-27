@@ -12,3 +12,10 @@ Daily Sprint 6:
 Reunión 21/09/23: Se charlaron temas con respecto a cómo se trabajó al sprint anterior y se estableció una nueva reunión a futuro dado que no contamos con los temas al día.
 
 Reunión 06/10/23: Presentamos el diagrama de base de datos y se charló sobre el mismo. Procedimos a dividir tareas y trabajar en ellas.  
+
+______________________________________________________________________________________
+Daily Sprint 7:
+
+Reunión 17/10/23: Se ajustan temas pendientes del sprint anterior que se deben corregir y se comienza con el nuevo.
+
+Reunión 25/10/23:Reunión simple donde dividimos los temas. Por un lado se hacen las validaciones back (Lucas) y por otras las validaciones front (Serrana).

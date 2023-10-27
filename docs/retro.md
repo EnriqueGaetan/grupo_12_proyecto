@@ -55,3 +55,21 @@ Retrospectiva del Sprint 6:
 
 
 5 - **Dejar de hacer**: Llegar al lanzamiento del sprint con los temas claros y la teoría leída.
+
+
+____________________________________
+______________________________-
+
+Retrospectiva del Sprint 7:
+
+1 - **Comenzar a hacer**: ------
+
+2 - **Hacer más:** En estos momentos que estamos ultimando detalles nos damos cuenta que debemos aumentar la cantidad de reuniones.
+
+3 - **Continuar haciendo:** En este momento del curso y del proyecto las bases se encuentran asentadas por lo que nos comprometemos a seguir de la misma manera. 
+
+
+4 - **Hacer menos**: ---
+
+
+5 - **Dejar de hacer**: Así como comentamos anteriormente debemos llegar con la teoría ya leida dado que llegamos atrasados al comienzo del sprint.
