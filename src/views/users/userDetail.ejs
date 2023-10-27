@@ -21,23 +21,32 @@
   </header>
   <article>
     <div class="usuarioDatos">
-      <h1>Datos de usuario</h1>
-      <br>
-      
+      <h1>Datos de usuario:
+        <br>
+        <img src="data:image/png;base64,<%= user.image.toString('base64') %>" width="100px">
+      </h1>
+
+
+
+
       <form>
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" value="<%= user.first_name %>" disabled>
-        
+
         <label for="apellido">Apellido:</label>
         <input type="text" id="apellido" value="<%= user.last_name %>" disabled>
-        
+
         <label for="correo">Correo electrónico:</label>
         <input type="email" id="correo" value="<%= user.email %>" disabled>
-        
+
         <label for="categoria">Categoría de usuario:</label>
         <select id="categoria" disabled>
-          <option value="1" <% if (user.category === 1) { %><% } %>>Administrador</option>
-          <option value="2" <% if (user.category !== 1) { %><% } %>>Invitado</option>
+          <option value="1" <% if (user.category===1) { %>
+            <% } %>>Administrador
+          </option>
+          <option value="2" <% if (user.category !==1) { %>
+            <% } %>>Invitado
+          </option>
         </select>
       </form>
     </div>

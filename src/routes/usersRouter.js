@@ -6,7 +6,8 @@ const userValidation = require('../middlewares/userMiddleware');
 const productMiddleware2 = require('../middlewares/productMiddleware2');
 const loginMiddleware = require('../middlewares/loginMiddleware');
 const authUserMiddleware = require('../middlewares/authUserMiddleware');
-const registerMiddleware = require('../middlewares/registerMiddleware')
+const registerMiddleware = require('../middlewares/registerMiddleware');
+const updateUserMiddleware = require('../middlewares/updateUserMiddleware');
 
 
 
@@ -38,6 +39,6 @@ router.get('/:id/', usersController.detail);
 
 // Formulario de edición 
 router.get('/:id/edit', usersController.edit);
-router.put('/:id/edit', [upload.single('image'), registerMiddleware], usersController.updateUser);
+router.put('/:id/edit', [upload.single('image'), updateUserMiddleware], usersController.updateUser);
 
 module.exports = router;

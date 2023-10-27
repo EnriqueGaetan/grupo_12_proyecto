@@ -50,9 +50,6 @@ const controllers = {
 
         if (errors.isEmpty()) {
 
-
-
-
             try {
                 const registerUser = await User.create(newUser);
                 return res.redirect('/');
@@ -102,14 +99,14 @@ const controllers = {
 
         let updatedUser = user;
 
-        if (uploadedFile) { 
+        if (uploadedFile) {
             const imageBuffer = fs.readFileSync(uploadedFile.path);
             const imageBlob = Buffer.from(imageBuffer, 'binary');
-    
+
             updatedUser = {
                 ...updatedUser,
                 ...req.body,
-                img: imageBlob,
+                image: imageBlob,
             };
         }
         else {
@@ -118,21 +115,25 @@ const controllers = {
                 ...req.body,
             };
         }
-    
+
         let errors = validationResult(req);
 
-        try {
-            await User.update(updatedUser, {
-                where: {
-                    user_id: req.params.id
-                }
-            })
+        if (errors.isEmpty()) {
+            try {
+                await User.update(updatedUser, {
+                    where: {
+                        user_id: req.params.id
+                    }
+                });
+                return res.redirect('/controlpanel');
 
+            } catch (error) {
+                return res.render('UserEdit', { errors: errors.mapped(), old: req.body, user: user, uploadedFile: uploadedFile });
+            }
+        } else {
+            return res.render('UserEdit', { errors: errors.mapped(), old: req.body, user: user, uploadedFile: uploadedFile });
 
-        } catch (error) {
-            console.log(error);
-        }
-        res.redirect('/users/' + req.params.id)
+        };
     },
     detail: async (req, res) => {
         try {
@@ -149,46 +150,46 @@ const controllers = {
 
     },
     loginPost: async (req, res) => {
-            const userEmail = req.body.email;
-            const userPassword = req.body.password;
-            const errors = validationResult(req);
+        const userEmail = req.body.email;
+        const userPassword = req.body.password;
+        const errors = validationResult(req);
 
-            if (!errors.isEmpty()) {
-                req.session.loginErrors = errors.array();
-                return res.render('login', { errors: errors.array() });
-            };
+        if (!errors.isEmpty()) {
+            req.session.loginErrors = errors.array();
+            return res.render('login', { errors: errors.array() });
+        };
 
-            try {
-                const userLogin = await User.findOne({
-                    where: { email: userEmail },
-                });
-                if (!userLogin) {
-                    return res.render('/user/login?error=El correo o la contraseña son incorrectos');
-                }
-
-                const validPw = bcrypt.compareSync(userPassword, userLogin.password);
-
-                if (validPw) {
-                    if (req.body.remember === "on") {
-                        res.cookie('email', userLogin.email, { maxAge: 1000 * 60 * 60 * 24 * 365 });
-                        console.log('Recordar usuario');
-                    } else {
-                        console.log('No se quiere mantener la sesión iniciada');
-                    }
-
-                    req.session.user = userLogin;
-                    console.log(req.session.user);
-
-                    res.redirect('/');
-                } else {
-                    return res.render('login', { loginErrors: [{ msg: 'El correo o la contraseña son incorrectos' }] });
-                }
-            } catch (error) {
-                console.log(error);
-                res.redirect('/user/login?error=Ha ocurrido un error en el inicio de sesión');
+        try {
+            const userLogin = await User.findOne({
+                where: { email: userEmail },
+            });
+            if (!userLogin) {
+                return res.render('/user/login?error=El correo o la contraseña son incorrectos');
             }
+
+            const validPw = bcrypt.compareSync(userPassword, userLogin.password);
+
+            if (validPw) {
+                if (req.body.remember === "on") {
+                    res.cookie('email', userLogin.email, { maxAge: 1000 * 60 * 60 * 24 * 365 });
+                    console.log('Recordar usuario');
+                } else {
+                    console.log('No se quiere mantener la sesión iniciada');
+                }
+
+                req.session.user = userLogin;
+                console.log(req.session.user);
+
+                res.redirect('/');
+            } else {
+                return res.render('login', { loginErrors: [{ msg: 'El correo o la contraseña son incorrectos' }] });
+            }
+        } catch (error) {
+            console.log(error);
+            res.redirect('/user/login?error=Ha ocurrido un error en el inicio de sesión');
         }
-        ,
     }
+    ,
+}
 
 module.exports = controllers;

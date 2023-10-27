@@ -24,7 +24,13 @@
   
 
   <h1>Modificar usuario: <br>
-    <%= user.first_name %> <%= user.last_name %> </h1>
+    <%= user.first_name %> <%= user.last_name %> 
+  
+  <br>
+  <!-- <img src="data:image/png;base64,<%= user.image.toString('base64') %>" width="100px"> -->
+
+  </h1>
+
 
 
     <article>
@@ -36,6 +42,11 @@
     <label for="first_name">Nombre</label>
     <input type="text" id="name" name="first_name" required value="<%= user.first_name %>" >
     <br>
+    <% if (locals.errors && locals.errors.firstName) { %>
+      <p class="error">
+        <%= locals.errors.firstName.msg %>
+      </p>
+      <% } %>
 
     <label for="last_name">Apellido</label>
     <input type="text" id="name" name="last_name" required value="<%= user.last_name %>" >
@@ -53,7 +64,7 @@
 
     <label for="categoria">Categoría:</label>
     <select name="category_id" required>
-      <option value="<%= user.category %>"> * Seleccionar</option>
+      <option value="<%= user.category_id %>"> * Seleccionar</option>
       <option value="1">Administrador</option>
       <option value="2">Invitado</option>
 

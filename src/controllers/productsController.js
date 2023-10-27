@@ -5,8 +5,6 @@ const { Op } = require('sequelize');
 const { validationResult } = require('express-validator');
 const fs = require('fs');
 
-
-
 const controllers = {
     products: async (req, res) => {
         const products = await Product.findAll({ raw: true });
@@ -42,27 +40,27 @@ const controllers = {
     updateProduct: async (req, res) => {
         const uploadedFile = req.file;
         const product = await Product.findByPk(req.params.id, { raw: true });
-    
+
         let updatedProduct = { ...product };
-            
-        if (uploadedFile) { 
+
+        if (uploadedFile) {
             const imageBuffer = fs.readFileSync(uploadedFile.path);
             const imageBlob = Buffer.from(imageBuffer, 'binary');
-    
+
             updatedProduct = {
                 ...updatedProduct,
                 ...req.body,
                 img: imageBlob,
             };
-        }  else {
+        } else {
             updatedProduct = {
                 ...updatedProduct,
                 ...req.body,
             };
         }
-    
+
         let errors = validationResult(req);
-    
+
         if (errors.isEmpty()) {
             try {
                 await Product.update(updatedProduct, {
@@ -79,23 +77,22 @@ const controllers = {
         }
     }
     ,
-    create: (req, res)=>{
+    create: (req, res) => {
         return res.render('productCreate');
     },
-    createProduct: async (req,res) => {
+    createProduct: async (req, res) => {
         const uploadedFile = req.file;
-        
-        if (req.file == undefined ) {
-            res.locals.errors = { img: { msg: 'Debes seleccionar una imagen' } };
-            return res.render('productCreate');
-        } 
-        
+
+        let errors = validationResult(req);
+
+        if (req.file == undefined) {
+            errors = validationResult(req);
+            return res.render('productCreate', { errors: errors.mapped(), old: req.body });
+        }
+
         const imageBuffer = fs.readFileSync(uploadedFile.path);
         const imageBlob = Buffer.from(imageBuffer, 'binary');
         console.log(imageBlob)
-
-
-
 
         const newProduct = {
             name: req.body.name,
@@ -109,24 +106,22 @@ const controllers = {
 
         console.log(newProduct)
 
-            let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            try {
+                const createdProduct = await Product.create(newProduct);
+                return res.redirect('/products');
 
-            if (errors.isEmpty()) {
-                try {
-                    const createdProduct = await Product.create(newProduct);
-                    return res.redirect('/products');
-        
-                } catch (error) {
-                    return res.render('productCreate', { errors: errors.mapped(), old: req.body });
-
-                }               
-            } else {
+            } catch (error) {
                 return res.render('productCreate', { errors: errors.mapped(), old: req.body });
-            };  
+
+            }
+        } else {
+            return res.render('productCreate', { errors: errors.mapped(), old: req.body });
+        };
 
     },
 
-    productCart: (req, res)=>{
+    productCart: (req, res) => {
         return res.render('productCart');
     },
 
@@ -148,7 +143,7 @@ const controllers = {
 
     search: async (req, res) => {
         console.log(req.body.productSearch)
-        
+
         try {
             const products = await Product.findAll({
                 where: {
@@ -156,15 +151,12 @@ const controllers = {
                         [Op.like]: `%${req.body.productSearch}%`
                     }
                 }
-                })
-             
+            })
 
             res.render('productsSearch', { products });
-
         } catch (error) {
             console.log(error);
         }
-
     }
 }
 
