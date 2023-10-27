@@ -34,7 +34,6 @@ const controllers = {
 
         try {
             const product = await Product.findByPk(id, { raw: true });
-
             res.render('productEdit', { product });
         } catch (error) {
             console.log(error);
@@ -42,13 +41,11 @@ const controllers = {
     },
     updateProduct: async (req, res) => {
         const uploadedFile = req.file;
-
         const product = await Product.findByPk(req.params.id, { raw: true });
     
-        let updatedProduct = product;
-    
+        let updatedProduct = { ...product };
+            
         if (uploadedFile) { 
-            console.log(uploadedFile.path);
             const imageBuffer = fs.readFileSync(uploadedFile.path);
             const imageBlob = Buffer.from(imageBuffer, 'binary');
     
@@ -56,6 +53,11 @@ const controllers = {
                 ...updatedProduct,
                 ...req.body,
                 img: imageBlob,
+            };
+        }  else {
+            updatedProduct = {
+                ...updatedProduct,
+                ...req.body,
             };
         }
     

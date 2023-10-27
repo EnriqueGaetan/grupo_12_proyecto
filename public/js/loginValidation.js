@@ -24,10 +24,7 @@ window.addEventListener('load', function() {
         if (inputPassword.value.length < 1) {
             errors.password = 'Debes proporcionar una contraseña';
             inputPassword.classList.add('error');
-        } else if (inputPassword.value.length < 8) {
-            errors.password = 'La contraseña debe tener al menos 8 caracteres';
-            inputPassword.classList.add('error');
-        } else {
+        }  else {
             inputPassword.classList.remove('error');
         }
 
