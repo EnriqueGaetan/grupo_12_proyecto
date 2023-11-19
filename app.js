@@ -1,8 +1,5 @@
 const express = require('express');
 const methodOverride = require('method-override');
-const mainRouter = require('./src/routes/mainRouter');
-const productsRouter = require('./src/routes/productsRouter');
-const usersRouter = require('./src/routes/usersRouter');
 const path = require('path');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
@@ -11,8 +8,19 @@ const userLog =  require('./src/middlewares/userLog');
 const cookiesMiddleware = require('./src/middlewares/cookiesMiddleware');
 
 
-
 const app = express();
+
+
+// Rutas 
+const mainRouter = require('./src/routes/mainRouter');
+const productsRouter = require('./src/routes/productsRouter');
+const usersRouter = require('./src/routes/usersRouter');
+
+
+const productsRouterAPI = require('./src/routes/api/productsRouterAPI');
+const usersRouterAPI = require('./src/routes/api/usersRouterAPI');
+
+
 
 app.set('view engine', 'ejs');
 
@@ -36,10 +44,18 @@ app.use(express.json());
 app.use(bodyParser.json());
 
 
+
 app.use(methodOverride('_method'));
+app.use('/', mainRouter);
+app.use('/users', usersRouter);
+app.use('/products', productsRouter);
+
+app.use('/api/users', usersRouterAPI);
+app.use('/api/products', productsRouterAPI)
 
 
-
+app.listen(3001, () =>
+    console.log("Servidor corriendo en el puerto 3001"));
 
 
 // app.use((req, res, next) => {
@@ -56,18 +72,5 @@ app.use(methodOverride('_method'));
 //     // Si no hay cookie de email, no hacemos nada
 //     next();
 // });
-
-
-
-
-app.use('/', mainRouter);
-app.use('/products', productsRouter);
-app.use('/users', usersRouter);
-
-
-
-app.listen(3001, () =>
-    console.log("Servidor corriendo en el puerto 3001"));
-
 
 
