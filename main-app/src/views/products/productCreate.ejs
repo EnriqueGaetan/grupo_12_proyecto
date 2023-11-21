@@ -57,8 +57,10 @@
         <option value="1">Interior</option>
         <option value="2">Exterior</option>
         <option value="3">Complementos</option>
-
       </select>
+      <% if (locals.errors && locals.errors.category) { %>
+        <p class="error"><%= locals.errors.category.msg %></p>
+      <% } %>
       
       <br>
       <label for="color">Color:</label>
@@ -72,12 +74,9 @@
         <option value="6">Azul</option>
         <option value="7">Verde</option>
     </select>
-
-
-
-
-
-
+    <% if (locals.errors && locals.errors.color) { %>
+      <p class="error"><%= locals.errors.color.msg %></p>
+    <% } %>
       <br>
   
       <label for="options">Opciones - Litros/Tamaño/Etc</label>
@@ -87,16 +86,23 @@
         <option value="2">2 Litros</option>
         <option value="3">5 Litros</option>
         <option value="4">10 Litros</option>
-        <option value="5">20 Litros</option>
-        <option value="6">25 Litros</option>
+        <option value="5">15 Litros</option>
+        <option value="6">20</option>
+        <option value="6"> - </option>
       </select>
+      <% if (locals.errors && locals.errors.options) { %>
+        <p class="error"><%= locals.errors.options.msg %></p>
+      <% } %>
 
       <br>
 
       <label for="price">Precio:</label>
       <input type="number" id="price" name="price" step="0.01" >
+      <% if (locals.errors && locals.errors.price) { %>
+        <p class="error"><%= locals.errors.price.msg %></p>
+      <% } %>
       <br>
-  
+
       <input class="enviar" type="submit" value="Guardar Producto" >
     </form>
   

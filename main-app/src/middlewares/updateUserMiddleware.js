@@ -3,10 +3,10 @@ const path = require('path');
 
 
 const updateUserMiddleware = [
-  body('firstName')
+  body('first_name')
     .notEmpty().withMessage('Debe ingresar un nombre')
     .isLength({ min: 2 }).withMessage('El nombre debe tener al menos 2 caracteres'),
-    body('lastName')
+    body('last_name')
     .notEmpty().withMessage('Debe ingresar un apellido')
     .isLength({ min: 2 }).withMessage('El apellido debe tener al menos 2 caracteres'),
     body('email')

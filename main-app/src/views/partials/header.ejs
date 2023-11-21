@@ -4,35 +4,37 @@
         <i class="fa-solid fa-bars burger"></i>
         <a href="/" class="logo">
             <img src="/images/LOGO PINTUR.png" width="100px" alt="Descripción de la imagen">
-          </a>
-          
+        </a>
+
         <ul class="links nav-textos">
             <li class="uno"><a href="/pendingSite">Colores</a></li>
             <li class="dos"><a href="/pendingSite">Accesorios</a></li>
             <li class="tres"><a href="/products">Productos</a></li>
             <li class="cuatro"><a href="/pendingSite">Asesoramiento</a></li>
-            <% if (locals.userLog) { %>
-            <li class="cuatro"><a style="color:rgb(224, 0, 52);" href="/controlpanel">Panel de administrador</a></li>
-            <% } else { %>
-                <% } %>
+            <% if (locals.userLog && locals.userLog.category_id===1) { %>
+                <li class="cuatro"><a style="color:rgb(224, 0, 52);" href="/controlpanel">Panel de administrador</a>
+                </li>
+                <% } else { %>
+                    <% } %>
 
         </ul>
 
         <ul class="links iconos-der">
             <!-- <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li> -->
             <!-- Lupa de busqueda. Se quitó hasta que se reconfigure su función! -->
-            
-            <li><a href="/users/login">
-                <% if (locals.userLog) { %>
-                    <p><%= locals.userLog.first_name %>
-                    </p>
-                    <p> 
-                        <a href="/users/logout" style="color:rgb(224, 0, 52);">   Salir</a>
-                    </p>
-                            <% } else { %>
-                                <p >Iniciar sesión</p>
 
-                                <% } %>
+            <li><a href="/users/login">
+                    <% if (locals.userLog) { %>
+                        <p>
+                            <%= locals.userLog.first_name %>
+                        </p>
+                        <p>
+                            <a href="/users/logout" style="color:rgb(224, 0, 52);"> Salir</a>
+                        </p>
+                        <% } else { %>
+                            <p>Iniciar sesión</p>
+
+                            <% } %>
                 </a>
             </li>
 

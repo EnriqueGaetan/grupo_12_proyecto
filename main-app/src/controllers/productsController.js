@@ -11,6 +11,24 @@ const controllers = {
 
         res.render('products', { products });
     },
+    productsInterior: async (req, res) => {
+        const products = await Product.findAll({ 
+            where: {
+                category_id: 1
+            },
+            raw: true });
+
+        res.render('productsInt', { products });
+    },
+    productsExterior: async (req, res) => {
+        const products = await Product.findAll({ 
+            where: {
+                category_id: 2
+            },
+            raw: true });
+
+        res.render('productsExt', { products });
+    },
     productDetail: async (req, res) => {
         try {
             const selectedProduct = await Product.findByPk(req.params.id, {

@@ -49,8 +49,13 @@
                 <div class="container">
                     <div class="img-producto">
                         <div>
-                            <a class="editar" href="/products/<%=selectedProduct.id %>/edit">Editar producto</a>
                         </div>
+
+                        <% if (locals.userLog && locals.userLog.category_id===1) { %>
+                            <a class="editar" href="/products/<%=selectedProduct.id %>/edit">Editar producto</a>
+                            <% } else { %>
+                                <% } %>
+
                         <br>
 
 
@@ -74,15 +79,10 @@
 
                         <div class="opciones-compra-items">
 
-                            <select name="color" id="color">
-                                <option>
-                                    <%=selectedProduct.colors.color%>
-                                </option>
-                            </select>
+                            <input type="text"  name="color" id="color" value="<%=selectedProduct.colors.color%>"readonly>
 
-                            <select name="litros" id="litros">
-                                <option><%= selectedProduct.options.liters %> litros</option>
-                            </select>
+
+                            <input type="text" name="litros" id="litros" value="<%= selectedProduct.options.liters %> litros" readonly>
 
                             <div class="cantidad">
 
@@ -115,7 +115,7 @@
 
 
 
-                    <div class="info-principal">
+                    <!-- <div class="info-principal">
                         <p class="info-principal-titulo">Información principal</p>
 
                         <div>
@@ -147,8 +147,9 @@
                             </ul>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
 
+                    <br>
 
 
                     <div class="info-general"></div>
