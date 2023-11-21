@@ -625,7 +625,8 @@ pre code {
     display: flex;
     flex-wrap: wrap;
     margin-right: -.75rem;
-    margin-left: -.75rem
+    margin-left: -.25rem;
+    margin-top: 1rem;
 }
 
 .no-gutters {
@@ -10786,8 +10787,8 @@ a:focus {
 }
 
 .bg-gradient-secondary {
-    background-color: #858796;
-    background-image: linear-gradient(180deg, #858796 10%, #60616f 100%);
+    background-color: #ebf0f5;
+    background-image: linear-gradient(180deg, #ebf0f500 10%, #acafb5  100%);
     background-size: cover
 }
 
@@ -11546,35 +11547,35 @@ a:focus {
 }
 
 .sidebar-dark .sidebar-brand {
-    color: #fff
+    color: #2390cf
 }
 
 .sidebar-dark hr.sidebar-divider {
-    border-top: 1px solid rgba(255, 255, 255, .15)
+    border-top: 1px solid  #ffffff
 }
 
 .sidebar-dark .sidebar-heading {
-    color: rgba(255, 255, 255, .4)
+    color: #e6127a
 }
 
 .sidebar-dark .nav-item .nav-link {
-    color: rgba(255, 255, 255, .8)
+    color: #2390cf
 }
 
 .sidebar-dark .nav-item .nav-link i {
-    color: rgba(255, 255, 255, .3)
+    color: #2390cf
 }
 
 .sidebar-dark .nav-item .nav-link:active,
 .sidebar-dark .nav-item .nav-link:focus,
 .sidebar-dark .nav-item .nav-link:hover {
-    color: #fff
+    color: #91c2e0
 }
 
 .sidebar-dark .nav-item .nav-link:active i,
 .sidebar-dark .nav-item .nav-link:focus i,
 .sidebar-dark .nav-item .nav-link:hover i {
-    color: #fff
+    color: #c899b0
 }
 
 .sidebar-dark .nav-item .nav-link[data-toggle=collapse]::after {
@@ -11582,11 +11583,11 @@ a:focus {
 }
 
 .sidebar-dark .nav-item.active .nav-link {
-    color: #fff
+    color: #2390cf
 }
 
 .sidebar-dark .nav-item.active .nav-link i {
-    color: #fff
+    color: #2390cf
 }
 
 .sidebar-dark #sidebarToggle {

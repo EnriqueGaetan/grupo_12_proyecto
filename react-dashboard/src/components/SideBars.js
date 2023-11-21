@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../assets/images/logo-DH.png';
+import image from '../assets/images/1694562002021-LOGO PINTUR.png';
 import ContentWrapper from './ContentWrapper';
 
 import {Link, Route, Routes} from 'react-router-dom';
@@ -13,7 +13,7 @@ function SideBar(){
                 {/*<!-- Sidebar - Brand -->*/}
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                     <div className="sidebar-brand-icon">
-                        <img className="w-100" src={image} alt="Digital House"/>
+                        <img className="w-50" src={image} alt="Digital House"/>
                     </div> 
                 </a>
 
