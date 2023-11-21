@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 function LastProductUser(props){
     return(
         <div className="col-lg-6 mb-4">
