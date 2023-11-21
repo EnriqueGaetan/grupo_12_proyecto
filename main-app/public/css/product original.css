@@ -1,10 +1,239 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
 
+
 * {
     font-family: 'Outfit', sans-serif;
+    /* color: #1E1E1E; */
+    font-size: 12px;
     text-decoration: none;
-    color: black;
 }
+
+@media (max-width: 479px) {
+
+* {
+    font-size: 11px;
+}
+
+
+    .absolute-boton {
+        margin-top: -30px;
+    }
+
+    .absolute-boton .boton-uno {
+        margin-left: 10px;
+    }
+
+    .ovalo {
+        bottom: 120px;
+    }
+
+    .container {
+        display: grid;
+    }
+
+
+
+
+    .info-principal-titulo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: white;
+        border-radius: 15px;
+        width: 160px;
+        height: 25px;
+    }
+
+    .opciones-compra-items {
+        width: 80%;
+    }
+
+
+
+
+}
+
+
+
+@media (min-width: 480px) {
+
+    .info-principal-titulo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: white;
+        border-radius: 15px;
+        width: 220px;
+        height: 30px;
+    }
+
+
+
+}
+
+.opciones-compra h1 {
+    font-size: 20px;
+    margin-bottom: -12px;
+    margin-left: 10px;
+}
+
+.opciones-compra h2 {
+    font-style: italic;
+    font-size: 13px;
+    font-weight: 100;
+    margin-left: 10px;
+}
+
+.container {
+    /* border: 1px solid black; */
+    display: grid;
+    gap: 0px 60px;
+    /* grid-auto-flow: row; */
+    margin-top: 41px;
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+  }
+
+.img-producto {
+    grid-area: 1 / 1 / 3 / 3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center
+
+}
+
+.opciones-producto a {
+    margin-top: 11px;
+    display: flex;
+    color: red;
+}
+
+
+.img-producto p {
+    width: auto;
+    font-size: 14px;
+}
+
+
+.opciones-compra {
+    grid-area: 1 / 3 / 3 / 5;
+    /* height: 114vh; */
+}
+
+
+
+.opciones-compra-items {
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+}
+
+.opciones-compra select, input, button {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+
+
+button {
+    border: none;
+    background-color: #C83838;
+    color: white;
+    border-radius: 15px;
+}
+
+
+
+
+
+.cantidad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.cantidad label {
+    margin-left: 10px;
+}
+
+
+.fav-sucursal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.info-principal {
+    grid-area: 3 / 1 / 6 / 3;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+
+}
+
+.editar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C83838;
+    color: white;
+    border-radius: 15px;
+    width: 160px;
+    height: 25px;
+    text-decoration: none;
+    
+}
+.editar:hover {
+    background-color: #b23535;
+
+}
+
+
+
+
+.info-principal h3 {
+    margin-left: -15px;
+}
+
+
+.info-general {
+    grid-area: 3 / 3 / 6 / 5;
+    margin-top: 30px;
+
+}
+
+.linea-int-ext {
+    grid-area: 3 / 3 / 4 / 5;
+    width: 70%;
+    margin-top: 10px;
+}
+
+.aplicacion {
+    grid-area: 4 / 3 / 5 / 5;
+    width: 90%;
+
+}
+
+.extra {
+    grid-area: 5 / 3 / 6 / 5;
+    width: 90%;
+}
+
+
 
 html,
 body {
@@ -17,25 +246,19 @@ body {
     background-color: #FFFFFF;
 }
 
-main  {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-}
-
 header {
-    background-color: #ffffff;
+    background-color: #EBF0F5;
     width: 100vw;
     position: relative;
-    height: 30vh;
-    z-index: 1;
 }
 
+main {
+    height: 164vh;
+}
 .navbar {
     display: inline-flex;
     align-items: center;
-    height: 56px;
+    height: 76px;
     flex-direction: row;
     width: 100vw;
     justify-content: space-around;
@@ -44,7 +267,7 @@ header {
 }
 
 
-.logo {margin-left: 25px;}
+
 
 .burguer {
     font-size:14px;
@@ -60,10 +283,6 @@ header {
 .links li {
     width: 35vw;
 
-}
-
-.user {
-    color: red;
 }
 
 .nav-textos {
@@ -89,8 +308,9 @@ header {
     height: 1px;
     position: relative;
     z-index: 10;
-    top: -4px;
+    top: -6px;
     width: 100vw;
+
 }
 
 .ovalo {
@@ -99,7 +319,7 @@ header {
     border-radius: 50%;
     position: relative;
     z-index: -10;
-    bottom: 90px;
+    bottom: 121px;
     width: 100vw;
 }
 
@@ -114,26 +334,21 @@ header {
 .texto-ovalo {
     z-index: 10;
     position: absolute;
-    top: 49px;
-    /* margin-left: 43px; */
-    font-size: 21px;
-    width: 88vw;
+    top: 75px;   
+    font-size: 25px;
 }
-
-
 
 .botones-ovalo {
     display: flex;
+    flex-direction: column;
     width: 100vw;
-    flex-direction: row;
     align-items: center;
-    justify-content: center;
 }
 
 .absolute-boton {
     z-index: 10;
     position: absolute;
-    top: 102px;
+    top: 152px;
     flex-direction: column;
 }
 
@@ -142,12 +357,12 @@ header {
     padding: 2px 12px;
     border-width: 0px;
     border-radius: 35px;
-    height: 15px;
-    /* margin-left: 110px; */
-    margin-bottom: 0px;
+    height: 20px;
+    margin-left: 114px;
+    margin-bottom: 7px;
     text-align: center;
-    width: 83px;
-    font-size: 10px;
+    width: 115px;
+    font-size: 13px;
 }
 
 .boton-dos {
@@ -155,70 +370,69 @@ header {
     padding: 2px 12px;
     border-width: 0px;
     border-radius: 35px;
-    height: 15px;
-    /* margin-left: 110px; */
+    height: 20px;
+    margin-left: 114px;
     text-align: center;
-    width: 83px;
-    font-size: 10px;
+    width: 115px;
+    font-size: 13px;
     /* top: 51px; */
 }
 
 
-.body-ustedes {
-    height: 50vh;
-}
+
 
 footer {
     background-color: #EBF0F5;
     width: 100vw;
-    height: 57vh;
+    height: 40vh;
+    /* margin: 0; */
 }
 
 
 .ovalo-footer {
     background-color: #EBF0F5;
-    height: 23vh;
+    height: 26vh;
     border-radius: 50%;
     position: relative;
     z-index: -10;
-    bottom: 321px;
+    bottom: 303px;
     width: 100vw;
 }
 
 .footer-bar {
     display: inline-flex;
     align-items: flex-start;
-    height: 257px;
+    height: 200px;
     flex-direction: column;
     width: 100vw;
-    margin-bottom: 20px;
     align-content: center;
+    margin-bottom: 19px;
 }
 
 .logo-footer {
-    margin-left: 97px;
-    margin-bottom: 11px;
-    width: 121px;
+    margin-left: 114px;
+    margin-bottom: 12px;
+    width: 130px;
 }
 
 .text-ayuda {
-    font-size: 10px;
+    font-size: 12px;
     list-style: none;
 }
 
 .titulo {
     color: #2390cf;
-    font-size: 11px;
+    font-size: 13px;
 }
 
 .compra-segura {
-    font-size: 10px;
+    font-size: 12px;
     list-style: none;
     align-items: center;
 }
 
 .encuentra-sucursal {
-    font-size: 10px;
+    font-size: 12px;
     list-style: none;
 }
 
@@ -228,7 +442,8 @@ footer {
     align-items: center;
     flex-wrap: wrap;
     justify-content: flex-end;
-    margin-bottom: 66px;
+    margin-bottom: 103px;
+    
 }
 
 .body-ustedes {
@@ -238,30 +453,27 @@ footer {
 }
 
 .h3-boletin {
-    margin: 8px;
-    font-size: 18px;
+    margin: 10px;
+    font-size: 22px;
     color: #1E1E1E;
 }
 
 .p-boletin {
     margin: 1px;
-    font-size: 10px;
+    font-size: 12px;
     color: #545151;
 }
 
 .email {
-    margin-top: 7px;
-    margin-bottom: 3px;
+    margin-top: 10px;
+    margin-bottom:8px;
     border-radius: 35px;
-    height: 16px;
-    width: 126px;
-    font-size: 9px;
+    height: 20px;
+    width: 200px;
+    font-size: 12px;
     border-width: 1px;
     padding: 2px 12px;
 }
-
-.email:hover {
-    box-shadow: 3px 3px 4px rgb(147 144 144 / 50%); }
 
 .contactanos-boletin {
     font-size: 10px;
@@ -274,21 +486,19 @@ footer {
     display: inline-flex;
     flex-direction: row;
     justify-content: space-around;
-    font-size: 13px;
+    font-size: 14px;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.boton-uno:hover, .boton-dos:hover {
-    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5); }
-      
-    
-@media (min-width:480px) {
+
+ /* VER LUCAS  */
+ @media (min-width:480px) {
     header {
     background-color: #ffffff;
     width: 100vw;
-    height: 30vh;
+    height: 10vh;
     position: relative;
     z-index: 1;
 }
@@ -348,7 +558,7 @@ footer {
     height: 1px;
     position: relative;
     z-index: 10;
-    top: -13px;
+    top: -5px;
     width: 100vw;
 }
 
@@ -358,7 +568,7 @@ footer {
     border-radius: 50%;
     position: relative;
     z-index: -10;
-    bottom: 119px;
+    bottom: 128px;
     width: 100vw;
 }
 
@@ -371,7 +581,7 @@ footer {
 .texto-ovalo {
     z-index: 10;
     position: absolute;
-    top: 60px;
+    top: 110px;
     font-size: 27px;
     width: 93vw;
 }
@@ -386,7 +596,7 @@ footer {
 .absolute-boton {
     z-index: 10;
     position: absolute;
-    top: 125px;
+    top: 180px;
     /* flex-wrap: wrap; */
 }
 
@@ -534,14 +744,45 @@ footer {
 }
 }
 
+
+/* VER LUCAS */
+
+
 @media (min-width: 769px) {
     header {
-    background-color: #ffffff;
-    /* width: 100vw; */
-    position: relative;
-    height: 30vh;
+        background-color: #ffffff;
+        width: 100vw;
+        position: relative;
+        height: 30vh;
 }
 
+      .seguir-comprando {
+        background-color: #FFFDFD;
+        padding: 2px 15px;
+        border-width: 0px;
+        border-radius: 35px;
+        height: 20px;
+        margin: 5px;
+        text-align: end;
+        width: 58px;
+        font-size: 13px;
+    }
+
+    .seguir-comprando:hover {
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .flecha {
+        position: absolute;
+        color: #191919;
+        width: 20px;
+        height: 12px;
+        left: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 14px;
+    }
+    
 .burger {
     display: none;
     color: #EBF0F5;
@@ -564,7 +805,7 @@ footer {
 }
 
 .links {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     font-size: 12px;
     list-style: none;
@@ -624,8 +865,8 @@ footer {
 .texto-ovalo {
     z-index: 10;
     position: absolute;
-    top: 63px;
-    font-size: 28px;
+    top: 66px;
+    font-size: 29px;
 }
 
 .botones-ovalo {
@@ -638,7 +879,7 @@ footer {
 .absolute-boton {
     z-index: 10;
     position: absolute;
-    top: 132px;
+    top: 134px;
 }
 
 .boton-uno {
@@ -670,7 +911,7 @@ footer {
       
     
 .body-ustedes {
-    height: 59vh;
+    height: 46vh;
 }
 
 footer {
@@ -731,14 +972,14 @@ footer {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    margin-bottom: 92px;
+    margin-bottom: 99px;
 }
 
 .body-ustedes {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    align-content: flex-start;
 }
 
 .h3-boletin {
@@ -784,9 +1025,71 @@ footer {
   
 }
 
+
+.opciones-producto {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px
+}
+
+
+
+
+
 @media (min-width: 1024px) {
     main {
-      /* height: 159vh; */
+      height: 100%;
+    }
+
+      .seguir-comprando {
+        background-color: #FFFDFD;
+        padding: 2px 15px;
+        border-width: 0px;
+        border-radius: 35px;
+        height: 20px;
+        margin: 5px;
+        text-align: end;
+        width: 58px;
+        font-size: 13px;
+    }
+
+    .seguir-comprando:hover {
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .flecha {
+        position: absolute;
+        color: #191919;
+        width: 20px;
+        height: 12px;
+        left: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 14px;
     }
 }
 
+
+@media (max-width:479px) {
+    header {
+    background-color: #ffffff;
+    width: 100vw;
+    height: 11vh;
+    position: relative;
+    z-index: 1;
+    }
+
+    .texto-ovalo {
+        z-index: 10;
+        position: absolute;
+        top: 110px;
+        font-size: 25px;
+    }
+
+    .absolute-boton {
+        z-index: 10;
+        position: absolute;
+        top: 195px;
+    }
+
+}
