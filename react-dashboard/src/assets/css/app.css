@@ -49,7 +49,7 @@
 html {
     font-family: sans-serif;
     line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 80%;
     -webkit-tap-highlight-color: transparent
 }
 
@@ -69,7 +69,7 @@ section {
 body {
     margin: 0;
     font-family: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 1rem;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
     color: #858796;
@@ -627,6 +627,7 @@ pre code {
     margin-right: -.75rem;
     margin-left: -.25rem;
     margin-top: 1rem;
+    justify-content: center;
 }
 
 .no-gutters {
@@ -1296,7 +1297,7 @@ pre code {
 
     .col-lg-6 {
         flex: 0 0 50%;
-        max-width: 50%
+        max-width: 100%
     }
 
     .col-lg-7 {
@@ -4755,7 +4756,7 @@ input[type=submit].btn-block {
     background-color: #fff;
     background-clip: border-box;
     border: 1px solid #e3e6f0;
-    border-radius: .35rem
+    border-radius: 2rem
 }
 
 .card>hr {
@@ -6806,7 +6807,7 @@ button.bg-light:hover {
 }
 
 .bg-dark {
-    background-color: #5a5c69 !important
+    background-color: #C83838  !important
 }
 
 a.bg-dark:focus,
@@ -8254,7 +8255,8 @@ button.bg-dark:hover {
 
 .mb-4,
 .my-4 {
-    margin-bottom: 1.5rem !important
+    margin-bottom: 1.5rem !important;
+    margin-top: 1.5rem
 }
 
 .ml-4,
@@ -11555,21 +11557,21 @@ a:focus {
 }
 
 .sidebar-dark .sidebar-heading {
-    color: #e6127a
+    color: #C83838
 }
 
 .sidebar-dark .nav-item .nav-link {
-    color: #2390cf
+    color: #000000e6
 }
 
 .sidebar-dark .nav-item .nav-link i {
-    color: #2390cf
+    color: #C83838
 }
 
 .sidebar-dark .nav-item .nav-link:active,
 .sidebar-dark .nav-item .nav-link:focus,
 .sidebar-dark .nav-item .nav-link:hover {
-    color: #91c2e0
+    color: #8f5f5a
 }
 
 .sidebar-dark .nav-item .nav-link:active i,
@@ -11583,11 +11585,11 @@ a:focus {
 }
 
 .sidebar-dark .nav-item.active .nav-link {
-    color: #2390cf
+    color: #000000e6
 }
 
 .sidebar-dark .nav-item.active .nav-link i {
-    color: #2390cf
+    color: #000000e6
 }
 
 .sidebar-dark #sidebarToggle {

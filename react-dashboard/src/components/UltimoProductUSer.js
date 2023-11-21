@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function LastProductUser(props){
+function UltimoProductUser(props){
     return(
         <div className="col-lg-6 mb-4">
             <div className="card shadow mb-4">
@@ -10,7 +10,7 @@ function LastProductUser(props){
                 </div>
                 <div className="card-body">
                     <div className="text-center">
-                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 20 + 'rem', height: 20 + 'rem'}} src={props.urlImage} alt={props.title}/>
+                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 13 + 'rem', height: 10 + 'rem'}} src={props.urlImage} alt={props.title}/>
                     </div> 
                     <p>{props.title}</p>
                     <p>{props.description}</p>
@@ -20,4 +20,4 @@ function LastProductUser(props){
     )
 }
 
-export default LastProductUser;
+export default UltimoProductUser;

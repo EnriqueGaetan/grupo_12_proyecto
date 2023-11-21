@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import LastProductUser from './LastProductUSer';
+import UltimoProductUser from './UltimoProductUSer';
 
 function LastView() {
     const [products, setProducts] = useState([]);
@@ -53,7 +53,7 @@ function LastView() {
     return (
         <div className="row">
             {newDate.map((item, index) => (
-                <LastProductUser {...item} key={index} />
+                <UltimoProductUser {...item} key={index} />
             ))}
         </div>
     );

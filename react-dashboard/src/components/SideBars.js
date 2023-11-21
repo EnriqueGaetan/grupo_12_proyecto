@@ -24,7 +24,7 @@ function SideBar() {
                 <li className="nav-item active">
                     <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard</span></Link>
+                        <span>Dashboard Pintur</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -37,7 +37,7 @@ function SideBar() {
                 <li className="nav-item">
                     <Link className="nav-link" to="/GenresInDb">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Pages</span>
+                        <span>Categorías</span>
                     </Link>
                 </li>
 
@@ -45,14 +45,14 @@ function SideBar() {
                 <li className="nav-item">
                     <Link className="nav-link" to="/Chart">
                         <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Charts</span></Link>
+                        <span>Totales</span></Link>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item nav-link">
                     <Link className="nav-link" to="/ContentRowMovies">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Tables</span></Link>
+                        <span>Tabla</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
