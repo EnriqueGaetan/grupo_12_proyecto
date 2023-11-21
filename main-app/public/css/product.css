@@ -397,14 +397,15 @@ main {
 
 }
 
-.product-image {
-    max-width: 100%;
-    height: auto;
+.product-container img {
+    width: 90%;
+    align-items: center;
+    margin-left: 45px;
 }
 
 .product-details {
-    margin-top: -150px;
-    margin-bottom: 150px;
+    margin-top: -280px;
+    margin-bottom: 261px;
     width: 50%;
     border-top: 1px solid #c1c1c1;
 }
@@ -1056,6 +1057,13 @@ footer {
     .tres a{
         margin-left: 46px;
     }
+
+    .product-details {
+        margin-top: -115px;
+        margin-bottom: 150px;
+        width: 45%;
+        border-top: 1px solid #c1c1c1;
+    }
     
 }
 
@@ -1137,5 +1145,6 @@ footer {
         background-color: #C83838;
         color: white;
     }
+
 
 }

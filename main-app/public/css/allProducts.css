@@ -390,6 +390,12 @@ body {
 
 
 
+    .product-container img {
+        width: 100%;
+        align-items: center;
+        margin-left: 45px;
+    }
+
     .boletin {
         display: inline-flex;
         flex-direction: column;
