@@ -1,11 +1,11 @@
 import React from 'react';
-import image from '../assets/images/1694562002021-LOGO PINTUR.png';
+import image from '../assets/images/logo-DH.png';
 import ContentWrapper from './ContentWrapper';
 
-import { Link, Route, Switch } from 'react-router-dom';
+import {Link, Route, Routes} from 'react-router-dom';
 
-function SideBar() {
-    return (
+function SideBar(){
+    return(
         <React.Fragment>
             {/*<!-- Sidebar -->*/}
             <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -13,31 +13,31 @@ function SideBar() {
                 {/*<!-- Sidebar - Brand -->*/}
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                     <div className="sidebar-brand-icon">
-                        <img className="w-50" src={image} alt="Digital House" />
-                    </div>
+                        <img className="w-100" src={image} alt="Digital House"/>
+                    </div> 
                 </a>
 
                 {/*<!-- Divider -->*/}
-                <hr className="sidebar-divider my-0" />
+                <hr className="sidebar-divider my-0"/>
 
                 {/*<!-- Nav Item - Dashboard -->*/}
                 <li className="nav-item active">
                     <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard Pintur</span></Link>
+                        <span>Dashboard</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
-                <hr className="sidebar-divider" />
+                <hr className="sidebar-divider"/>
 
                 {/*<!-- Heading -->*/}
                 <div className="sidebar-heading">Actions</div>
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link" to="/GenresInDb">
+                <Link className="nav-link" to="/GenresInDb">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Categorías</span>
+                        <span>Pages</span>
                     </Link>
                 </li>
 
@@ -45,25 +45,25 @@ function SideBar() {
                 <li className="nav-item">
                     <Link className="nav-link" to="/Chart">
                         <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Totales</span></Link>
+                        <span>Charts</span></Link>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item nav-link">
-                    <Link className="nav-link" to="/ContentRowMovies">
+                <Link className="nav-link" to="/ContentRowMovies">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Tabla</span></Link>
+                        <span>Tables</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
-                <hr className="sidebar-divider d-none d-md-block" />
+                <hr className="sidebar-divider d-none d-md-block"/>
             </ul>
             {/*<!-- End of Sidebar -->*/}
 
-            <Switch>
-            <Route path="/" component={ContentWrapper} />
-        {/* <Route component={NotFound} /> */}
-            </Switch>
+            <Routes>
+                <Route path="/" element={<ContentWrapper />}/>
+                {/* <Route component={NotFound} /> */}
+            </Routes>
             {/*<!-- End Microdesafio 2 -->*/}
         </React.Fragment>
     )
