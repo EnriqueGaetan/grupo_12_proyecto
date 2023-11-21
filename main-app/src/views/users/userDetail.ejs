@@ -39,15 +39,16 @@
         <label for="correo">Correo electrónico:</label>
         <input type="email" id="correo" value="<%= user.email %>" disabled>
 
-        <label for="categoria">Categoría de usuario:</label>
-        <select id="categoria" disabled>
-          <option value="1" <% if (user.category===1) { %>
-            <% } %>>Administrador
-          </option>
-          <option value="2" <% if (user.category !==1) { %>
-            <% } %>>Invitado
-          </option>
-        </select>
+
+        <label for="correo">Categoría de usuario:</label>
+        <input type="email" id="correo" value=
+        "<% if (user.category_id === 1) { %>
+          Administrador
+        <% } else { %>
+          Invitado
+        <% } %>"
+        disabled>
+
       </form>
     </div>
 

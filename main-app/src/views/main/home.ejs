@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Pintur</title>
     <script src="../app.js"></script>
     <link rel="stylesheet" href="/css/navfooter.css">
     <link rel="stylesheet" href="/css/home.css">
@@ -16,19 +16,20 @@
 <body>
     <header>
         <%- include('header') %>
-        <div class="bienvenido">
-            <h2 class="texto-ovalo">¡Bienvenido a tu mundo de colores !</h2>
-            <script src="/js/js-front.js"></script>
-
-           
+            <div class="bienvenido">
+                <h2 class="texto-ovalo">¡Bienvenido a tu mundo de colores !</h2>
+                <script src="/js/js-front.js"></script>
 
 
-        </div>
-        <div class="botones-ovalo">
-            <div class="absolute-boton">
-                <form action="/products/search" method="POST">
-                    <input class="boton-uno" type="text" name="productSearch" id="productSearch" placeholder="Que buscás?">
-                    <button type="submit" style="    display: inline-block;
+
+
+            </div>
+            <div class="botones-ovalo">
+                <div class="absolute-boton">
+                    <form action="/products/search" method="POST">
+                        <input class="boton-uno" type="text" name="productSearch" id="productSearch"
+                            placeholder="Que buscás?">
+                        <button type="submit" style="    display: inline-block;
                     background-color: #6c6c6c;
                     color: white;
                     height: 24px;
@@ -37,11 +38,11 @@
                     border: none;
                     border-radius: 10px;
                     cursor: pointer;">Ir</button>
-                    <!-- Pendiente!! Configurar en CSS -->
-                </form>
+                        <!-- Pendiente!! Configurar en CSS -->
+                    </form>
 
+                </div>
             </div>
-        </div>
     </header>
     <main>
         <article class="imagenes-linea">
@@ -70,37 +71,48 @@
         <article class="forma">
             <img class="forma-centro" src="/images/forma1.png" width="100px">
             <div class="texto-centro">
-                <p class="t1">Te ayudamos a inspirarte. </p>
+                <!-- <p class="t1">Te ayudamos a inspirarte. </p>
                 <p class="p1">QUIERO <b>PINTAR</b></p>
                 <p class="p2">QUIERO <b>REPARAR</b></p>
                 <p class="p3">QUIERO <b>IMPERMEABILIZAR</b></p>
-                <p class="p4">QUIERO <b>REVESTIR</b></p>
+                <p class="p4">QUIERO <b>REVESTIR</b></p> -->
             </div>
         </article>
 
-        <article class="box-interior">
-            <img class="img-interior" src="/images/linea-interior.png" width="100px">
-            <div class="caja-blanca1">
-            <div class="textos-cb">
-                <p class="p-titulo-linea"> Línea Interior </p>
-                <p class="p-lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dignissimos itaque esse nostrum molestias aliquid fugit modi earum aspernatur,
-                    doloribus harum culpa eos commodi vel nam repudiandae beatae nisi labore dolorem?</p>
-                <p class="ver-mas2"> Ver más</p>
-            </div></div>
-        </article>
+        <a href="products/interior">
+            <article class="box-interior">
+                <img class="img-interior" src="/images/linea-interior.png" width="100px">
+                <div class="caja-blanca1">
+                    <div class="textos-cb">
+                        <p class="p-titulo-linea"> Línea Interior </p>
+                        <p class="p-lorem">En nuestra colección de productos de interior, fusionamos la calidad
+                            artística con la funcionalidad práctica. Desde tonos suaves que abrazan la serenidad hasta
+                            explosiones de color que despiertan la vitalidad, ofrecemos una paleta diversa para
+                            satisfacer todos los gustos y estilos.
+                        </p>
+                        <p class="ver-mas2"> <a href="products/interior"> Ver más</a> </p>
+                    </div>
+                </div>
+            </article>
+        </a>
 
+        <a href="products/exterior">
         <article class="box-exterior">
             <img class="img-exterior" src="/images/linea-exterior.png" width="100px">
             <div class="caja-blanca2">
-            <div class="textos-cb">
-                <p class="p-titulo-linea"> Línea Exterior </p>
-                <p class="p-lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dignissimos itaque esse nostrum molestias aliquid fugit modi earum aspernatur,
-                    doloribus harum culpa eos commodi vel nam repudiandae beatae nisi labore dolorem?</p>
-                <p class="ver-mas2"> Ver más</p>
-            </div></div>
+                <div class="textos-cb">
+                    <p class="p-titulo-linea"> Línea Exterior </p>
+                    <p class="p-lorem">En nuestro repertorio de productos para exteriores, fusionamos la maestría
+                        artística con la funcionalidad resistente. Desde tonalidades que se mezclan armoniosamente con
+                        la naturaleza circundante hasta colores que despiertan la fachada, nuestra paleta diversa está
+                        diseñada para complementar todos los gustos y estilos al aire libre.
+
+                    </p>
+                    <p class="ver-mas2"> <a href="products/exterior"> Ver más</a></p>
+                </div>
+            </div>
         </article>
+    </a>
 
         <section class="body-ustedes">
             <div class="boletin">

@@ -2,7 +2,7 @@ const express = require('express');
 const productsController = require('../controllers/productsController');
 const multer = require('multer');
 const router = express.Router();
-const productMiddleware2 = require('../middlewares/productMiddleware2');
+const productMiddleware = require('../middlewares/productMiddleware');
 const editProductMiddleware = require('../middlewares/editProductMiddleware');
 
 const path = require('path');
@@ -24,16 +24,20 @@ const storage = multer.diskStorage({
 // Todos los productos /products
 router.get('/', productsController.products);
 
+router.get('/interior', productsController.productsInterior);
+router.get('/exterior', productsController.productsExterior);
+
+
 // // Detalle de producto products/2/productDetail
 router.get('/:id/productDetail', productsController.productDetail);
 
 // // Editar producto - GET / PUT
-router.get('/:id/edit', productsController.editProduct);
+router.get('/:id/edit',authUserMiddleware, productsController.editProduct);
 router.put('/:id/edit', [upload.single('img'), editProductMiddleware], productsController.updateProduct);
 
 // Crear producto - GET / POST
-router.get('/create', productsController.create);
-router.post('/', [upload.single('img'), productMiddleware2], productsController.createProduct);
+router.get('/create',authUserMiddleware, productsController.create);
+router.post('/', [upload.single('img'), productMiddleware], productsController.createProduct);
 
 // Carrito de compras /products/carritocompras
 router.get('/productCart', productsController.productCart);

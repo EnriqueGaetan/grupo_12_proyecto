@@ -2,8 +2,8 @@ const express = require('express');
 const usersController = require('../controllers/usersController')
 const multer = require('multer');
 const router = express.Router();
-const userValidation = require('../middlewares/userMiddleware');
-const productMiddleware2 = require('../middlewares/productMiddleware2');
+const userMiddleware = require('../middlewares/userMiddleware');
+const productMiddleware = require('../middlewares/productMiddleware');
 const loginMiddleware = require('../middlewares/loginMiddleware');
 const authUserMiddleware = require('../middlewares/authUserMiddleware');
 const registerMiddleware = require('../middlewares/registerMiddleware');
@@ -24,21 +24,21 @@ const upload = multer({ storage: storage });
 
 
 // Formulario de login
-router.get('/login', usersController.login);
+router.get('/login', userMiddleware, usersController.login);
 router.post('/login', usersController.loginPost);
 
 //logout
 router.get('/logout', usersController.logout);
 
 // Formulario de registro
-router.get('/register',userValidation, usersController.register);
+router.get('/register',userMiddleware, usersController.register);
 router.post('/register',[upload.single('image'), registerMiddleware], usersController.registerPost);
 
 //Detalle de usuario
 router.get('/:id/', usersController.detail);
 
 // Formulario de edición 
-router.get('/:id/edit', usersController.edit);
+router.get('/:id/edit', authUserMiddleware, usersController.edit);
 router.put('/:id/edit', [upload.single('image'), updateUserMiddleware], usersController.updateUser);
 
 module.exports = router;

@@ -97,7 +97,7 @@
                         <th>Apellido</th>
                         <th>Categoría</th>
                         <th>Email</th>
-                        <th>Editar</th>
+                        <th>Detalles</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -113,8 +113,13 @@
                                 <%= user.last_name %>
                             </td>
                             <td>
-                                <%= user.category_id %>
-                            </td>
+                                <% if (user.category_id === 1) { %>
+                                  Administrador
+                                <% } else { %>
+                                  Invitado
+                                <% } %>
+                              </td>
+                              
                             <td>
                                 <%= user.email %>
                             </td>

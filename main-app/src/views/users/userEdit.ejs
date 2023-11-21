@@ -42,19 +42,29 @@
     <label for="first_name">Nombre</label>
     <input type="text" id="name" name="first_name" required value="<%= user.first_name %>" >
     <br>
-    <% if (locals.errors && locals.errors.firstName) { %>
+    <% if (locals.errors && locals.errors.first_name) { %>
       <p class="error">
-        <%= locals.errors.firstName.msg %>
+        <%= locals.errors.first_name.msg %>
       </p>
       <% } %>
 
     <label for="last_name">Apellido</label>
     <input type="text" id="name" name="last_name" required value="<%= user.last_name %>" >
+    <% if (locals.errors && locals.errors.last_name) { %>
+      <p class="error">
+        <%= locals.errors.last_name.msg %>
+      </p>
+      <% } %>
     <br>
 
     
-    <label for="last_name">Correo</label>
+    <label for="email">Correo</label>
     <input type="text" id="name" name="email" required value="<%= user.email%>" >
+    <% if (locals.errors && locals.errors.email) { %>
+      <p class="error">
+        <%= locals.errors.email.msg %>
+      </p>
+      <% } %>
     <br>
 
 
@@ -62,9 +72,13 @@
 
     <br>
 
-    <label for="categoria">Categoría:</label>
+    <label for="categoria">Modificar categoria: (Actual:<% if (user.category_id === 1) { %>
+      Administrador
+    <% } else { %>
+      Invitado
+    <% } %> ) </label>
     <select name="category_id" required>
-      <option value="<%= user.category_id %>"> * Seleccionar</option>
+      <option value="<%= user.category_id %>"> -</option>
       <option value="1">Administrador</option>
       <option value="2">Invitado</option>
 
@@ -75,6 +89,11 @@
 
     <label for="image" class="input-file">Actualizar imagen de perfil :</label>
     <input type="file" id="image" name="image" multiple>
+    <% if (locals.errors && locals.errors.image) { %>
+      <p class="error">
+        <%= locals.errors.image.msg %>
+      </p>
+      <% } %>
     <br>
 
     <input class="enviar" type="submit" value="Guardar cambios">
