@@ -114,7 +114,7 @@ body {
 
     
     section {
-        height: 50vh;
+        /* height: 50vh; */
     }
 
 
@@ -248,7 +248,30 @@ body {
 
 }
 
-@media (min-width: 768px) {
+@media (max-width: 320px) {
+
+    .datos {
+        display: none;
+    }
+    
+    .datoTienda {
+        display: none;
+    }
+    
+    .caja-articulos .fa-solid {
+        display: none;
+    }
+    
+    .caja-articulos .fa-check {
+        display: none;
+    }
+
+    .foreachproducts {
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
    
 
     main {
@@ -911,4 +934,7 @@ body {
     .block {
         display: block;
     }
+
+
+    
 }

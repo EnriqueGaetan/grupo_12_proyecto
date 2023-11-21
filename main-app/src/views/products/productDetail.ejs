@@ -30,9 +30,6 @@
                       <% } %>
             
             </h2>
-
-
-
             </div>
             <div class="botones-ovalo">
                 <div class="absolute-boton">
@@ -40,146 +37,48 @@
                         <button class="seguir-comprando" style="color: black; text-align: center; font-size: 15px ;width: 100px" type="button">Volver</button>
                       </a>
                 </div>               
-                
             </div>
-        <main>
-            <section>
 
+            <main>
+                <div class="product-container">
+                    <!-- Foto del producto -->
+                    <img src="data:image/png;base64,<%= selectedProduct.img.toString('base64') %>">
 
-                <div class="container">
-                    <div class="img-producto">
-                        <div>
-                        </div>
+                    <div class="space"></div>
 
-                        <% if (locals.userLog && locals.userLog.category_id===1) { %>
-                            <a class="editar" href="/products/<%=selectedProduct.id %>/edit">Editar producto</a>
-                            <% } else { %>
-                                <% } %>
-
-                        <br>
-
-
-                        <img src="data:image/png;base64,<%= selectedProduct.img.toString('base64') %>" width="500px">
-
-
-
-
-
-                    </div>
-
-
+        
+                    <!-- Detalles del producto -->
                     <div class="opciones-compra">
 
-                        <h1>
-                            <%=selectedProduct.name %>
-                        </h1>
-                        <h1> $ <%=selectedProduct.price %>
-                        </h1>
+                        <h1><%=selectedProduct.name %></h1>
+                        <h1> $ <%=selectedProduct.price %></h1>
                         <br>
-
                         <div class="opciones-compra-items">
-
                             <input type="text"  name="color" id="color" value="<%=selectedProduct.colors.color%>"readonly>
-
-
                             <input type="text" name="litros" id="litros" value="<%= selectedProduct.options.liters %> litros" readonly>
-
                             <div class="cantidad">
-
                                 <div>
                                     <label for="cantidad">Cantidad</label>
                                     <input type="number" id="cantidad" name="cantidad" min="1" max="10"
                                         placeholder="- 1 +" value="1">
                                 </div>
-
-                                <!-- <div>
-                                    <label for="cantidad">Calculadora de pintura</label>
-                                    <input type="number" id="cantidad" name="cantidad" min="1" max="10"
-                                        placeholder="Calcular">
-                                </div> -->
                             </div>
-
-                            <button>Agregar al carrito</button>
-
+                            <button class="button-carrito">Agregar al carrito</button>
                             <div class="fav-sucursal">
                                 <i class="fa-regular fa-heart"></i>
                                 <p>Favoritos</p>
                                 <i class="fa-solid fa-location-dot"> </i>
                                 <p>Encontrar una sucursal</p>
                             </div>
-
                         </div>
-
                     </div>
-
-
-
-
-                    <!-- <div class="info-principal">
-                        <p class="info-principal-titulo">Información principal</p>
-
-                        <div>
-                            <ul>
-                                <li>Acabado:
-                                    <ul>
-                                        <li>Mate</li>
-                                    </ul>
-                                </li>
-                                <li>Cobertura:
-                                    <ul>
-                                        <li>10 a 12 m2 por litro</li>
-                                    </ul>
-                                </li>
-                                <li>Tiempo de secado:
-                                    <ul>
-                                        <li>2 horas</li>
-                                    </ul>
-                                </li>
-                                <li>Capas:
-                                    <ul>
-                                        <li>2</li>
-                                    </ul>
-                                </li>
-                                <h3>Características del producto</h3>
-                                <li>Fácil aplicación</li>
-                                <li>Antihongos</li>
-                                <li>Rápido secado</li>
-                            </ul>
-                            </ul>
-                        </div>
-                    </div> -->
-
-                    <br>
-
-
-                    <div class="info-general"></div>
-                    <div class="linea-int-ext">
-                        <h2>Descripción del producto</h2>
-                        <p>
-                            <%=selectedProduct.description %>
-                        </p>
-                    </div>
-
-
+            </div>
+            <div class="product-details">
+                <h2 style="font-size: 20px;">Descripción del producto</h2>
+                <p ><%=selectedProduct.description %></p>
                 </div>
+            </main>
 
-
-                <section class="body-ustedes">
-                    <div class="boletin">
-                        <p class="h3-boletin">Subscribite a nuestro boletín</p>
-                        <p class="p-boletin">Descubrí ideas y tendencias de decoración</p>
-                        <p class="p-boletin">en nuestro nuevo boletín mensual</p>
-                        <input class="email" type="email" name="email" id="email"
-                            placeholder="Dirección de correo electrónico">
-                        <p class="contactanos-boletin">Contactános</p>
-                        <ul class="iconos-contacto">
-                            <li class="facebook"><a href="#"> <i class="fa-brands fa-facebook-f"></i></i></a></li>
-                            <li class="twitter"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                            <li class="instagram"><a href="#"><i class="fa-brands fa-instagram"></i></i></a></li>
-                        </ul>
-                    </div>
-                </section>
-                </main>
 
                 <footer>
                     <%- include('footer') %>
