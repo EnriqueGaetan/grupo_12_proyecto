@@ -287,7 +287,7 @@ footer {
         font-size: 14px;
     }
 
-@media (min-width: 768px) {
+@media (min-width: 320px) {
     header {
         background-color: #ffffff;
         width: 100vw;
@@ -369,7 +369,7 @@ footer {
         border-radius: 50%;
         position: relative;
         z-index: 1;
-        bottom: 109px;
+        bottom: 170px;
         width: 100vw;
     }
 
@@ -528,6 +528,8 @@ footer {
         width: 100vw;
         flex-wrap: wrap;
         align-items: flex-start;
+        margin-top:115px
+
     }
 
     .producto-1 {
@@ -1132,8 +1134,8 @@ margin-top: 0px;
 
 
     .titulo-h3 {
-        margin-left: 68px;
-    }
+        margin-left: 81px;
+        font-size: 24px;    }
 
 
 
