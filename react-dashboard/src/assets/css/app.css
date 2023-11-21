@@ -9,7 +9,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+ :root {
     --blue: #4e73df;
     --indigo: #6610f2;
     --purple: #6f42c1;
@@ -49,7 +49,7 @@
 html {
     font-family: sans-serif;
     line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 80%;
     -webkit-tap-highlight-color: transparent
 }
 
@@ -69,7 +69,7 @@ section {
 body {
     margin: 0;
     font-family: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 1rem;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
     color: #858796;
@@ -625,7 +625,9 @@ pre code {
     display: flex;
     flex-wrap: wrap;
     margin-right: -.75rem;
-    margin-left: -.75rem
+    margin-left: -.25rem;
+    margin-top: 1rem;
+    justify-content: center;
 }
 
 .no-gutters {
@@ -1295,7 +1297,7 @@ pre code {
 
     .col-lg-6 {
         flex: 0 0 50%;
-        max-width: 50%
+        max-width: 100%
     }
 
     .col-lg-7 {
@@ -4754,7 +4756,7 @@ input[type=submit].btn-block {
     background-color: #fff;
     background-clip: border-box;
     border: 1px solid #e3e6f0;
-    border-radius: .35rem
+    border-radius: 2rem
 }
 
 .card>hr {
@@ -6805,7 +6807,7 @@ button.bg-light:hover {
 }
 
 .bg-dark {
-    background-color: #5a5c69 !important
+    background-color: #C83838  !important
 }
 
 a.bg-dark:focus,
@@ -8253,7 +8255,8 @@ button.bg-dark:hover {
 
 .mb-4,
 .my-4 {
-    margin-bottom: 1.5rem !important
+    margin-bottom: 1.5rem !important;
+    margin-top: 1.5rem
 }
 
 .ml-4,
@@ -10786,8 +10789,8 @@ a:focus {
 }
 
 .bg-gradient-secondary {
-    background-color: #858796;
-    background-image: linear-gradient(180deg, #858796 10%, #60616f 100%);
+    background-color: #ebf0f5;
+    background-image: linear-gradient(180deg, #ebf0f500 10%, #acafb5  100%);
     background-size: cover
 }
 
@@ -11546,35 +11549,35 @@ a:focus {
 }
 
 .sidebar-dark .sidebar-brand {
-    color: #fff
+    color: #2390cf
 }
 
 .sidebar-dark hr.sidebar-divider {
-    border-top: 1px solid rgba(255, 255, 255, .15)
+    border-top: 1px solid  #ffffff
 }
 
 .sidebar-dark .sidebar-heading {
-    color: rgba(255, 255, 255, .4)
+    color: #C83838
 }
 
 .sidebar-dark .nav-item .nav-link {
-    color: rgba(255, 255, 255, .8)
+    color: #000000e6
 }
 
 .sidebar-dark .nav-item .nav-link i {
-    color: rgba(255, 255, 255, .3)
+    color: #C83838
 }
 
 .sidebar-dark .nav-item .nav-link:active,
 .sidebar-dark .nav-item .nav-link:focus,
 .sidebar-dark .nav-item .nav-link:hover {
-    color: #fff
+    color: #8f5f5a
 }
 
 .sidebar-dark .nav-item .nav-link:active i,
 .sidebar-dark .nav-item .nav-link:focus i,
 .sidebar-dark .nav-item .nav-link:hover i {
-    color: #fff
+    color: #c899b0
 }
 
 .sidebar-dark .nav-item .nav-link[data-toggle=collapse]::after {
@@ -11582,11 +11585,11 @@ a:focus {
 }
 
 .sidebar-dark .nav-item.active .nav-link {
-    color: #fff
+    color: #000000e6
 }
 
 .sidebar-dark .nav-item.active .nav-link i {
-    color: #fff
+    color: #000000e6
 }
 
 .sidebar-dark #sidebarToggle {
