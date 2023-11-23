@@ -39,10 +39,23 @@
                 </div>               
             </div>
 
+
+
+
+
             <main>
                 <div class="product-container">
                     <!-- Foto del producto -->
-                    <img src="data:image/png;base64,<%= selectedProduct.img.toString('base64') %>">
+                    <div class="img-producto">
+                        <div>
+                        </div>
+                        <% if (locals.userLog && locals.userLog.category_id===1) { %>
+                            <a class="editar" href="/products/<%=selectedProduct.id %>/edit">Editar producto</a>
+                            <% } else { %>
+                                <% } %>
+                        <br>
+                        <img src="data:image/png;base64,<%= selectedProduct.img.toString('base64') %>" width="500px">
+                    </div>
 
                     <div class="space"></div>
 
@@ -72,12 +85,15 @@
                             </div>
                         </div>
                     </div>
+                    
             </div>
             <div class="product-details">
                 <h2 style="font-size: 20px;">Descripción del producto</h2>
                 <p ><%=selectedProduct.description %></p>
                 </div>
             </main>
+
+
 
 
                 <footer>

@@ -55,3 +55,9 @@ app.use('/api/products', productsRouterAPI)
 app.listen(3001, () =>
     console.log("Servidor corriendo en el puerto 3001"));
 
+
+app.use((req, res, next) => {
+        res.status(404).send("<h2>La página que estás buscando no existe.</h2>")
+      });
+      
+

@@ -12,7 +12,7 @@ const controllers = {
     products: async (req, res) => {
         
         const products = await Product.findAll({ 
-            attributes: ['id', 'name', 'description', 'category_id'],
+            attributes: ['id', 'name', 'description', 'category_id', 'price'],
             include: [{ model: Productcategory, as: 'productcategorys', attributes: ['category'] }],
             raw: true });
 
@@ -21,6 +21,7 @@ const controllers = {
                 id: products.id,
                 name: products.name,
                 description: products.description,
+                price: "$" + products.price,
                 detail: 'http://localhost:3001/api/products/' + products.id,
             }
         });

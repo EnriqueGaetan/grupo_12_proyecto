@@ -41,4 +41,8 @@ router.get('/:id/', usersController.detail);
 router.get('/:id/edit', authUserMiddleware, usersController.edit);
 router.put('/:id/edit', [upload.single('image'), updateUserMiddleware], usersController.updateUser);
 
+
+router.delete('/:id/delete', usersController.delete);
+
+
 module.exports = router;

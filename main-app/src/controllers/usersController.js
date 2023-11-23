@@ -189,6 +189,21 @@ const controllers = {
         }
     }
     ,
+    delete: async (req, res) => {
+        const id = req.params.id;
+
+        try {
+            User.destroy({
+                where: {
+                    id
+                }
+            })
+        } catch (error) {
+            console.log(error);
+        }
+
+        res.redirect('/controlpanel')
+    },
 }
 
 module.exports = controllers;

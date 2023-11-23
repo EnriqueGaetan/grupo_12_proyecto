@@ -79,6 +79,7 @@ button {
     justify-content: center;
     align-items: center;
     gap: 10px;
+
 }
 
 
@@ -102,6 +103,8 @@ button {
     width: 160px;
     height: 25px;
     text-decoration: none;
+    margin-left: 75px;
+
     
 }
 .editar:hover {
@@ -404,8 +407,8 @@ main {
 }
 
 .product-details {
-    margin-top: -280px;
-    margin-bottom: 261px;
+    margin-top: -351px;
+    margin-bottom: 419px;
     width: 50%;
     border-top: 1px solid #c1c1c1;
 }

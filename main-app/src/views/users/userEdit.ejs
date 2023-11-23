@@ -97,6 +97,10 @@
     <br>
 
     <input class="enviar" type="submit" value="Guardar cambios">
+    <br>
+    <form action="/users/<%= user.id%>/delete?_method=DELETE" method="POST">
+      <button class="borrar" type="submit">Borrar</button>
+    </form>
    
   </form>
 
